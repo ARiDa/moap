@@ -1,11 +1,5 @@
 package arida.ufc.br.moap.core.beans;
 
-import arida.ufc.br.moap.core.spi.IAnnotable;
-import java.util.ArrayList;
-import java.util.List;
-
-import arida.ufc.br.moap.core.spi.ITemporalFeature;
-
 /**
  * @author igobrilhante
  *
@@ -14,21 +8,15 @@ import arida.ufc.br.moap.core.spi.ITemporalFeature;
  * User Structure
  * @param <S>
  */
-public class MovingObject<S extends IAnnotable, T> {
+public class MovingObject {
     
     private String id;
-    private List<Trajectory<S, T>> trajectories;
     
     public MovingObject(String id) {
         this.id = id;
-        this.trajectories = new ArrayList<Trajectory<S, T>>();
     }
     
-    public MovingObject(String id, List<Trajectory<S, T>> trajectoryList) {
-        super();
-        this.id = id;
-        this.trajectories = trajectoryList;
-    }
+
     
     public String getId() {
         return id;
@@ -38,25 +26,6 @@ public class MovingObject<S extends IAnnotable, T> {
         this.id = id;
     }
     
-    public void addTrajectory(Trajectory<S, T> trajectory) {
-        trajectory.setMovingObject(id);
-        this.trajectories.add(trajectory);
-    }
-    
-    public void setTrajectories(List<Trajectory<S, T>> trajectoryList) {
-        for (Trajectory traj : trajectoryList) {
-            traj.setId(id);
-        }
-        this.trajectories = trajectoryList;
-    }
-    
-    public List<Trajectory<S, T>> getTrajectories() {
-        return this.trajectories;
-    }
-    
-    public Trajectory<S, T> getTrajectory(int index) {
-        return this.trajectories.get(index);
-    }
     
     @Override
     public int hashCode() {
@@ -92,7 +61,4 @@ public class MovingObject<S extends IAnnotable, T> {
         return "Moving Object " + id;
     }
     
-    public int getTrajectoryCount(){
-        return this.trajectories.size();
-    }
 }

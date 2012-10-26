@@ -16,6 +16,6 @@ public interface ITrajectoryFactory<S extends IAnnotable,T> {
     
     public Trajectory<S,T>  newTrajectory(String id);
     
-    public MovingObject<S,T>  newMovingObject(String id);
+    public MovingObject newMovingObject(String id);
     
 }

@@ -1,9 +1,8 @@
 package arida.ufc.br.moap.core.beans;
 
-import arida.ufc.br.moap.core.beans.Annotations;
+import arida.ufc.br.moap.core.spi.IAnnotable;
 import java.util.ArrayList;
 import java.util.List;
-import arida.ufc.br.moap.core.spi.IAnnotable;
 
 /**
  * @author igobrilhante
@@ -13,7 +12,7 @@ import arida.ufc.br.moap.core.spi.IAnnotable;
  */
 public class Trajectory<S extends IAnnotable, T> implements IAnnotable {
 
-    private String movingObject;
+    private MovingObject movingObject;
     private String id;
     private List<S> points;
     private List<T> times;
@@ -29,7 +28,7 @@ public class Trajectory<S extends IAnnotable, T> implements IAnnotable {
 
     }
     
-    public Trajectory(String id,String movingObject) {
+    public Trajectory(String id,MovingObject movingObject) {
         this.id = id;
         this.movingObject = movingObject;
         this.points = new ArrayList<S>();
@@ -37,11 +36,11 @@ public class Trajectory<S extends IAnnotable, T> implements IAnnotable {
 
     }
 
-    public String getMovingObject() {
+    public MovingObject getMovingObject() {
         return movingObject;
     }
 
-    public void setMovingObject(String movingObject) {
+    public void setMovingObject(MovingObject movingObject) {
         this.movingObject = movingObject;
     }
 

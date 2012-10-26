@@ -22,7 +22,7 @@ public class TrajectoryFactoryImp<S extends IAnnotable,T>  implements ITrajector
     }
 
     @Override
-    public MovingObject<S,T> newMovingObject(String id) {
+    public MovingObject newMovingObject(String id) {
         return new MovingObject(id);
     }
     
