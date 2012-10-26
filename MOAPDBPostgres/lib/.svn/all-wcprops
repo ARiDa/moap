@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/kdd/!svn/ver/213/moap/MOAPDBPostgres/lib
+END
+org-openide-util-lookup.jar
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/kdd/!svn/ver/213/moap/MOAPDBPostgres/lib/org-openide-util-lookup.jar
+END
+postgis-2.0.0SVN.jar
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/kdd/!svn/ver/213/moap/MOAPDBPostgres/lib/postgis-2.0.0SVN.jar
+END
+junit-4.5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/kdd/!svn/ver/213/moap/MOAPDBPostgres/lib/junit-4.5.jar
+END
+log4j-1.2.16.jar
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/kdd/!svn/ver/213/moap/MOAPDBPostgres/lib/log4j-1.2.16.jar
+END
+postgresql-9.0-801.jdbc4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/kdd/!svn/ver/213/moap/MOAPDBPostgres/lib/postgresql-9.0-801.jdbc4.jar
+END
+org-openide-util.jar
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/kdd/!svn/ver/213/moap/MOAPDBPostgres/lib/org-openide-util.jar
+END

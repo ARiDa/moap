@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/src/arida/ufc/br/moap/network/mobnet/renderer
+END
+MapRenderer.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/src/arida/ufc/br/moap/network/mobnet/renderer/MapRenderer.java
+END
+CommunityRenderer.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/src/arida/ufc/br/moap/network/mobnet/renderer/CommunityRenderer.java
+END
+TrajectoryRenderer.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/src/arida/ufc/br/moap/network/mobnet/renderer/TrajectoryRenderer.java
+END

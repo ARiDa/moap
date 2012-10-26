@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/kdd/!svn/ver/283/moap/MOAPDBPostgres
+END
+postgis.properties
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/kdd/!svn/ver/213/moap/MOAPDBPostgres/postgis.properties
+END
+manifest.mf
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/kdd/!svn/ver/213/moap/MOAPDBPostgres/manifest.mf
+END
+admin.log
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/kdd/!svn/ver/213/moap/MOAPDBPostgres/admin.log
+END
+log4j.properties
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/kdd/!svn/ver/213/moap/MOAPDBPostgres/log4j.properties
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/kdd/!svn/ver/213/moap/MOAPDBPostgres/build.xml
+END
+postgresql.properties
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/kdd/!svn/ver/213/moap/MOAPDBPostgres/postgresql.properties
+END
+database.properties
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/kdd/!svn/ver/216/moap/MOAPDBPostgres/database.properties
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/forOPTICSAndDBScan/DataObjects
+END
+ManhattanDataObject.class
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/forOPTICSAndDBScan/DataObjects/ManhattanDataObject.class
+END
+EuclidianDataObject.class
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/forOPTICSAndDBScan/DataObjects/EuclidianDataObject.class
+END
+DataObject.class
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/forOPTICSAndDBScan/DataObjects/DataObject.class
+END

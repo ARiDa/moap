@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/kdd/!svn/ver/311/moap/MOAPNetwork/lib/weka/weka/classifiers
+END
+SingleClassifierEnhancer.class
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/SingleClassifierEnhancer.class
+END
+RandomizableMultipleClassifiersCombiner.class
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/RandomizableMultipleClassifiersCombiner.class
+END
+CostMatrix.class
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/CostMatrix.class
+END
+CheckSource.class
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/CheckSource.class
+END
+IterativeClassifier.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/IterativeClassifier.class
+END
+MultipleClassifiersCombiner.class
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/MultipleClassifiersCombiner.class
+END
+RandomizableIteratedSingleClassifierEnhancer.class
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/RandomizableIteratedSingleClassifierEnhancer.class
+END
+BVDecompose.class
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/BVDecompose.class
+END
+Evaluation.class
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/Evaluation.class
+END
+BVDecomposeSegCVSub.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/BVDecomposeSegCVSub.class
+END
+UpdateableClassifier.class
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/UpdateableClassifier.class
+END
+RandomizableClassifier.class
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/RandomizableClassifier.class
+END
+IteratedSingleClassifierEnhancer.class
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/IteratedSingleClassifierEnhancer.class
+END
+IntervalEstimator.class
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/IntervalEstimator.class
+END
+Sourcable.class
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/Sourcable.class
+END
+RandomizableSingleClassifierEnhancer.class
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/RandomizableSingleClassifierEnhancer.class
+END
+CheckClassifier.class
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/CheckClassifier.class
+END
+Classifier.class
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/Classifier.class
+END

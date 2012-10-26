@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/mi/supportVector
+END
+MIRBFKernel.class
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/mi/supportVector/MIRBFKernel.class
+END
+MIPolyKernel.class
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/mi/supportVector/MIPolyKernel.class
+END

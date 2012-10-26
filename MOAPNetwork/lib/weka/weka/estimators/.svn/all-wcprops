@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/estimators
+END
+DDConditionalEstimator.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/estimators/DDConditionalEstimator.class
+END
+CheckEstimator.class
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/estimators/CheckEstimator.class
+END
+MahalanobisEstimator.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/estimators/MahalanobisEstimator.class
+END
+Estimator.class
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/estimators/Estimator.class
+END
+KernelEstimator.class
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/estimators/KernelEstimator.class
+END
+KDConditionalEstimator.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/estimators/KDConditionalEstimator.class
+END
+DKConditionalEstimator.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/estimators/DKConditionalEstimator.class
+END
+CheckEstimator$EstTypes.class
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/estimators/CheckEstimator$EstTypes.class
+END
+DNConditionalEstimator.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/estimators/DNConditionalEstimator.class
+END
+NDConditionalEstimator.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/estimators/NDConditionalEstimator.class
+END
+CheckEstimator$PostProcessor.class
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/estimators/CheckEstimator$PostProcessor.class
+END
+NormalEstimator.class
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/estimators/NormalEstimator.class
+END
+KKConditionalEstimator.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/estimators/KKConditionalEstimator.class
+END
+Estimator$Builder.class
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/estimators/Estimator$Builder.class
+END
+PoissonEstimator.class
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/estimators/PoissonEstimator.class
+END
+NNConditionalEstimator.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/estimators/NNConditionalEstimator.class
+END
+EstimatorUtils.class
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/estimators/EstimatorUtils.class
+END
+IncrementalEstimator.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/estimators/IncrementalEstimator.class
+END
+CheckEstimator$AttrTypes.class
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/estimators/CheckEstimator$AttrTypes.class
+END
+DiscreteEstimator.class
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/estimators/DiscreteEstimator.class
+END
+ConditionalEstimator.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/estimators/ConditionalEstimator.class
+END
+Estimator$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/estimators/Estimator$1.class
+END

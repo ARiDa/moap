@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/part
+END
+MakeDecList.class
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/part/MakeDecList.class
+END
+PruneableDecList.class
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/part/PruneableDecList.class
+END
+ClassifierDecList.class
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/part/ClassifierDecList.class
+END
+C45PruneableDecList.class
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/part/C45PruneableDecList.class
+END

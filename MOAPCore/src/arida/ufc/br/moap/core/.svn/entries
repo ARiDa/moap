@@ -1,0 +1,80 @@
+10
+
+dir
+315
+https://200.19.187.69/svn/kdd/moap/MOAPCore/src/arida/ufc/br/moap/core
+https://200.19.187.69/svn/kdd
+
+
+
+2012-10-10T03:38:32.459883Z
+295
+igobrilhante
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4a3cf20f-3b90-4fb5-880d-a2933f490bef
+
+database
+dir
+
+Bundle.properties
+file
+
+
+
+
+2012-10-25T17:41:36.402410Z
+2e7c9739bec7b883df64232df29aae3a
+2012-08-11T09:07:01.554993Z
+213
+igobrilhante
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+29
+
+imp
+dir
+
+algorithm
+dir
+
+beans
+dir
+
+datasource
+dir
+
+spi
+dir
+

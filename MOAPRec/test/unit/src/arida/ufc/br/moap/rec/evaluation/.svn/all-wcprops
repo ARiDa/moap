@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/kdd/!svn/ver/238/moap/MOAPRec/test/unit/src/arida/ufc/br/moap/rec/evaluation
+END
+IntraListSimilarityTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/kdd/!svn/ver/228/moap/MOAPRec/test/unit/src/arida/ufc/br/moap/rec/evaluation/IntraListSimilarityTest.java
+END
+NoveltyTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/kdd/!svn/ver/238/moap/MOAPRec/test/unit/src/arida/ufc/br/moap/rec/evaluation/NoveltyTest.java
+END
+PersonalizationTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/kdd/!svn/ver/228/moap/MOAPRec/test/unit/src/arida/ufc/br/moap/rec/evaluation/PersonalizationTest.java
+END
+UnserendipityTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/kdd/!svn/ver/238/moap/MOAPRec/test/unit/src/arida/ufc/br/moap/rec/evaluation/UnserendipityTest.java
+END

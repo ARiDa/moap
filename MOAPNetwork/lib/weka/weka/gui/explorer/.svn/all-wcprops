@@ -1,0 +1,863 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer
+END
+DataGeneratorPanel$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/DataGeneratorPanel$1.class
+END
+ClustererPanel$9.class
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClustererPanel$9.class
+END
+AttributeSelectionPanel$9.class
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/AttributeSelectionPanel$9.class
+END
+Explorer$3.class
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/Explorer$3.class
+END
+PreprocessPanel$2.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/PreprocessPanel$2.class
+END
+AttributeSelectionPanel$10.class
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/AttributeSelectionPanel$10.class
+END
+PreprocessPanel$6.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/PreprocessPanel$6.class
+END
+ClustererPanel$23.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClustererPanel$23.class
+END
+AttributeSelectionPanel$14.class
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/AttributeSelectionPanel$14.class
+END
+AttributeSelectionPanel$18.class
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/AttributeSelectionPanel$18.class
+END
+AssociationsPanel$4.class
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/AssociationsPanel$4.class
+END
+ClassifierPanel$10.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$10.class
+END
+AssociationsPanel$8.class
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/AssociationsPanel$8.class
+END
+PreprocessPanel$13.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/PreprocessPanel$13.class
+END
+ClassifierPanel$14.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$14.class
+END
+ClassifierPanel$33.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$33.class
+END
+PreprocessPanel$17.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/PreprocessPanel$17.class
+END
+ClassifierPanel$18.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$18.class
+END
+AssociationsPanel$12.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/AssociationsPanel$12.class
+END
+ClustererPanel.class
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClustererPanel.class
+END
+ClassifierPanel$3.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$3.class
+END
+ClassifierPanel$7.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$7.class
+END
+DataGeneratorPanel.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/DataGeneratorPanel.class
+END
+ClustererPanel$13.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClustererPanel$13.class
+END
+ClassifierPanel$13$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$13$1.class
+END
+PreprocessPanel$13$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/PreprocessPanel$13$1.class
+END
+ClustererPanel$17.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClustererPanel$17.class
+END
+PreprocessPanel.class
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/PreprocessPanel.class
+END
+PreprocessPanel$17$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/PreprocessPanel$17$1.class
+END
+ClassifierPanel$23.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$23.class
+END
+PreprocessPanel$22.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/PreprocessPanel$22.class
+END
+AssociationsPanel.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/AssociationsPanel.class
+END
+ClustererPanel$4.class
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClustererPanel$4.class
+END
+AttributeSelectionPanel$4.class
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/AttributeSelectionPanel$4.class
+END
+ClassifierPanel$27.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$27.class
+END
+ClustererPanel$8.class
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClustererPanel$8.class
+END
+AttributeSelectionPanel$8.class
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/AttributeSelectionPanel$8.class
+END
+Explorer$2.class
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/Explorer$2.class
+END
+PreprocessPanel$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/PreprocessPanel$1.class
+END
+PreprocessPanel$5.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/PreprocessPanel$5.class
+END
+ClustererPanel$22.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClustererPanel$22.class
+END
+AttributeSelectionPanel$13.class
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/AttributeSelectionPanel$13.class
+END
+PreprocessPanel$9.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/PreprocessPanel$9.class
+END
+PreprocessPanel$23$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/PreprocessPanel$23$1.class
+END
+ClustererPanel$26.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClustererPanel$26.class
+END
+Explorer$ExplorerPanel.class
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/Explorer$ExplorerPanel.class
+END
+AttributeSelectionPanel$17.class
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/AttributeSelectionPanel$17.class
+END
+ClassifierPanel$26$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$26$1.class
+END
+AssociationsPanel$3.class
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/AssociationsPanel$3.class
+END
+AssociationsPanel$7.class
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/AssociationsPanel$7.class
+END
+PreprocessPanel$12.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/PreprocessPanel$12.class
+END
+ClassifierPanel$13.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$13.class
+END
+ClassifierPanel$32.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$32.class
+END
+PreprocessPanel$16.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/PreprocessPanel$16.class
+END
+ClassifierPanel$17.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$17.class
+END
+ClassifierPanel$36.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$36.class
+END
+AssociationsPanel$11.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/AssociationsPanel$11.class
+END
+ClassifierPanel$2.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$2.class
+END
+ClassifierPanel$6.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$6.class
+END
+ClustererPanel$12.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClustererPanel$12.class
+END
+ClustererPanel$16.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClustererPanel$16.class
+END
+Explorer$LogHandler.class
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/Explorer$LogHandler.class
+END
+PreprocessPanel$21.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/PreprocessPanel$21.class
+END
+ClassifierPanel$22.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$22.class
+END
+ClustererPanel$3.class
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClustererPanel$3.class
+END
+AttributeSelectionPanel$3.class
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/AttributeSelectionPanel$3.class
+END
+ClassifierPanel$26.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$26.class
+END
+PreprocessPanel$25.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/PreprocessPanel$25.class
+END
+VisualizePanel$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/VisualizePanel$1.class
+END
+ClustererPanel$7.class
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClustererPanel$7.class
+END
+AttributeSelectionPanel$7.class
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/AttributeSelectionPanel$7.class
+END
+Explorer$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/Explorer$1.class
+END
+PreprocessPanel$4.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/PreprocessPanel$4.class
+END
+ClustererPanel$21.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClustererPanel$21.class
+END
+Explorer$CapabilitiesFilterChangeListener.class
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/Explorer$CapabilitiesFilterChangeListener.class
+END
+AttributeSelectionPanel$12.class
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/AttributeSelectionPanel$12.class
+END
+PreprocessPanel$8.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/PreprocessPanel$8.class
+END
+ClustererPanel$25.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClustererPanel$25.class
+END
+AttributeSelectionPanel$16.class
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/AttributeSelectionPanel$16.class
+END
+AssociationsPanel$2.class
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/AssociationsPanel$2.class
+END
+AssociationsPanel$6.class
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/AssociationsPanel$6.class
+END
+PreprocessPanel$11.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/PreprocessPanel$11.class
+END
+ClassifierPanel$12.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$12.class
+END
+ClassifierPanel$31.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$31.class
+END
+PreprocessPanel$15.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/PreprocessPanel$15.class
+END
+ClassifierPanel$16.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$16.class
+END
+ClassifierPanel$35.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$35.class
+END
+PreprocessPanel$19.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/PreprocessPanel$19.class
+END
+AssociationsPanel$10.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/AssociationsPanel$10.class
+END
+ClassifierPanel$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$1.class
+END
+ClassifierPanel$5.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$5.class
+END
+Explorer.props
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/Explorer.props
+END
+ClustererPanel$11.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClustererPanel$11.class
+END
+Explorer.class
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/Explorer.class
+END
+ClassifierPanel$9.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$9.class
+END
+ClustererPanel$15.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClustererPanel$15.class
+END
+ClustererPanel$19.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClustererPanel$19.class
+END
+PreprocessPanel$20.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/PreprocessPanel$20.class
+END
+ClassifierPanel$21.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$21.class
+END
+ClustererPanel$2.class
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClustererPanel$2.class
+END
+AttributeSelectionPanel$2.class
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/AttributeSelectionPanel$2.class
+END
+ClassifierPanel$25.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$25.class
+END
+PreprocessPanel$24.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/PreprocessPanel$24.class
+END
+ClustererPanel$6.class
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClustererPanel$6.class
+END
+AttributeSelectionPanel$6.class
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/AttributeSelectionPanel$6.class
+END
+ClassifierPanel$29.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$29.class
+END
+ClassifierPanel$8$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$8$1.class
+END
+ExplorerDefaults.class
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ExplorerDefaults.class
+END
+Explorer$CapabilitiesFilterChangeEvent.class
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/Explorer$CapabilitiesFilterChangeEvent.class
+END
+PreprocessPanel$3.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/PreprocessPanel$3.class
+END
+ClustererPanel$20.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClustererPanel$20.class
+END
+AttributeSelectionPanel$11.class
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/AttributeSelectionPanel$11.class
+END
+PreprocessPanel$7.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/PreprocessPanel$7.class
+END
+ClustererPanel$24.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClustererPanel$24.class
+END
+AttributeSelectionPanel$15.class
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/AttributeSelectionPanel$15.class
+END
+ClassifierPanel.class
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel.class
+END
+AssociationsPanel$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/AssociationsPanel$1.class
+END
+AssociationsPanel$5.class
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/AssociationsPanel$5.class
+END
+PreprocessPanel$10.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/PreprocessPanel$10.class
+END
+ClassifierPanel$11.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$11.class
+END
+ClassifierPanel$30.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$30.class
+END
+AssociationsPanel$9.class
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/AssociationsPanel$9.class
+END
+PreprocessPanel$14.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/PreprocessPanel$14.class
+END
+ClassifierPanel$15.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$15.class
+END
+ClassifierPanel$34.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$34.class
+END
+PreprocessPanel$18.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/PreprocessPanel$18.class
+END
+ClassifierPanel$19.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$19.class
+END
+AttributeSelectionPanel.class
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/AttributeSelectionPanel.class
+END
+VisualizePanel.class
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/VisualizePanel.class
+END
+ClassifierPanel$4.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$4.class
+END
+ClustererPanel$10.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClustererPanel$10.class
+END
+ClassifierPanel$8.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$8.class
+END
+ClustererPanel$14.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClustererPanel$14.class
+END
+ClassifierPanel$13$2.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$13$2.class
+END
+ClustererPanel$18.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClustererPanel$18.class
+END
+ClassifierPanel$20.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$20.class
+END
+ClustererPanel$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClustererPanel$1.class
+END
+AttributeSelectionPanel$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/AttributeSelectionPanel$1.class
+END
+ClassifierPanel$24.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$24.class
+END
+PreprocessPanel$23.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/PreprocessPanel$23.class
+END
+ClustererPanel$5.class
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClustererPanel$5.class
+END
+AttributeSelectionPanel$5.class
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/AttributeSelectionPanel$5.class
+END
+ClassifierPanel$28.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/explorer/ClassifierPanel$28.class
+END

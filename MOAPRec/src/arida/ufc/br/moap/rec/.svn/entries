@@ -1,0 +1,110 @@
+10
+
+dir
+315
+https://200.19.187.69/svn/kdd/moap/MOAPRec/src/arida/ufc/br/moap/rec
+https://200.19.187.69/svn/kdd
+
+
+
+2012-09-15T17:53:36.783494Z
+242
+igobrilhante
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4a3cf20f-3b90-4fb5-880d-a2933f490bef
+
+spi
+dir
+
+recommender
+dir
+
+utils
+dir
+
+vis
+dir
+
+Bundle.properties
+file
+
+
+
+
+2012-10-25T17:41:32.102410Z
+4cd642aca110205b6d2757708da9cc6f
+2012-08-11T09:07:01.554993Z
+213
+igobrilhante
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+28
+
+database
+dir
+
+evaluation
+dir
+
+location
+dir
+
+algorithms
+dir
+
+javafx
+dir
+
+memorybasedcf
+dir
+
+interfaces
+dir
+
+slopeone
+dir
+
+approaches
+dir
+
+function
+dir
+
+userbasedcf
+dir
+
+locationrecommender
+dir
+

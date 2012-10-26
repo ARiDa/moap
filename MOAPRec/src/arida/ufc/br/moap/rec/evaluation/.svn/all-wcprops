@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/kdd/!svn/ver/242/moap/MOAPRec/src/arida/ufc/br/moap/rec/evaluation
+END
+IntraListSimilarity.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/kdd/!svn/ver/242/moap/MOAPRec/src/arida/ufc/br/moap/rec/evaluation/IntraListSimilarity.java
+END
+NormalizedPrecision.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/kdd/!svn/ver/228/moap/MOAPRec/src/arida/ufc/br/moap/rec/evaluation/NormalizedPrecision.java
+END
+Novelty.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/kdd/!svn/ver/242/moap/MOAPRec/src/arida/ufc/br/moap/rec/evaluation/Novelty.java
+END
+Personalization.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/kdd/!svn/ver/242/moap/MOAPRec/src/arida/ufc/br/moap/rec/evaluation/Personalization.java
+END
+IREvaluation.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/228/moap/MOAPRec/src/arida/ufc/br/moap/rec/evaluation/IREvaluation.java
+END
+Unserendipity.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/242/moap/MOAPRec/src/arida/ufc/br/moap/rec/evaluation/Unserendipity.java
+END
+KFoldCrossValidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/kdd/!svn/ver/228/moap/MOAPRec/src/arida/ufc/br/moap/rec/evaluation/KFoldCrossValidation.java
+END
+SurprisingGain.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/kdd/!svn/ver/228/moap/MOAPRec/src/arida/ufc/br/moap/rec/evaluation/SurprisingGain.java
+END

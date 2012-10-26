@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/kdd/!svn/ver/235/moap/MOAPRec/src/arida/ufc/br/moap/rec/spi
+END
+MemoryBasedCF.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/kdd/!svn/ver/235/moap/MOAPRec/src/arida/ufc/br/moap/rec/spi/MemoryBasedCF.java
+END
+SimilarityFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/kdd/!svn/ver/235/moap/MOAPRec/src/arida/ufc/br/moap/rec/spi/SimilarityFunction.java
+END
+IRecommenderSystem.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/kdd/!svn/ver/228/moap/MOAPRec/src/arida/ufc/br/moap/rec/spi/IRecommenderSystem.java
+END

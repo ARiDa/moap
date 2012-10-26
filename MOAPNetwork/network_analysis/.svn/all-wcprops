@@ -1,0 +1,245 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis
+END
+poi_commreport1.csv
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/poi_commreport1.csv
+END
+node_indegree_vizinhos.csv
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/node_indegree_vizinhos.csv
+END
+location_4h_150m_node_out_vizinhos_in.csv
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/location_4h_150m_node_out_vizinhos_in.csv
+END
+poi_commreport2.csv
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/poi_commreport2.csv
+END
+node_outdegree_vizinhos.csv
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/node_outdegree_vizinhos.csv
+END
+poi_commreport3.csv
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/poi_commreport3.csv
+END
+node_outdegree_vizinhos_indegree.csv
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/node_outdegree_vizinhos_indegree.csv
+END
+community_report.R
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/community_report.R
+END
+list_of_pois.csv
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/list_of_pois.csv
+END
+location_4h_150m_assortative.csv
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/location_4h_150m_assortative.csv
+END
+location_4h_150m_edge.csv
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/location_4h_150m_edge.csv
+END
+node_analysis.sql
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/node_analysis.sql
+END
+poi_node.csv
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/poi_node.csv
+END
+location_4h_150m_commreport1.csv
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/location_4h_150m_commreport1.csv
+END
+location_4h_150m_commreport2.csv
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/location_4h_150m_commreport2.csv
+END
+poi_analysis.sql
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/poi_analysis.sql
+END
+location_4h_150m_commreport3.csv
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/location_4h_150m_commreport3.csv
+END
+location_4h_150m_node_vizinhos_outdegree.csv
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/location_4h_150m_node_vizinhos_outdegree.csv
+END
+node_degree_weight.csv
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/node_degree_weight.csv
+END
+link_community.R
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/link_community.R
+END
+location_4h_150m_node.csv
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/location_4h_150m_node.csv
+END
+edge_distance.csv
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/edge_distance.csv
+END
+community_report.csv
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/community_report.csv
+END
+location_4h_150m_node_in_vizinhos_out.csv
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/location_4h_150m_node_in_vizinhos_out.csv
+END
+location_4h_150m_commreport05.csv
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/location_4h_150m_commreport05.csv
+END
+node_indegree_vizinhos_outdegree.csv
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/node_indegree_vizinhos_outdegree.csv
+END
+community_report.sql
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/community_report.sql
+END
+graph.txt
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/graph.txt
+END
+node_degree_vizinhos.csv
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/node_degree_vizinhos.csv
+END
+community_analysis.sql
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/community_analysis.sql
+END
+node_indegree_weight.csv
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/node_indegree_weight.csv
+END
+poi_commreport.csv
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/poi_commreport.csv
+END
+node_outdegree_weight.csv
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/node_outdegree_weight.csv
+END
+location_4h_150m_node_vizinhos_indegree.csv
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/location_4h_150m_node_vizinhos_indegree.csv
+END
+location_4h_150m_assortative2.csv
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/location_4h_150m_assortative2.csv
+END
+poi_assortative.csv
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/poi_assortative.csv
+END
+poi_edge.csv
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/poi_edge.csv
+END
+location_4h_150m_commreport.csv
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/location_4h_150m_commreport.csv
+END
+location_4h_150m_edge.txt
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/location_4h_150m_edge.txt
+END
+location_4h_150m_node_vizinhos_degree.csv
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/network_analysis/location_4h_150m_node_vizinhos_degree.csv
+END

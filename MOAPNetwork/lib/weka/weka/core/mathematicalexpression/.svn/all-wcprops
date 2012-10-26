@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/mathematicalexpression
+END
+sym.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/mathematicalexpression/sym.class
+END
+Scanner.class
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/mathematicalexpression/Scanner.class
+END
+Parser.class
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/mathematicalexpression/Parser.class
+END
+Scanner.jflex
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/mathematicalexpression/Scanner.jflex
+END
+CUP$Parser$actions.class
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/mathematicalexpression/CUP$Parser$actions.class
+END
+Parser.cup
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/mathematicalexpression/Parser.cup
+END

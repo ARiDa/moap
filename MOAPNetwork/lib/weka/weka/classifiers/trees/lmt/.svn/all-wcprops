@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/trees/lmt
+END
+ResidualSplit.class
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/trees/lmt/ResidualSplit.class
+END
+LogisticBase.class
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/trees/lmt/LogisticBase.class
+END
+CompareNode.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/trees/lmt/CompareNode.class
+END
+ResidualModelSelection.class
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/trees/lmt/ResidualModelSelection.class
+END
+LMTNode.class
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/trees/lmt/LMTNode.class
+END

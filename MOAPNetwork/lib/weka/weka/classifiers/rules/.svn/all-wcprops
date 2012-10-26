@@ -1,0 +1,227 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules
+END
+Prism$PrismRule.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/Prism$PrismRule.class
+END
+JRip$NumericAntd.class
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/JRip$NumericAntd.class
+END
+Ridor$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/Ridor$1.class
+END
+JRip.class
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/JRip.class
+END
+DecisionTable.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/DecisionTable.class
+END
+Rule.class
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/Rule.class
+END
+NNge$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/NNge$1.class
+END
+DTNB$EvalWithDelete.class
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/DTNB$EvalWithDelete.class
+END
+OneR$OneRRule.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/OneR$OneRRule.class
+END
+RuleStats.class
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/RuleStats.class
+END
+DTNB.class
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/DTNB.class
+END
+Ridor$Ridor_node.class
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/Ridor$Ridor_node.class
+END
+Prism.class
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/Prism.class
+END
+DecisionTable$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/DecisionTable$1.class
+END
+M5Rules.class
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/M5Rules.class
+END
+Prism$Test.class
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/Prism$Test.class
+END
+DecisionTable$DummySubsetEvaluator.class
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/DecisionTable$DummySubsetEvaluator.class
+END
+ZeroR.class
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/ZeroR.class
+END
+OneR.class
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/OneR.class
+END
+PART.class
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/PART.class
+END
+Ridor$NominalAntd.class
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/Ridor$NominalAntd.class
+END
+ConjunctiveRule$NominalAntd.class
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/ConjunctiveRule$NominalAntd.class
+END
+Ridor$RidorRule.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/Ridor$RidorRule.class
+END
+Ridor$NumericAntd.class
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/Ridor$NumericAntd.class
+END
+ConjunctiveRule$NumericAntd.class
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/ConjunctiveRule$NumericAntd.class
+END
+Prism$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/Prism$1.class
+END
+ConjunctiveRule.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/ConjunctiveRule.class
+END
+JRip$Antd.class
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/JRip$Antd.class
+END
+Ridor.class
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/Ridor.class
+END
+DecisionTableHashKey.class
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/DecisionTableHashKey.class
+END
+JRip$RipperRule.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/JRip$RipperRule.class
+END
+NNge.class
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/NNge.class
+END
+NNge$Exemplar.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/NNge$Exemplar.class
+END
+Ridor$Antd.class
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/Ridor$Antd.class
+END
+ConjunctiveRule$Antd.class
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/ConjunctiveRule$Antd.class
+END
+DTNB$BackwardsWithDelete.class
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/DTNB$BackwardsWithDelete.class
+END
+JRip$NominalAntd.class
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/classifiers/rules/JRip$NominalAntd.class
+END

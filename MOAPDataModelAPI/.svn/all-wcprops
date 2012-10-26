@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/kdd/!svn/ver/300/moap/MOAPDataModelAPI
+END
+manifest.mf
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/kdd/!svn/ver/252/moap/MOAPDataModelAPI/manifest.mf
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/kdd/!svn/ver/252/moap/MOAPDataModelAPI/build.xml
+END

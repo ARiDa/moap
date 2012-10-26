@@ -1,0 +1,25 @@
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+
+communityView.Action.shortDescription=
+communityView.Action.text=
+networkView.Action.text=
+networkView.Action.shortDescription=
+networkFrame.Action.text=
+networkFrame.Action.shortDescription=
+communityDetection.Action.shortDescription=
+communityDetection.Action.text=
+communityDetectionAction.Action.text=
+communityDetectionAction.Action.shortDescription=
+networkManagerAction.Action.text=
+networkManagerAction.Action.shortDescription=
+poiNetworkBuilderAction.Action.text=
+poiNetworkBuilderAction.Action.shortDescription=
+communityViewAction.Action.shortDescription=
+communityViewAction.Action.text=
+trajectoryNetworkBuilderAction.Action.text=
+trajectoryNetworkBuilderAction.Action.shortDescription=
+trajectoryViewAction.Action.text=
+trajectoryViewAction.Action.shortDescription=
+aboutAction.Action.shortDescription=
+aboutAction.Action.text=

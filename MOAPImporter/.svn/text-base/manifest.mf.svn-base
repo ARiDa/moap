@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+OpenIDE-Module: arida.ufc.br.moap.importer
+OpenIDE-Module-Localizing-Bundle: arida/ufc/br/moap/importer/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+

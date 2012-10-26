@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/kdtrees
+END
+MedianOfWidestDimension.class
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/kdtrees/MedianOfWidestDimension.class
+END
+KMeansInpiredMethod.class
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/kdtrees/KMeansInpiredMethod.class
+END
+KDTreeNodeSplitter.class
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/kdtrees/KDTreeNodeSplitter.class
+END
+MidPointOfWidestDimension.class
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/kdtrees/MidPointOfWidestDimension.class
+END
+KDTreeNode.class
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/kdtrees/KDTreeNode.class
+END
+SlidingMidPointOfWidestSide.class
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/kdtrees/SlidingMidPointOfWidestSide.class
+END

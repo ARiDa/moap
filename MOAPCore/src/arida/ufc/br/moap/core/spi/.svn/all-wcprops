@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/kdd/!svn/ver/295/moap/MOAPCore/src/arida/ufc/br/moap/core/spi
+END
+IAnnotable.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/kdd/!svn/ver/213/moap/MOAPCore/src/arida/ufc/br/moap/core/spi/IAnnotable.java
+END
+ISpatialFeature.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/kdd/!svn/ver/213/moap/MOAPCore/src/arida/ufc/br/moap/core/spi/ISpatialFeature.java
+END
+IDataModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/kdd/!svn/ver/295/moap/MOAPCore/src/arida/ufc/br/moap/core/spi/IDataModel.java
+END
+ITemporalFeature.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/kdd/!svn/ver/213/moap/MOAPCore/src/arida/ufc/br/moap/core/spi/ITemporalFeature.java
+END

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/kdd/!svn/ver/282/moap/GPX4jWrapper/release/modules/ext
+END
+jdom.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/kdd/!svn/ver/282/moap/GPX4jWrapper/release/modules/ext/jdom.jar
+END
+jaxb-api.jar
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/kdd/!svn/ver/282/moap/GPX4jWrapper/release/modules/ext/jaxb-api.jar
+END
+log4j-1.2.16.jar
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/kdd/!svn/ver/282/moap/GPX4jWrapper/release/modules/ext/log4j-1.2.16.jar
+END
+jaxb-impl.jar
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/kdd/!svn/ver/282/moap/GPX4jWrapper/release/modules/ext/jaxb-impl.jar
+END
+libgpx4j.jar
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/kdd/!svn/ver/282/moap/GPX4jWrapper/release/modules/ext/libgpx4j.jar
+END

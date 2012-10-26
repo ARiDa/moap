@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/kdd/!svn/ver/312/moap/build/cluster/modules/ext
+END
+joda-time-2.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/kdd/!svn/ver/308/moap/build/cluster/modules/ext/joda-time-2.1.jar
+END
+jdom.jar
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/kdd/!svn/ver/302/moap/build/cluster/modules/ext/jdom.jar
+END
+super-csv-2.0.0-beta-1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/kdd/!svn/ver/308/moap/build/cluster/modules/ext/super-csv-2.0.0-beta-1.jar
+END
+org-openide-util-lookup.jar
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/kdd/!svn/ver/308/moap/build/cluster/modules/ext/org-openide-util-lookup.jar
+END
+postgis-2.0.0SVN.jar
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/kdd/!svn/ver/308/moap/build/cluster/modules/ext/postgis-2.0.0SVN.jar
+END
+super-csv-2.0.0-beta-1-sources.jar
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/kdd/!svn/ver/308/moap/build/cluster/modules/ext/super-csv-2.0.0-beta-1-sources.jar
+END
+jaxb-api.jar
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/kdd/!svn/ver/302/moap/build/cluster/modules/ext/jaxb-api.jar
+END
+junit-4.5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/kdd/!svn/ver/308/moap/build/cluster/modules/ext/junit-4.5.jar
+END
+super-csv-2.0.0-beta-1-javadoc.jar
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/kdd/!svn/ver/308/moap/build/cluster/modules/ext/super-csv-2.0.0-beta-1-javadoc.jar
+END
+log4j-1.2.16.jar
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/kdd/!svn/ver/308/moap/build/cluster/modules/ext/log4j-1.2.16.jar
+END
+postgresql-9.0-801.jdbc4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/kdd/!svn/ver/308/moap/build/cluster/modules/ext/postgresql-9.0-801.jdbc4.jar
+END
+jaxb-impl.jar
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/kdd/!svn/ver/302/moap/build/cluster/modules/ext/jaxb-impl.jar
+END
+org-openide-util.jar
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/kdd/!svn/ver/308/moap/build/cluster/modules/ext/org-openide-util.jar
+END

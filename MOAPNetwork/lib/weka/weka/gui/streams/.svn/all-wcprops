@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/streams
+END
+InstanceTable$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/streams/InstanceTable$1.class
+END
+InstanceSavePanel.class
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/streams/InstanceSavePanel.class
+END
+InstanceCounter.class
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/streams/InstanceCounter.class
+END
+InstanceEvent.class
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/streams/InstanceEvent.class
+END
+InstanceViewer.class
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/streams/InstanceViewer.class
+END
+InstanceLoader$LoadThread.class
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/streams/InstanceLoader$LoadThread.class
+END
+InstanceProducer.class
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/streams/InstanceProducer.class
+END
+InstanceListener.class
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/streams/InstanceListener.class
+END
+SerialInstanceListener.class
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/streams/SerialInstanceListener.class
+END
+InstanceJoiner.class
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/streams/InstanceJoiner.class
+END
+InstanceLoader.class
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/streams/InstanceLoader.class
+END
+InstanceTable.class
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/streams/InstanceTable.class
+END

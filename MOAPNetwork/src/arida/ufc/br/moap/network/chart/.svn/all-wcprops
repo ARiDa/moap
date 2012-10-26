@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/kdd/!svn/ver/228/moap/MOAPNetwork/src/arida/ufc/br/moap/network/chart
+END
+TimeSeriesChart.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/src/arida/ufc/br/moap/network/chart/TimeSeriesChart.java
+END
+CumulativeDistribution.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/src/arida/ufc/br/moap/network/chart/CumulativeDistribution.java
+END
+ChartLayout.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/kdd/!svn/ver/228/moap/MOAPNetwork/src/arida/ufc/br/moap/network/chart/ChartLayout.java
+END
+HistogramChart.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/src/arida/ufc/br/moap/network/chart/HistogramChart.java
+END
+VectorChart.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/src/arida/ufc/br/moap/network/chart/VectorChart.java
+END
+BarChart.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/src/arida/ufc/br/moap/network/chart/BarChart.java
+END
+ScatterChart.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/src/arida/ufc/br/moap/network/chart/ScatterChart.java
+END
+XYBarChart.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/src/arida/ufc/br/moap/network/chart/XYBarChart.java
+END

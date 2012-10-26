@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/kdd/!svn/ver/295/moap/MOAPCore/src/arida/ufc/br/moap/core/algorithm/spi
+END
+IAlgorithmBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/kdd/!svn/ver/250/moap/MOAPCore/src/arida/ufc/br/moap/core/algorithm/spi/IAlgorithmBuilder.java
+END
+ITrajectoryFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/kdd/!svn/ver/295/moap/MOAPCore/src/arida/ufc/br/moap/core/algorithm/spi/ITrajectoryFactory.java
+END
+AbstractAlgorithm.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/kdd/!svn/ver/295/moap/MOAPCore/src/arida/ufc/br/moap/core/algorithm/spi/AbstractAlgorithm.java
+END

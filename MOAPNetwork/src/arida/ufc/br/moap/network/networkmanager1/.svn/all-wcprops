@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/src/arida/ufc/br/moap/network/networkmanager1
+END
+EdgeProperty.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/src/arida/ufc/br/moap/network/networkmanager1/EdgeProperty.java
+END
+NodeProperty.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/src/arida/ufc/br/moap/network/networkmanager1/NodeProperty.java
+END
+NetworkPropertyInterface.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/src/arida/ufc/br/moap/network/networkmanager1/NetworkPropertyInterface.java
+END
+database.properties
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/src/arida/ufc/br/moap/network/networkmanager1/database.properties
+END
+Bundle.properties
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/src/arida/ufc/br/moap/network/networkmanager1/Bundle.properties
+END
+NetworkReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/src/arida/ufc/br/moap/network/networkmanager1/NetworkReport.java
+END

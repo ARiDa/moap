@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/kdd/!svn/ver/213/moap/MOAPDBPostgres/src/arida/ufc/br/moap/db/postgres/types
+END
+PostgisProperties.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/kdd/!svn/ver/213/moap/MOAPDBPostgres/src/arida/ufc/br/moap/db/postgres/types/PostgisProperties.java
+END
+TypeConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/kdd/!svn/ver/213/moap/MOAPDBPostgres/src/arida/ufc/br/moap/db/postgres/types/TypeConverter.java
+END

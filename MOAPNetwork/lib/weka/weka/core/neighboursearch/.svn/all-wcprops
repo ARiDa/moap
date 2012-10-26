@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch
+END
+KDTree.class
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/KDTree.class
+END
+PerformanceStats.class
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/PerformanceStats.class
+END
+CoverTree$MyHeapElement.class
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/CoverTree$MyHeapElement.class
+END
+NearestNeighbourSearch$NeighborNode.class
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/NearestNeighbourSearch$NeighborNode.class
+END
+CoverTree$DistanceNode.class
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/CoverTree$DistanceNode.class
+END
+CoverTree$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/CoverTree$1.class
+END
+CoverTree$CoverTreeNode.class
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/CoverTree$CoverTreeNode.class
+END
+NearestNeighbourSearch.class
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/NearestNeighbourSearch.class
+END
+BallTree.class
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/BallTree.class
+END
+LinearNNSearch.class
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/LinearNNSearch.class
+END
+CoverTree.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/CoverTree.class
+END
+TreePerformanceStats.class
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/TreePerformanceStats.class
+END
+NearestNeighbourSearch$MyHeap.class
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/NearestNeighbourSearch$MyHeap.class
+END
+CoverTree$MyHeap.class
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/CoverTree$MyHeap.class
+END
+NearestNeighbourSearch$NeighborList.class
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/NearestNeighbourSearch$NeighborList.class
+END
+CoverTree$d_node.class
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/CoverTree$d_node.class
+END
+NearestNeighbourSearch$MyHeapElement.class
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/NearestNeighbourSearch$MyHeapElement.class
+END

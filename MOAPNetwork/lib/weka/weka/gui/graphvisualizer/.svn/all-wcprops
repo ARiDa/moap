@@ -1,0 +1,161 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/graphvisualizer
+END
+GraphVisualizer.class
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/graphvisualizer/GraphVisualizer.class
+END
+HierarchicalBCEngine$MyList.class
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/graphvisualizer/HierarchicalBCEngine$MyList.class
+END
+GraphVisualizer$GraphPanel.class
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/graphvisualizer/GraphVisualizer$GraphPanel.class
+END
+HierarchicalBCEngine$MyListNode.class
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/graphvisualizer/HierarchicalBCEngine$MyListNode.class
+END
+GraphEdge.class
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/graphvisualizer/GraphEdge.class
+END
+GraphVisualizer$GraphVisualizerMouseMotionListener.class
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/graphvisualizer/GraphVisualizer$GraphVisualizerMouseMotionListener.class
+END
+BIFFormatException.class
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/graphvisualizer/BIFFormatException.class
+END
+GraphConstants.class
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/graphvisualizer/GraphConstants.class
+END
+HierarchicalBCEngine$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/graphvisualizer/HierarchicalBCEngine$1.class
+END
+HierarchicalBCEngine$2.class
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/graphvisualizer/HierarchicalBCEngine$2.class
+END
+GraphVisualizer$GraphVisualizerMouseListener.class
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/graphvisualizer/GraphVisualizer$GraphVisualizerMouseListener.class
+END
+DotParser.class
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/graphvisualizer/DotParser.class
+END
+LayoutEngine.class
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/graphvisualizer/LayoutEngine.class
+END
+GraphVisualizer$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/graphvisualizer/GraphVisualizer$1.class
+END
+GraphVisualizer$2.class
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/graphvisualizer/GraphVisualizer$2.class
+END
+GraphVisualizer$3.class
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/graphvisualizer/GraphVisualizer$3.class
+END
+GraphVisualizer$4.class
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/graphvisualizer/GraphVisualizer$4.class
+END
+GraphNode.class
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/graphvisualizer/GraphNode.class
+END
+GraphVisualizer$5.class
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/graphvisualizer/GraphVisualizer$5.class
+END
+LayoutCompleteEvent.class
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/graphvisualizer/LayoutCompleteEvent.class
+END
+GraphVisualizer$6.class
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/graphvisualizer/GraphVisualizer$6.class
+END
+HierarchicalBCEngine.class
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/graphvisualizer/HierarchicalBCEngine.class
+END
+GraphVisualizer$7.class
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/graphvisualizer/GraphVisualizer$7.class
+END
+GraphVisualizer$GraphVisualizerTableModel.class
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/graphvisualizer/GraphVisualizer$GraphVisualizerTableModel.class
+END
+BIFParser.class
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/graphvisualizer/BIFParser.class
+END
+LayoutCompleteEventListener.class
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/graphvisualizer/LayoutCompleteEventListener.class
+END

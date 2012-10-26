@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/balltrees
+END
+MedianDistanceFromArbitraryPoint.class
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/balltrees/MedianDistanceFromArbitraryPoint.class
+END
+MiddleOutConstructor$MyIdxList.class
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/balltrees/MiddleOutConstructor$MyIdxList.class
+END
+MedianOfWidestDimension.class
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/balltrees/MedianOfWidestDimension.class
+END
+PointsClosestToFurthestChildren.class
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/balltrees/PointsClosestToFurthestChildren.class
+END
+MiddleOutConstructor$TempNode.class
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/balltrees/MiddleOutConstructor$TempNode.class
+END
+MiddleOutConstructor.class
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/balltrees/MiddleOutConstructor.class
+END
+BottomUpConstructor$TempNode.class
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/balltrees/BottomUpConstructor$TempNode.class
+END
+BottomUpConstructor.class
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/balltrees/BottomUpConstructor.class
+END
+BallNode.class
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/balltrees/BallNode.class
+END
+BallTreeConstructor.class
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/balltrees/BallTreeConstructor.class
+END
+TopDownConstructor.class
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/balltrees/TopDownConstructor.class
+END
+BallSplitter.class
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/balltrees/BallSplitter.class
+END
+MiddleOutConstructor$ListNode.class
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/neighboursearch/balltrees/MiddleOutConstructor$ListNode.class
+END

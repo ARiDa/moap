@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/sql/event
+END
+QueryExecuteEvent.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/sql/event/QueryExecuteEvent.class
+END
+ResultChangedEvent.class
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/sql/event/ResultChangedEvent.class
+END
+HistoryChangedEvent.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/sql/event/HistoryChangedEvent.class
+END
+QueryExecuteListener.class
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/sql/event/QueryExecuteListener.class
+END
+ResultChangedListener.class
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/sql/event/ResultChangedListener.class
+END
+ConnectionEvent.class
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/sql/event/ConnectionEvent.class
+END
+HistoryChangedListener.class
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/sql/event/HistoryChangedListener.class
+END
+ConnectionListener.class
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/gui/sql/event/ConnectionListener.class
+END

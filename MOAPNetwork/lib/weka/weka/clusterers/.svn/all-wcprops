@@ -1,0 +1,203 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers
+END
+UpdateableClusterer.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/UpdateableClusterer.class
+END
+RandomizableDensityBasedClusterer.class
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/RandomizableDensityBasedClusterer.class
+END
+NumberOfClustersRequestable.class
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/NumberOfClustersRequestable.class
+END
+sIB$Input.class
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/sIB$Input.class
+END
+EM.class
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/EM.class
+END
+sIB$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/sIB$1.class
+END
+CLOPE.class
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/CLOPE.class
+END
+MakeDensityBasedClusterer.class
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/MakeDensityBasedClusterer.class
+END
+RandomizableSingleClustererEnhancer.class
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/RandomizableSingleClustererEnhancer.class
+END
+DensityBasedClusterer.class
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/DensityBasedClusterer.class
+END
+ClusterEvaluation.class
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/ClusterEvaluation.class
+END
+sIB$Partition.class
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/sIB$Partition.class
+END
+SingleClustererEnhancer.class
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/SingleClustererEnhancer.class
+END
+Cobweb$CNode.class
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/Cobweb$CNode.class
+END
+HierarchicalClusterer$Node.class
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/HierarchicalClusterer$Node.class
+END
+CLOPE$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/CLOPE$1.class
+END
+FarthestFirst.class
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/FarthestFirst.class
+END
+DBScan.class
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/DBScan.class
+END
+AbstractDensityBasedClusterer.class
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/AbstractDensityBasedClusterer.class
+END
+RandomizableClusterer.class
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/RandomizableClusterer.class
+END
+OPTICS.class
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/OPTICS.class
+END
+Cobweb.class
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/Cobweb.class
+END
+CheckClusterer.class
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/CheckClusterer.class
+END
+HierarchicalClusterer.class
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/HierarchicalClusterer.class
+END
+Clusterer.class
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/Clusterer.class
+END
+HierarchicalClusterer$TupleComparator.class
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/HierarchicalClusterer$TupleComparator.class
+END
+sIB.class
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/sIB.class
+END
+HierarchicalClusterer$Tuple.class
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/HierarchicalClusterer$Tuple.class
+END
+FilteredClusterer.class
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/FilteredClusterer.class
+END
+SimpleKMeans.class
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/SimpleKMeans.class
+END
+XMeans.class
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/XMeans.class
+END
+CLOPE$CLOPECluster.class
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/CLOPE$CLOPECluster.class
+END
+AbstractClusterer.class
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/clusterers/AbstractClusterer.class
+END

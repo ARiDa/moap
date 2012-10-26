@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/logging
+END
+Logger$Level.class
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/logging/Logger$Level.class
+END
+OutputLogger$OutputPrintStream.class
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/logging/OutputLogger$OutputPrintStream.class
+END
+FileLogger.class
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/logging/FileLogger.class
+END
+Logger.class
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/logging/Logger.class
+END
+OutputLogger.class
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/logging/OutputLogger.class
+END
+ConsoleLogger.class
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/logging/ConsoleLogger.class
+END
+Logging.props
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/logging/Logging.props
+END

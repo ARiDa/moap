@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/kdd/!svn/ver/312/moap/build/cluster/modules
+END
+arida-ufc-br-moap-core.jar
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/kdd/!svn/ver/311/moap/build/cluster/modules/arida-ufc-br-moap-core.jar
+END
+arida-ufc-br-moap-db-postgres.jar
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/kdd/!svn/ver/311/moap/build/cluster/modules/arida-ufc-br-moap-db-postgres.jar
+END
+arida-ufc-br-moap-datamodel.jar
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/kdd/!svn/ver/311/moap/build/cluster/modules/arida-ufc-br-moap-datamodel.jar
+END
+arida-ufc-br-moap-distance.jar
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/kdd/!svn/ver/311/moap/build/cluster/modules/arida-ufc-br-moap-distance.jar
+END
+arida-ufc-br-moap-ext-gpx4j.jar
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/kdd/!svn/ver/311/moap/build/cluster/modules/arida-ufc-br-moap-ext-gpx4j.jar
+END
+org-supercsv.jar
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/kdd/!svn/ver/312/moap/build/cluster/modules/org-supercsv.jar
+END
+arida-ufc-br-libs.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/kdd/!svn/ver/311/moap/build/cluster/modules/arida-ufc-br-libs.jar
+END
+arida-ufc-br-moap-clustering.jar
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/kdd/!svn/ver/311/moap/build/cluster/modules/arida-ufc-br-moap-clustering.jar
+END
+arida-ufc-br-moap-importer.jar
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/kdd/!svn/ver/311/moap/build/cluster/modules/arida-ufc-br-moap-importer.jar
+END
+arida-ufc-br-moap-datamodelapi.jar
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/kdd/!svn/ver/311/moap/build/cluster/modules/arida-ufc-br-moap-datamodelapi.jar
+END
+arida-ufc-br-moap-stop.jar
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/kdd/!svn/ver/311/moap/build/cluster/modules/arida-ufc-br-moap-stop.jar
+END

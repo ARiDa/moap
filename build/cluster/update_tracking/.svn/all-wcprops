@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/kdd/!svn/ver/312/moap/build/cluster/update_tracking
+END
+arida-ufc-br-moap-datamodelapi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/kdd/!svn/ver/311/moap/build/cluster/update_tracking/arida-ufc-br-moap-datamodelapi.xml
+END
+arida-ufc-br-moap-stop.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/kdd/!svn/ver/311/moap/build/cluster/update_tracking/arida-ufc-br-moap-stop.xml
+END
+arida-ufc-br-moap-core.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/kdd/!svn/ver/311/moap/build/cluster/update_tracking/arida-ufc-br-moap-core.xml
+END
+arida-ufc-br-moap-db-postgres.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/kdd/!svn/ver/311/moap/build/cluster/update_tracking/arida-ufc-br-moap-db-postgres.xml
+END
+arida-ufc-br-moap-datamodel.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/kdd/!svn/ver/311/moap/build/cluster/update_tracking/arida-ufc-br-moap-datamodel.xml
+END
+arida-ufc-br-moap-distance.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/kdd/!svn/ver/311/moap/build/cluster/update_tracking/arida-ufc-br-moap-distance.xml
+END
+arida-ufc-br-moap-ext-gpx4j.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/kdd/!svn/ver/311/moap/build/cluster/update_tracking/arida-ufc-br-moap-ext-gpx4j.xml
+END
+org-supercsv.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/kdd/!svn/ver/312/moap/build/cluster/update_tracking/org-supercsv.xml
+END
+arida-ufc-br-libs.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/kdd/!svn/ver/311/moap/build/cluster/update_tracking/arida-ufc-br-libs.xml
+END
+arida-ufc-br-moap-clustering.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/311/moap/build/cluster/update_tracking/arida-ufc-br-moap-clustering.xml
+END
+arida-ufc-br-moap-importer.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/kdd/!svn/ver/311/moap/build/cluster/update_tracking/arida-ufc-br-moap-importer.xml
+END

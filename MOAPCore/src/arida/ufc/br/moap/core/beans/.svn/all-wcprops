@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/kdd/!svn/ver/295/moap/MOAPCore/src/arida/ufc/br/moap/core/beans
+END
+LatLonPoint.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/kdd/!svn/ver/274/moap/MOAPCore/src/arida/ufc/br/moap/core/beans/LatLonPoint.java
+END
+Interval.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/kdd/!svn/ver/228/moap/MOAPCore/src/arida/ufc/br/moap/core/beans/Interval.java
+END
+TrajectoryFactoryImp.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/kdd/!svn/ver/295/moap/MOAPCore/src/arida/ufc/br/moap/core/beans/TrajectoryFactoryImp.java
+END
+MovingObject.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/kdd/!svn/ver/295/moap/MOAPCore/src/arida/ufc/br/moap/core/beans/MovingObject.java
+END
+Trajectory.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/kdd/!svn/ver/295/moap/MOAPCore/src/arida/ufc/br/moap/core/beans/Trajectory.java
+END
+Poi.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/kdd/!svn/ver/237/moap/MOAPCore/src/arida/ufc/br/moap/core/beans/Poi.java
+END
+Annotation.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/kdd/!svn/ver/295/moap/MOAPCore/src/arida/ufc/br/moap/core/beans/Annotation.java
+END
+Pair.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/kdd/!svn/ver/213/moap/MOAPCore/src/arida/ufc/br/moap/core/beans/Pair.java
+END
+AnnotationType.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/kdd/!svn/ver/295/moap/MOAPCore/src/arida/ufc/br/moap/core/beans/AnnotationType.java
+END
+Annotations.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/kdd/!svn/ver/295/moap/MOAPCore/src/arida/ufc/br/moap/core/beans/Annotations.java
+END
+Linestring.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/kdd/!svn/ver/213/moap/MOAPCore/src/arida/ufc/br/moap/core/beans/Linestring.java
+END

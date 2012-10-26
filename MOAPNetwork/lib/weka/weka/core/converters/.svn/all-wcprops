@@ -1,0 +1,203 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/converters
+END
+C45Loader.class
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/converters/C45Loader.class
+END
+LibSVMLoader.class
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/converters/LibSVMLoader.class
+END
+SVMLightLoader.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/converters/SVMLightLoader.class
+END
+DatabaseConnection.class
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/converters/DatabaseConnection.class
+END
+IncrementalConverter.class
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/converters/IncrementalConverter.class
+END
+AbstractFileLoader.class
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/converters/AbstractFileLoader.class
+END
+AbstractLoader.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/converters/AbstractLoader.class
+END
+ArffLoader$ArffReader.class
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/converters/ArffLoader$ArffReader.class
+END
+DatabaseConverter.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/converters/DatabaseConverter.class
+END
+FileSourcedConverter.class
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/converters/FileSourcedConverter.class
+END
+C45Saver.class
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/converters/C45Saver.class
+END
+SVMLightSaver.class
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/converters/SVMLightSaver.class
+END
+TextDirectoryLoader.class
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/converters/TextDirectoryLoader.class
+END
+AbstractFileSaver.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/converters/AbstractFileSaver.class
+END
+AbstractSaver.class
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/converters/AbstractSaver.class
+END
+DatabaseSaver.class
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/converters/DatabaseSaver.class
+END
+ArffLoader.class
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/converters/ArffLoader.class
+END
+ConverterUtils$DataSource.class
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/converters/ConverterUtils$DataSource.class
+END
+URLSourcedLoader.class
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/converters/URLSourcedLoader.class
+END
+CSVLoader.class
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/converters/CSVLoader.class
+END
+ConverterUtils.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/converters/ConverterUtils.class
+END
+SerializedInstancesLoader.class
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/converters/SerializedInstancesLoader.class
+END
+DatabaseLoader.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/converters/DatabaseLoader.class
+END
+XRFFLoader.class
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/converters/XRFFLoader.class
+END
+CSVSaver.class
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/converters/CSVSaver.class
+END
+LibSVMSaver.class
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/converters/LibSVMSaver.class
+END
+SerializedInstancesSaver.class
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/converters/SerializedInstancesSaver.class
+END
+Loader.class
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/converters/Loader.class
+END
+XRFFSaver.class
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/converters/XRFFSaver.class
+END
+BatchConverter.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/converters/BatchConverter.class
+END
+ConverterUtils$DataSink.class
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/converters/ConverterUtils$DataSink.class
+END
+ArffSaver.class
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/converters/ArffSaver.class
+END
+Saver.class
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/kdd/!svn/ver/213/moap/MOAPNetwork/lib/weka/weka/core/converters/Saver.class
+END
