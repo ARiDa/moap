@@ -1,5 +1,0 @@
-Manifest-Version: 1.0
-OpenIDE-Module: arida.ufc.br.moap.ext.gpx4j
-OpenIDE-Module-Localizing-Bundle: arida/ufc/br/moap/ext/gpx4j/Bundle.properties
-OpenIDE-Module-Specification-Version: 1.0
-
