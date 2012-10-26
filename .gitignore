@@ -1,0 +1,7 @@
+/MOAPClustering/build/
+/MOAPDBPostgres/build/
+/MOAPDataModel/build/
+/SuperCSVWrapper/build/
+/SuperCSVWrapper/nbproject/private/
+/MOAPImporter/nbproject/private/
+/org.supercsv/build/
