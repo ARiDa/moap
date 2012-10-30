@@ -11,18 +11,18 @@ import arida.ufc.br.moap.core.spi.IAnnotable;
  *
  * @author igobrilhante
  */
-public class TrajectoryFactoryImp<S,T>  implements ITrajectoryFactory {
+public class TrajectoryFactoryImp<S extends IAnnotable,T>  implements ITrajectoryFactory {
 
    
     
     @Override
-    public Trajectory<S,T>  newTrajectory(String id, MovingObject mo) {
-        return new Trajectory(id, mo);
+    public Trajectory<S,T>  newTrajectory(String id) {
+        return new Trajectory(id);
         
     }
 
     @Override
-    public MovingObject newMovingObject(String id) {
+    public MovingObject<S,T> newMovingObject(String id) {
         return new MovingObject(id);
     }
     

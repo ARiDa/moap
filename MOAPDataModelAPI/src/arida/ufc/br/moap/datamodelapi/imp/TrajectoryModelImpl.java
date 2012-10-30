@@ -5,9 +5,11 @@ import arida.ufc.br.moap.core.beans.MovingObject;
 import arida.ufc.br.moap.core.beans.Trajectory;
 import arida.ufc.br.moap.core.beans.TrajectoryFactoryImp;
 import arida.ufc.br.moap.datamodelapi.spi.ITrajectoryModel;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 
 /**
  * ITrajectoryModel implementation.
@@ -15,20 +17,26 @@ import java.util.HashSet;
  * @author franzejr
  * @author rafaelelias
  */
-public class TrajectoryModelImpl implements ITrajectoryModel{
+public class TrajectoryModelImpl<S,T> implements ITrajectoryModel{
     /*
      * List of all trajectories. Remembering that a trajectory
      * is a set of points which each point has a Latitude,Longitude
      * and one Timestamp.
      */
+    
+    /*
+     *Identify a trajectory 
+     */
+    private HashMap<String,Trajectory<S,T>> trajectoryIndices = new HashMap<String, Trajectory<S,T>>();
+    /*
+     * Identify Moving Objects
+     */
     private HashMap<String,MovingObject> movingObjectIndices = new HashMap<String, MovingObject>();
-    private ITrajectoryFactory factory = new TrajectoryFactoryImp();
+    /*
+     * Build a trajectory for a model
+     */
+    private ITrajectoryFactory<S,T> factory = new TrajectoryFactoryImp<S,T>();
 
-
-//    @Override
-//    public void addTrajectory(List<Trajectory> trajectory) {
-//        trajectory.addAll(trajectory);
-//    }
 
     @Override
     public Trajectory getTrajectory(int id) {
@@ -36,12 +44,8 @@ public class TrajectoryModelImpl implements ITrajectoryModel{
     }
     
     @Override
-    public Collection<Trajectory> getTrajectories() {
-        Collection<Trajectory> trajectorySet = new HashSet<Trajectory>();
-        for(MovingObject mo : movingObjectIndices.values()){
-            trajectorySet.addAll(mo.getTrajectories());
-        }
-        return trajectorySet;
+    public Collection<Trajectory<S,T>> getTrajectories() {
+            return this.trajectoryIndices.values();
     }
 
     @Override
@@ -50,11 +54,6 @@ public class TrajectoryModelImpl implements ITrajectoryModel{
         
     }
 
-//    @Override
-//    public void setMovingObject(String trajectoryId) {
-//        this.trajectoryIndices.get(trajectoryId).setMovingObject(trajectoryId);
-//    }
-
     @Override
     public MovingObject getMovingObject(String id) {
         return this.movingObjectIndices.get(id);
@@ -62,11 +61,7 @@ public class TrajectoryModelImpl implements ITrajectoryModel{
 
     @Override
     public int getTrajectoryCount() {
-        int count = 0;
-        for(MovingObject mo : movingObjectIndices.values()){
-            count += mo.getTrajectoryCount();
-        }
-        return count;
+        return this.trajectoryIndices.values().size();
     }
 
     @Override
@@ -75,8 +70,8 @@ public class TrajectoryModelImpl implements ITrajectoryModel{
     }
 
     @Override
-    public void addTrajectory(Trajectory trajectory) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void addTrajectory(String id,Trajectory trajectory) {
+        this.trajectoryIndices.put(id, trajectory);
     }
     
     @Override
@@ -97,6 +92,23 @@ public class TrajectoryModelImpl implements ITrajectoryModel{
     @Override
     public Collection<MovingObject> getMovingObjects() {
         return this.movingObjectIndices.values();
+    }
+
+    @Override
+    public Collection getTrajectories(MovingObject mo) {
+        List<Trajectory> list = new ArrayList<Trajectory>();
+        for(Trajectory traj : this.trajectoryIndices.values()){
+            if(traj.getMovingObject().equals(mo)){
+                list.add(traj);
+            }
+        }
+        return list;
+    }
+
+    @Override
+    public Collection getTrajectories(String moId) {
+        MovingObject mo = this.movingObjectIndices.get(moId);
+        return getTrajectories(mo);
     }
 
     

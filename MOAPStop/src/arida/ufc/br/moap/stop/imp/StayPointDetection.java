@@ -115,10 +115,11 @@ public class StayPointDetection extends IStopAlgorithm {
     private void stayingPointDetection(Trajectory trajectory, IDistanceFunction distanceFunction, double spatialThreshold, double temporalThreshold) {
         //report.setReport("Starting the stayingPointDetection method");    
         int pointNum = trajectory.getPointCount();
-        String movingObjectId = trajectory.getMovingObject();
+        MovingObject movingObjectId = trajectory.getMovingObject();
         Trajectory new_trajectory = this.result.factory().newTrajectory(trajectory.getId());
         
-        this.result.getMovingObject(movingObjectId).addTrajectory(new_trajectory);
+        this.result.getMovingObject(movingObjectId.getId()).addTrajectory(new_trajectory);
+      
         LatLonPoint point_i, point_j;
         DateTime time_i, time_j;
         int i = 0, j = 0;

@@ -10,7 +10,7 @@ import java.util.List;
  * @param <S>
  * @param <T>
  */
-public class Trajectory<S extends IAnnotable, T> implements IAnnotable {
+public class Trajectory<S,T> implements IAnnotable {
 
     private MovingObject movingObject;
     private String id;
@@ -20,7 +20,9 @@ public class Trajectory<S extends IAnnotable, T> implements IAnnotable {
 
     /**
      * @param id
+     * 
      */
+    @Deprecated 
     public Trajectory(String id) {
         this.id = id;
         this.points = new ArrayList<S>();
