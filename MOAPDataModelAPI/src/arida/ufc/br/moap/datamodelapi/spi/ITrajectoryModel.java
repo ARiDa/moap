@@ -4,8 +4,11 @@ import arida.ufc.br.moap.core.algorithm.spi.ITrajectoryFactory;
 import arida.ufc.br.moap.core.beans.MovingObject;
 import arida.ufc.br.moap.core.beans.Trajectory;
 import arida.ufc.br.moap.core.beans.TrajectoryFactoryImp;
+import arida.ufc.br.moap.core.beans.iterators.api.IMovingObjectIterable;
 import arida.ufc.br.moap.core.spi.IAnnotable;
 import arida.ufc.br.moap.core.spi.IDataModel;
+import arida.ufc.br.moap.core.beans.iterators.api.ITrajectoryIterable;
+import arida.ufc.br.moap.core.beans.iterators.api.ITrajectoryIterator;
 import java.util.Collection;
 import java.util.List;
 
@@ -47,9 +50,9 @@ public interface ITrajectoryModel<S,T> extends IDataModel {
     /*
      * @return List of All trajectories
      */
-    public Collection<Trajectory<S,T>> getTrajectories();
+    public ITrajectoryIterable getTrajectories();
     
-    public Collection<MovingObject> getMovingObjects();
+    public IMovingObjectIterable getMovingObjects();
     /*
      * Add a moving object
      */

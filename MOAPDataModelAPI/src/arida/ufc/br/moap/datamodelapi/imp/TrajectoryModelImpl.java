@@ -4,6 +4,11 @@ import arida.ufc.br.moap.core.algorithm.spi.ITrajectoryFactory;
 import arida.ufc.br.moap.core.beans.MovingObject;
 import arida.ufc.br.moap.core.beans.Trajectory;
 import arida.ufc.br.moap.core.beans.TrajectoryFactoryImp;
+import arida.ufc.br.moap.core.beans.iterators.api.IMovingObjectIterable;
+import arida.ufc.br.moap.core.beans.iterators.api.ITrajectoryIterable;
+import arida.ufc.br.moap.core.beans.iterators.api.ITrajectoryIterator;
+import arida.ufc.br.moap.core.beans.iterators.imp.MovingObjectIterableImp;
+import arida.ufc.br.moap.core.beans.iterators.imp.TrajectoryIterableImp;
 import arida.ufc.br.moap.datamodelapi.spi.ITrajectoryModel;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -28,6 +33,7 @@ public class TrajectoryModelImpl<S, T> implements ITrajectoryModel {
     /*
      * Trajectory List
      */
+
     private List<Trajectory<S, T>> trajectories = new ArrayList<Trajectory<S, T>>();
     /*
      *Identify a trajectory 
@@ -45,68 +51,74 @@ public class TrajectoryModelImpl<S, T> implements ITrajectoryModel {
      * Build a trajectory for a model
      */
     private ITrajectoryFactory<S, T> factory = new TrajectoryFactoryImp<S, T>();
-    
+
     @Override
     public Trajectory<S, T> getTrajectory(int id) {
         return trajectories.get(id);
     }
-    
+
     @Override
-    public Collection<Trajectory<S, T>> getTrajectories() {
-        return this.trajectories;
+    public ITrajectoryIterable getTrajectories() {
+
+        ITrajectoryIterable iterable = new TrajectoryIterableImp(trajectories);
+        return iterable;
     }
-    
+
     @Override
     public void addMovingObject(MovingObject mo) {
-        this.movingObjects.add(mo);
-        this.movingObjectIndices.put(mo.getId(), mo);
-        
+        if (!this.movingObjectIndices.containsKey(mo.getId())) {
+            this.movingObjects.add(mo);
+            this.movingObjectIndices.put(mo.getId(), mo);
+        }
     }
-    
+
     @Override
     public MovingObject getMovingObject(String id) {
         return this.movingObjectIndices.get(id);
     }
-    
+
     @Override
     public int getTrajectoryCount() {
         return this.trajectories.size();
     }
-    
+
     @Override
     public int getMovingObjectCount() {
         return this.movingObjects.size();
     }
-    
+
     @Override
     public void addTrajectory(Trajectory trajectory) {
-        this.trajectories.add(trajectory);
-        this.trajectoryIndices.put(trajectory.getId(), trajectory);
+        if (!this.trajectoryIndices.containsKey(trajectory.getId())) {
+            this.trajectories.add(trajectory);
+            this.trajectoryIndices.put(trajectory.getId(), trajectory);
+            addMovingObject(trajectory.getMovingObject());
+        }
     }
-    
+
     @Override
     public String toString() {
         return "";
     }
-    
+
     @Override
     public ITrajectoryFactory factory() {
         return this.factory;
     }
-    
+
     @Override
     public MovingObject getMovingObject(int idx) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
-    
+
     @Override
-    public Collection<MovingObject> getMovingObjects() {
-        return this.getMovingObjects();
+    public IMovingObjectIterable getMovingObjects() {
+        return new MovingObjectIterableImp(movingObjects);
     }
-    
+
     @Override
-    public Collection<Trajectory<S,T>> getTrajectories(MovingObject mo) {
-        List<Trajectory<S,T>> list = new ArrayList<Trajectory<S,T>>();
+    public Collection<Trajectory<S, T>> getTrajectories(MovingObject mo) {
+        List<Trajectory<S, T>> list = new ArrayList<Trajectory<S, T>>();
         for (Trajectory traj : this.trajectoryIndices.values()) {
             if (traj.getMovingObject().equals(mo)) {
                 list.add(traj);
@@ -114,46 +126,54 @@ public class TrajectoryModelImpl<S, T> implements ITrajectoryModel {
         }
         return list;
     }
-    
+
     @Override
-    public Collection<Trajectory<S,T>> getTrajectories(String moId) {
+    public Collection<Trajectory<S, T>> getTrajectories(String moId) {
         MovingObject mo = this.movingObjectIndices.get(moId);
         return getTrajectories(mo);
     }
-    
+
     @Override
     public Trajectory getTrajectory(String id) {
         return this.trajectoryIndices.get(id);
     }
-    
+
     @Override
     public Trajectory removeTrajectory(int id) {
         Trajectory t = this.trajectories.remove(id);
-        this.trajectoryIndices.remove(t.getId());
+        if (t != null) {
+            this.trajectoryIndices.remove(t.getId());
+        }
         return t;
     }
-    
+
     @Override
     public Trajectory removeTrajectory(String id) {
         Trajectory t = this.trajectoryIndices.remove(id);
-        this.trajectories.remove(t);
-        
+        if (t != null) {
+            this.trajectories.remove(t);
+        }
+
         return t;
     }
-    
+
     @Override
     public MovingObject removeMovingObject(int idx) {
         MovingObject mo = this.movingObjects.get(idx);
-        this.movingObjectIndices.remove(mo.getId());
-        
+        if (mo != null) {
+            this.movingObjectIndices.remove(mo.getId());
+        }
+
         return mo;
     }
-    
+
     @Override
     public MovingObject removeMovingObject(String id) {
         MovingObject mo = this.movingObjectIndices.get(id);
-        this.movingObjects.remove(mo);
-        
+        if (mo != null) {
+            this.movingObjects.remove(mo);
+        }
+
         return mo;
     }
 }

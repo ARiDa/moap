@@ -91,8 +91,9 @@ public class StayPointDetection extends IStopAlgorithm {
          * For each trajectory
          */
         //report.setReport("Starting the algorithm, it works for a single trajectory");
-        Collection<Trajectory<LatLonPoint, DateTime>> trajectories = data.getTrajectories();
-        for (Trajectory traj : trajectories) {
+//        Collection<Trajectory<LatLonPoint, DateTime>> trajectories = data.getTrajectories();
+        
+        for (Trajectory traj : data.getTrajectories()) {
             System.out.println("iterando nas trajetorias");
             stayingPointDetection(traj, distanceFunction, distanceThreshold, timeThreshold);
 

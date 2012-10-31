@@ -9,6 +9,8 @@
             <public-packages>
                 <package>arida.ufc.br.moap.core.algorithm.spi</package>
                 <package>arida.ufc.br.moap.core.beans</package>
+                <package>arida.ufc.br.moap.core.beans.iterators.api</package>
+                <package>arida.ufc.br.moap.core.beans.iterators.imp</package>
                 <package>arida.ufc.br.moap.core.database.imp</package>
                 <package>arida.ufc.br.moap.core.database.spi</package>
                 <package>arida.ufc.br.moap.core.datasource.spi</package>
