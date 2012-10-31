@@ -20,11 +20,17 @@ public interface ITrajectoryModel<S,T> extends IDataModel {
      * Add a single trajectory
      */
     
-    public void addTrajectory(String id,Trajectory<S,T> trajectory);
+    public void addTrajectory(Trajectory<S,T> trajectory);
     /*
      * @return Trajectory
      */
     public Trajectory<S,T> getTrajectory(int id);
+    
+    public Trajectory<S,T> getTrajectory(String id);
+    
+    public Trajectory<S,T> removeTrajectory(int id);
+    
+    public Trajectory<S,T> removeTrajectory(String id);
     
     public ITrajectoryFactory<S,T> factory();
     
@@ -33,6 +39,9 @@ public interface ITrajectoryModel<S,T> extends IDataModel {
      */
     public Collection<Trajectory<S,T>> getTrajectories(MovingObject mo);
     
+    /*
+     * @return Collection of all trajectory for a given Moving Object
+     */
     public Collection<Trajectory<S,T>> getTrajectories(String mo);
     
     /*
@@ -52,6 +61,10 @@ public interface ITrajectoryModel<S,T> extends IDataModel {
     public MovingObject getMovingObject(int idx);
     
     public MovingObject getMovingObject(String id);
+    
+    public MovingObject removeMovingObject(int idx);
+    
+    public MovingObject removeMovingObject(String id);
     /*
      * @return Trajectory count
      */
@@ -60,4 +73,8 @@ public interface ITrajectoryModel<S,T> extends IDataModel {
      * @return Moving Object count
      */
     public int getMovingObjectCount();
+    
+    
+    
+    
 }

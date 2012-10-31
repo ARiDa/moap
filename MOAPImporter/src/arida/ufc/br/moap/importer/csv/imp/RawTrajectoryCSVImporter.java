@@ -151,8 +151,8 @@ public class RawTrajectoryCSVImporter implements ITrajectoryImporter {
      */
     private void readWithNoUserId(ICsvListReader listReader, CellProcessor[] processors) throws IOException {
         Integer mo_id = this.trajectoryDataModel.getMovingObjectCount();
-        MovingObject<LatLonPoint, DateTime> movingObject = new MovingObject<LatLonPoint, DateTime>(mo_id.toString());
-        Trajectory<LatLonPoint, DateTime> trajectory = new Trajectory<LatLonPoint, DateTime>(mo_id + "_1");
+        MovingObject movingObject = this.trajectoryDataModel.factory().newMovingObject(mo_id.toString());
+        Trajectory<LatLonPoint, DateTime> trajectory = this.trajectoryDataModel.factory().newTrajectory(mo_id+"_0", movingObject);
         List<Object> trajectoryList;
         while ((trajectoryList = listReader.read(processors)) != null) {
 
@@ -186,8 +186,8 @@ public class RawTrajectoryCSVImporter implements ITrajectoryImporter {
             System.out.println(String.format("lineNo=%s, rowNo=%s, trajectoryList=%s", listReader.getLineNumber(),
                     listReader.getRowNumber(), trajectoryList));
         }
-        movingObject.addTrajectory(trajectory);
-        this.trajectoryDataModel.addMovingObject(movingObject);
+        
+        this.trajectoryDataModel.addTrajectory(trajectory);
     }
 
     /*
@@ -198,6 +198,7 @@ public class RawTrajectoryCSVImporter implements ITrajectoryImporter {
 
         List<Object> trajectoryList;
         String previous_userid = "";
+        String current_trajectory = "";
         while ((trajectoryList = listReader.read(processors)) != null) {
 
             String userid = (String) trajectoryList.get(this.mandatoryIdx.get(USERID));
@@ -225,17 +226,18 @@ public class RawTrajectoryCSVImporter implements ITrajectoryImporter {
              * Add point to the trajectory
              */
             if (previous_userid.equalsIgnoreCase(userid)) {
-                int i = this.trajectoryDataModel.getMovingObject(userid).getTrajectoryCount();
-                this.trajectoryDataModel.getMovingObject(userid).getTrajectory(i-1).addPoint(point, datetime);
+                int i = this.trajectoryDataModel.getTrajectories(userid).size();
+                this.trajectoryDataModel.getTrajectory(current_trajectory).addPoint(point, datetime);;
             } /*
              * Create a new moving object
-             */ else {
-                MovingObject<LatLonPoint, DateTime> movingObject = new MovingObject<LatLonPoint, DateTime>(userid);
-                Trajectory<LatLonPoint, DateTime> trajectory = new Trajectory<LatLonPoint, DateTime>(userid+"_1");
+             */ 
+            else {
+                MovingObject movingObject = this.trajectoryDataModel.factory().newMovingObject(userid);
+                Trajectory<LatLonPoint, DateTime> trajectory = this.trajectoryDataModel.factory().newTrajectory(userid+"_0", movingObject);
+                current_trajectory = userid+"_0";
                 trajectory.addPoint(point, datetime);
-                movingObject.addTrajectory(trajectory);
                 
-                this.trajectoryDataModel.addMovingObject(movingObject);
+                this.trajectoryDataModel.addTrajectory(trajectory);
             }
             previous_userid = userid;
 
