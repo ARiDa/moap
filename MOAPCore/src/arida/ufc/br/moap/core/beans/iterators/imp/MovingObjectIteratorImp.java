@@ -7,6 +7,7 @@ package arida.ufc.br.moap.core.beans.iterators.imp;
 import arida.ufc.br.moap.core.beans.MovingObject;
 import arida.ufc.br.moap.core.beans.iterators.api.IMovingObjectIterator;
 import java.util.List;
+import java.util.concurrent.locks.Lock;
 
 /**
  *
@@ -17,13 +18,21 @@ public class MovingObjectIteratorImp implements IMovingObjectIterator {
     private List<MovingObject> array;
     private int currentIndex = 0;
     private int currentSize;
-    public MovingObjectIteratorImp(List<MovingObject> list){
+    protected Lock lock;
+
+    public MovingObjectIteratorImp(List<MovingObject> list, Lock lock) {
         this.array = list;
         this.currentSize = list.size();
+        this.lock = lock;
     }
+
     @Override
     public boolean hasNext() {
-        return currentIndex < currentSize && array.get(currentIndex) != null;
+        boolean res = currentIndex < currentSize && array.get(currentIndex) != null;
+        if (!res && lock != null) {
+            lock.unlock();
+        }
+        return res;
     }
 
     @Override
@@ -33,9 +42,8 @@ public class MovingObjectIteratorImp implements IMovingObjectIterator {
 
     @Override
     public void remove() {
-       /*
-        * Not Implemented
-        */
+        /*
+         * Not Implemented
+         */
     }
-    
 }

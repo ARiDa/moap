@@ -2,6 +2,7 @@ package arida.ufc.br.moap.core.beans;
 
 import arida.ufc.br.moap.core.spi.IAnnotable;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -10,7 +11,7 @@ import java.util.List;
  * @param <S>
  * @param <T>
  */
-public class Trajectory<S,T> implements IAnnotable {
+public class Trajectory<S, T> implements IAnnotable {
 
     private MovingObject movingObject;
     private String id;
@@ -20,17 +21,17 @@ public class Trajectory<S,T> implements IAnnotable {
 
     /**
      * @param id
-     * 
+     *
      */
-    @Deprecated 
+    @Deprecated
     public Trajectory(String id) {
         this.id = id;
         this.points = new ArrayList<S>();
         this.times = new ArrayList<T>();
 
     }
-    
-    public Trajectory(String id,MovingObject movingObject) {
+
+    public Trajectory(String id, MovingObject movingObject) {
         this.id = id;
         this.movingObject = movingObject;
         this.points = new ArrayList<S>();
@@ -85,6 +86,10 @@ public class Trajectory<S,T> implements IAnnotable {
         return points;
     }
 
+    public Iterator<S> getPointIterator() {
+        return this.points.iterator();
+    }
+
     public S getPoint(int idx) {
         return this.points.get(idx);
     }
@@ -106,6 +111,10 @@ public class Trajectory<S,T> implements IAnnotable {
      */
     public List<T> getTimes() {
         return times;
+    }
+
+    public Iterator<T> getTimesIterator() {
+        return this.times.iterator();
     }
 
     public T getTime(int idx) {

@@ -9,6 +9,7 @@ import arida.ufc.br.moap.core.beans.iterators.api.ITrajectoryIterable;
 import arida.ufc.br.moap.core.beans.iterators.api.ITrajectoryIterator;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.locks.Lock;
 
 /**
  *
@@ -18,8 +19,8 @@ public class TrajectoryIterableImp implements ITrajectoryIterable {
 
     private TrajectoryIteratorImp iterator;
     
-    public TrajectoryIterableImp(List trajectories){
-        this.iterator = new TrajectoryIteratorImp(trajectories);
+    public TrajectoryIterableImp(List trajectories,Lock lock){
+        this.iterator = new TrajectoryIteratorImp(trajectories,lock);
     }
     
     @Override
@@ -35,6 +36,13 @@ public class TrajectoryIterableImp implements ITrajectoryIterable {
         }
          
          return list.toArray(new Trajectory[0]);
+    }
+
+    @Override
+    public void doBreak() {
+        if (this.iterator.lock != null) {
+            this.iterator.lock.unlock();
+        }
     }
 
 

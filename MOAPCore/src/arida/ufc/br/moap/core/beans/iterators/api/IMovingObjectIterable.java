@@ -15,6 +15,6 @@ public interface IMovingObjectIterable extends Iterable<MovingObject> {
     
     @Override
     public IMovingObjectIterator iterator();
-    
+    public void doBreak();
     public MovingObject[] toArray();
 }

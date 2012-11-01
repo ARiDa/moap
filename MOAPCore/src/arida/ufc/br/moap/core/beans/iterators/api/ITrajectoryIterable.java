@@ -14,7 +14,7 @@ import java.util.List;
 public interface ITrajectoryIterable extends Iterable<Trajectory> {
     @Override
     public ITrajectoryIterator iterator();
-    
+    public void doBreak();
     public Trajectory[] toArray();
 
 }

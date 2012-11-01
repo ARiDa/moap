@@ -11,6 +11,7 @@ import arida.ufc.br.moap.core.beans.iterators.api.ITrajectoryIterable;
 import arida.ufc.br.moap.core.beans.iterators.api.ITrajectoryIterator;
 import java.util.Collection;
 import java.util.List;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**
  *
@@ -77,7 +78,15 @@ public interface ITrajectoryModel<S,T> extends IDataModel {
      */
     public int getMovingObjectCount();
     
-    
+//    public void readLock() ;
+//
+//    public void readUnLock() ;
+//
+//    public void readUnlockAll() ;
+//
+//    public void writeLock() ;
+//
+//    public void writeUnlock();
     
     
 }
