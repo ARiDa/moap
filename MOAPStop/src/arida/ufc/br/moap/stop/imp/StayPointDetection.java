@@ -196,7 +196,7 @@ public class StayPointDetection extends IStopAlgorithm {
                 j++;
             }
             /*
-             * Force end loop since j has reached the end of the list
+             * Force end loop since j has reached the end of the trajectory
              */
             i = j;
 
