@@ -12,6 +12,7 @@ import arida.ufc.br.moap.datamodelapi.spi.AbstractTrajectoryModel;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
@@ -228,15 +229,30 @@ public class TrajectoryModelImpl<S, T> extends AbstractTrajectoryModel<S, T> {
         return mo;
     }
 
+    /* 
+     * @return Remove all trajectories of a given {@link Moving Object}
+     */
     private void removeTrajectories(MovingObject mo) {
-        for (Trajectory traj : trajectories) {
-            if (traj.getMovingObject().equals(mo)) {
-                trajectories.remove(traj);
-            }
+        Collection<Trajectory<S,T>> c = getTrajectories(mo);
+        Iterator iter = c.iterator();
+        while(iter.hasNext()){
+            this.trajectories.remove((Trajectory<S,T>)iter.next());
         }
     }
 
     public ReentrantReadWriteLock getReadWriteLock() {
         return readWriteLock;
+    }
+    
+    @Override
+    protected void finalize() throws Throwable{
+        super.finalize();
+        
+        this.factory = null;
+        this.movingObjectIndices = null;
+        this.movingObjects = null;
+        this.trajectories = null;
+        this.trajectoryIndices = null;
+        
     }
 }
