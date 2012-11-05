@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module codename="arida.ufc.br.moap.db.postgres">
-    <module_version install_time="1352142346527" last="true" origin="installer" specification_version="1.0">
+    <module_version install_time="1352144303664" last="true" origin="installer" specification_version="1.0">
         <file crc="831189967" name="config/Modules/arida-ufc-br-moap-db-postgres.xml"/>
-        <file crc="2433886070" name="modules/arida-ufc-br-moap-db-postgres.jar"/>
+        <file crc="4282500326" name="modules/arida-ufc-br-moap-db-postgres.jar"/>
         <file crc="1484850960" name="modules/ext/log4j-1.2.16.jar"/>
         <file crc="1896930537" name="modules/ext/postgis-2.0.0SVN.jar"/>
         <file crc="1399048292" name="modules/ext/postgresql-9.0-801.jdbc4.jar"/>

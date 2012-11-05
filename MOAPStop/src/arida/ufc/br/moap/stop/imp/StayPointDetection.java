@@ -71,12 +71,12 @@ public class StayPointDetection extends IStopAlgorithm {
         //Debug
 
 
-        double timeThreshold = (Double) parameters.getParam(PARAMETER_TIME_THRESHOLD);
+        double timeThreshold = (Double) parameters.getParamValue(PARAMETER_TIME_THRESHOLD);
 
         //Debug
         System.out.println("tempo limite = " + timeThreshold);
 
-        double distanceThreshold = (Double) parameters.getParam(PARAMETER_SPATIAL_THRESHOLD);
+        double distanceThreshold = (Double) parameters.getParamValue(PARAMETER_SPATIAL_THRESHOLD);
 
         //Debug
         System.out.println("distancia limite = " + distanceThreshold);

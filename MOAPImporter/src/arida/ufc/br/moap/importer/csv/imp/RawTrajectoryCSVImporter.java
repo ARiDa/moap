@@ -11,9 +11,12 @@ import arida.ufc.br.moap.core.beans.Trajectory;
 import arida.ufc.br.moap.core.imp.Parameters;
 import arida.ufc.br.moap.core.imp.Reporter;
 import arida.ufc.br.moap.datamodelapi.spi.ITrajectoryModel;
+import arida.ufc.br.moap.importer.exceptions.MissingHeaderAttribute;
 import arida.ufc.br.moap.importer.spi.ITrajectoryImporter;
+import com.sun.j3d.loaders.IncorrectFormatException;
 import java.io.File;
 import java.io.FileFilter;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Date;
@@ -22,6 +25,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Queue;
+import java.util.Set;
 import org.joda.time.DateTime;
 import org.supercsv.cellprocessor.Optional;
 import org.supercsv.cellprocessor.ParseDate;
@@ -35,11 +39,15 @@ import org.supercsv.prefs.CsvPreference;
 /**
  *
  * @author igobrilhante
- * 
- * <p>Class to import csv file with raw trajectory into a {@link ITrajectoryDataModel}
- * </P>
- * <p> @param {@link ITrajectoryModel} for inserting the data</p>
- * <p> @param {@link Parameters} to set the file path, for loading a single file, or a directory to load a list of csv files</p>
+ *
+ * <p>Class to import csv file with raw trajectory into a
+ * {@link ITrajectoryDataModel}. Time, Lat, Long are required, and new
+ * attributes can be found in the file. The file must be formatted as follow.
+ * </P> <p> <ul> <li> Without user id: time,lat,lon, ... </li> <li> With user
+ * id: userid,time,lat,long, ... </li> </ul> </p> <p>
+ * @param {@link ITrajectoryModel} for inserting the data</p> <p>
+ * @param {@link Parameters} to set the file path, for loading a single file, or
+ * a directory to load a list of csv files</p>
  */
 public class RawTrajectoryCSVImporter implements ITrajectoryImporter {
 
@@ -47,7 +55,6 @@ public class RawTrajectoryCSVImporter implements ITrajectoryImporter {
      * Necessary Parameters
      */
     public static final String PARAMETER_FILE = "file";
-    
     /*
      * Standard Variables
      */
@@ -56,7 +63,6 @@ public class RawTrajectoryCSVImporter implements ITrajectoryImporter {
     private final String TIME = "time";
     private final String USERID = "userid";
     private final String TIME_FORMAT = "yyyy-MM-dd'T'HH:mm:ss'Z'";
-            
     private String filepath;
     private Map<String, Integer> mandatoryIdx;
     private Map<String, Integer> annotationIdx;
@@ -66,12 +72,12 @@ public class RawTrajectoryCSVImporter implements ITrajectoryImporter {
     @Override
     public void buildImport(ITrajectoryModel trajectoryDataModel, Parameters parameters) {
 //        this.reporter.setReport("Importing Raw Trajectory CSV File");
-        this.filepath = (String) parameters.getParam(PARAMETER_FILE);
+        this.filepath = (String) parameters.getParamValue(PARAMETER_FILE);
         File file = new File(this.filepath);
         this.trajectoryDataModel = trajectoryDataModel;
         try {
             if (file.isFile()) {
-                
+
 //                this.reporter.setReport("Importing a CSV File");
                 readWithCsvListReader(file);
             } else if (file.isDirectory()) {
@@ -88,15 +94,16 @@ public class RawTrajectoryCSVImporter implements ITrajectoryImporter {
                     }
                 };
                 inspectDirectory(file, filter, files);
-                while(!files.isEmpty()){
+                while (!files.isEmpty()) {
                     File selectedFile = files.poll();
-                    if(selectedFile.isDirectory()){
+                    if (selectedFile.isDirectory()) {
                         inspectDirectory(selectedFile, filter, files);
-                    }
-                    else{
+                    } else {
                         readWithCsvListReader(selectedFile);
                     }
                 }
+            } else {
+                throw new FileNotFoundException("File " + filepath + " has not been found");
             }
 
         } catch (Exception ex) {
@@ -109,7 +116,7 @@ public class RawTrajectoryCSVImporter implements ITrajectoryImporter {
      * Inspect other files inside the directory
      */
     private void inspectDirectory(File file, FileFilter filter, Queue<File> fileSet) {
-        System.out.println("F: "+file.getName());
+        System.out.println("F: " + file.getName());
         File[] fileList = file.listFiles(filter);
         for (File f : fileList) {
             System.out.println("f:" + f.getName());
@@ -129,7 +136,7 @@ public class RawTrajectoryCSVImporter implements ITrajectoryImporter {
         try {
             listReader = new CsvListReader(fileReader, CsvPreference.STANDARD_PREFERENCE);
             String[] headers = listReader.getHeader(true);
-            boolean hasUserId = checkUserId(headers);
+            boolean hasUserId = isThereUserId(headers);
             final CellProcessor[] processors = getProcessors(headers);
 
             if (!hasUserId) {
@@ -152,7 +159,7 @@ public class RawTrajectoryCSVImporter implements ITrajectoryImporter {
     private void readWithNoUserId(ICsvListReader listReader, CellProcessor[] processors) throws IOException {
         Integer mo_id = this.trajectoryDataModel.getMovingObjectCount();
         MovingObject movingObject = this.trajectoryDataModel.factory().newMovingObject(mo_id.toString());
-        Trajectory<LatLonPoint, DateTime> trajectory = this.trajectoryDataModel.factory().newTrajectory(mo_id+"_0", movingObject);
+        Trajectory<LatLonPoint, DateTime> trajectory = this.trajectoryDataModel.factory().newTrajectory(mo_id + "_0", movingObject);
         List<Object> trajectoryList;
         while ((trajectoryList = listReader.read(processors)) != null) {
 
@@ -179,7 +186,7 @@ public class RawTrajectoryCSVImporter implements ITrajectoryImporter {
             /*
              * Add point to the trajectory
              */
-             trajectory.addPoint(point, datetime);
+            trajectory.addPoint(point, datetime);
 
 
 
@@ -231,13 +238,12 @@ public class RawTrajectoryCSVImporter implements ITrajectoryImporter {
                 this.trajectoryDataModel.getTrajectory(current_trajectory).addPoint(point, datetime);;
             } /*
              * Create a new moving object
-             */ 
-            else {
+             */ else {
                 MovingObject movingObject = this.trajectoryDataModel.factory().newMovingObject(userid);
-                Trajectory<LatLonPoint, DateTime> trajectory = this.trajectoryDataModel.factory().newTrajectory(userid+"_0", movingObject);
-                current_trajectory = userid+"_0";
+                Trajectory<LatLonPoint, DateTime> trajectory = this.trajectoryDataModel.factory().newTrajectory(userid + "_0", movingObject);
+                current_trajectory = userid + "_0";
                 trajectory.addPoint(point, datetime);
-                
+
                 this.trajectoryDataModel.addTrajectory(trajectory);
             }
             previous_userid = userid;
@@ -253,13 +259,39 @@ public class RawTrajectoryCSVImporter implements ITrajectoryImporter {
     /*
      * Check if there is USERID column
      */
-    private boolean checkUserId(String[] headers) {
+    private boolean isThereUserId(String[] headers) {
         for (int i = 0; i < headers.length; i++) {
             if (headers[i].equalsIgnoreCase(USERID)) {
                 return true;
             }
         }
         return false;
+    }
+
+    /*
+     * Verify if the header is valid
+     */
+    private boolean isHeaderValid(Set<String> header) {
+        String error = "";
+
+        if (!header.contains(LATITUDE)) {
+            error += "lat,";
+        }
+        if (!header.contains(LONGITUDE)) {
+            error += "lon,";
+        }
+        if (!header.contains(TIME)) {
+            error += "time,";
+        }
+
+
+        if (!error.equals("")) {
+            int size = error.length() - 1;
+            String msg = error.substring(0, size);
+            throw new MissingHeaderAttribute("Missing header attributes: " + msg);
+        }
+
+        return true;
     }
 
     /*
@@ -289,6 +321,11 @@ public class RawTrajectoryCSVImporter implements ITrajectoryImporter {
                 processors[i] = new Optional();
             }
         }
+
+        /*
+         * Verify if the header is valid
+         */
+        isHeaderValid(this.mandatoryIdx.keySet());
 
         return processors;
     }

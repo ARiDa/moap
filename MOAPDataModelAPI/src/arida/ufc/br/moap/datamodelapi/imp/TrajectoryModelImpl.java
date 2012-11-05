@@ -9,7 +9,6 @@ import arida.ufc.br.moap.core.beans.iterators.api.ITrajectoryIterable;
 import arida.ufc.br.moap.core.beans.iterators.imp.MovingObjectIterableImp;
 import arida.ufc.br.moap.core.beans.iterators.imp.TrajectoryIterableImp;
 import arida.ufc.br.moap.datamodelapi.spi.AbstractTrajectoryModel;
-import arida.ufc.br.moap.datamodelapi.spi.ITrajectoryModel;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
