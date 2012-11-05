@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module codename="arida.ufc.br.moap.clustering">
-    <module_version install_time="1351285341253" last="true" origin="installer" specification_version="1.0">
+    <module_version install_time="1352142350492" last="true" origin="installer" specification_version="1.0">
         <file crc="593248021" name="config/Modules/arida-ufc-br-moap-clustering.xml"/>
-        <file crc="1919517487" name="modules/arida-ufc-br-moap-clustering.jar"/>
+        <file crc="3223314851" name="modules/arida-ufc-br-moap-clustering.jar"/>
     </module_version>
 </module>

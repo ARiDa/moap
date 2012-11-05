@@ -186,15 +186,16 @@ public class RawTrajectoryCSVImporter implements ITrajectoryImporter {
             System.out.println(String.format("lineNo=%s, rowNo=%s, trajectoryList=%s", listReader.getLineNumber(),
                     listReader.getRowNumber(), trajectoryList));
         }
-        
+        /*
+         * Add trajectory into the TrajectoryModel
+         */
         this.trajectoryDataModel.addTrajectory(trajectory);
     }
 
     /*
-     * File with user identifier. This file can contain mant user trajectories. It is assumed to have a orderer file by userid and time
+     * File with user identifier. This file can contain many users. It is assumed to have a orderered file by userid and time
      */
     private void readWithUserId(ICsvListReader listReader, CellProcessor[] processors) throws IOException {
-        Integer trajCount = this.trajectoryDataModel.getTrajectoryCount();
 
         List<Object> trajectoryList;
         String previous_userid = "";

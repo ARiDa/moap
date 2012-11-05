@@ -23,7 +23,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
  * @author rafaelelias
  */
 public class TrajectoryModelImpl<S, T> extends AbstractTrajectoryModel<S, T> {
-    
+
     public TrajectoryModelImpl() {
         super();
     }
@@ -52,52 +52,51 @@ public class TrajectoryModelImpl<S, T> extends AbstractTrajectoryModel<S, T> {
      * Build a trajectory for a model
      */
     private ITrajectoryFactory<S, T> factory = new TrajectoryFactoryImp<S, T>();
-    
+
     @Override
     public Trajectory<S, T> getTrajectory(int id) {
-        
+
         if (Integer.valueOf(id) == null) {
             throw new NullPointerException("Trajectory idx cannot be NULL");
         }
-        
+
         return trajectories.get(id);
     }
-    
+
     @Override
     public ITrajectoryIterable getTrajectories() {
-        
+
         ITrajectoryIterable iterable = new TrajectoryIterableImp(trajectories, readWriteLock.readLock());
         return iterable;
     }
-    
-    @Override
-    public void addMovingObject(MovingObject mo) {
-        
+
+    private void addMovingObject(MovingObject mo) {
+
         if (mo == null) {
             throw new NullPointerException("Moving object cannot be NULL");
         }
-        
+
         if (!this.movingObjectIndices.containsKey(mo.getId())) {
             this.movingObjects.add(mo);
             this.movingObjectIndices.put(mo.getId(), mo);
         }
     }
-    
+
     @Override
     public MovingObject getMovingObject(String id) {
         return this.movingObjectIndices.get(id);
     }
-    
+
     @Override
     public int getTrajectoryCount() {
         return this.trajectories.size();
     }
-    
+
     @Override
     public int getMovingObjectCount() {
         return this.movingObjects.size();
     }
-    
+
     @Override
     public void addTrajectory(Trajectory trajectory) {
         if (trajectory == null) {
@@ -106,24 +105,24 @@ public class TrajectoryModelImpl<S, T> extends AbstractTrajectoryModel<S, T> {
         if (trajectory.getMovingObject() == null) {
             throw new NullPointerException("Moving object for the trajectory cannot be NULL");
         }
-        
+
         if (!this.trajectoryIndices.containsKey(trajectory.getId())) {
             this.trajectories.add(trajectory);
             this.trajectoryIndices.put(trajectory.getId(), trajectory);
             addMovingObject(trajectory.getMovingObject());
         }
     }
-    
+
     @Override
     public String toString() {
         return "";
     }
-    
+
     @Override
     public ITrajectoryFactory factory() {
         return this.factory;
     }
-    
+
     @Override
     public MovingObject getMovingObject(int idx) {
         if (Integer.valueOf(idx) == null) {
@@ -131,13 +130,13 @@ public class TrajectoryModelImpl<S, T> extends AbstractTrajectoryModel<S, T> {
         }
         return this.movingObjects.get(idx);
     }
-    
+
     @Override
     public IMovingObjectIterable getMovingObjects() {
         readLock();
         return new MovingObjectIterableImp(movingObjects, readWriteLock.readLock());
     }
-    
+
     @Override
     public Collection<Trajectory<S, T>> getTrajectories(MovingObject mo) {
         if (mo == null) {
@@ -151,7 +150,7 @@ public class TrajectoryModelImpl<S, T> extends AbstractTrajectoryModel<S, T> {
         }
         return list;
     }
-    
+
     @Override
     public Collection<Trajectory<S, T>> getTrajectories(String moId) {
         if (moId == null) {
@@ -160,7 +159,7 @@ public class TrajectoryModelImpl<S, T> extends AbstractTrajectoryModel<S, T> {
         MovingObject mo = this.movingObjectIndices.get(moId);
         return getTrajectories(mo);
     }
-    
+
     @Override
     public Trajectory getTrajectory(String id) {
         if (id == null) {
@@ -168,7 +167,7 @@ public class TrajectoryModelImpl<S, T> extends AbstractTrajectoryModel<S, T> {
         }
         return this.trajectoryIndices.get(id);
     }
-    
+
     @Override
     public Trajectory removeTrajectory(int id) {
         if (Integer.valueOf(id) == null) {
@@ -180,7 +179,7 @@ public class TrajectoryModelImpl<S, T> extends AbstractTrajectoryModel<S, T> {
         }
         return t;
     }
-    
+
     @Override
     public Trajectory removeTrajectory(String id) {
         if (id == null) {
@@ -190,10 +189,10 @@ public class TrajectoryModelImpl<S, T> extends AbstractTrajectoryModel<S, T> {
         if (t != null) {
             this.trajectories.remove(t);
         }
-        
+
         return t;
     }
-    
+
     @Override
     public MovingObject removeMovingObject(int idx) {
         if (Integer.valueOf(idx) == null) {
@@ -202,12 +201,17 @@ public class TrajectoryModelImpl<S, T> extends AbstractTrajectoryModel<S, T> {
         MovingObject mo = this.movingObjects.remove(idx);
         if (mo != null) {
             this.movingObjectIndices.remove(mo.getId());
-            
+
+            /*
+             * Remove all the Moving Object's trajectories
+             */
+            removeTrajectories(mo);
+
         }
-        
+
         return mo;
     }
-    
+
     @Override
     public MovingObject removeMovingObject(String id) {
         if (id == null) {
@@ -216,11 +220,23 @@ public class TrajectoryModelImpl<S, T> extends AbstractTrajectoryModel<S, T> {
         MovingObject mo = this.movingObjectIndices.remove(id);
         if (mo != null) {
             this.movingObjects.remove(mo);
+            /*
+             * Remove all the Moving Object's trajectories
+             */
+            removeTrajectories(mo);
         }
-        
+
         return mo;
     }
-    
+
+    private void removeTrajectories(MovingObject mo) {
+        for (Trajectory traj : trajectories) {
+            if (traj.getMovingObject().equals(mo)) {
+                trajectories.remove(traj);
+            }
+        }
+    }
+
     public ReentrantReadWriteLock getReadWriteLock() {
         return readWriteLock;
     }

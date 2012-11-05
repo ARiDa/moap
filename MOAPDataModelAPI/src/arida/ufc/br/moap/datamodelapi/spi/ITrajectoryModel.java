@@ -54,10 +54,6 @@ public interface ITrajectoryModel<S,T> extends IDataModel {
     public ITrajectoryIterable getTrajectories();
     
     public IMovingObjectIterable getMovingObjects();
-    /*
-     * Add a moving object
-     */
-    public void addMovingObject(MovingObject mo);
 
     /*
      * @return Moving Object
@@ -66,6 +62,9 @@ public interface ITrajectoryModel<S,T> extends IDataModel {
     
     public MovingObject getMovingObject(String id);
     
+    /*
+     * @return Moving Object 
+     */
     public MovingObject removeMovingObject(int idx);
     
     public MovingObject removeMovingObject(String id);

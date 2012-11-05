@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module codename="arida.ufc.br.libs">
-    <module_version install_time="1351285313110" last="true" origin="installer" specification_version="1.0">
+    <module_version install_time="1352142337327" last="true" origin="installer" specification_version="1.0">
         <file crc="2914797266" name="config/Modules/arida-ufc-br-libs.xml"/>
-        <file crc="2878193187" name="modules/arida-ufc-br-libs.jar"/>
+        <file crc="2924939321" name="modules/arida-ufc-br-libs.jar"/>
         <file crc="1685266790" name="modules/ext/joda-time-2.1.jar"/>
         <file crc="1484850960" name="modules/ext/log4j-1.2.16.jar"/>
     </module_version>
