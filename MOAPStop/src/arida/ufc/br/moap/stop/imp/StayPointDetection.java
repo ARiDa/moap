@@ -158,16 +158,17 @@ public class StayPointDetection extends IStopAlgorithm {
                     if (timeDifference > temporalThreshold) {
                         //Mean Lat and Long
                         
-                        //Se o primeiro e o ultimo ponto é considerado parada
+                        //If the first point and last point are not stay points
                         if(i!=0 && j!=pointNum){
                         
-                        
-                            LatLonPoint centroid = computeCentroid(null);
+                            //Compute centroid
+                            //LatLonPoint centroid = computeCentroid(null);
                             /*
                              * Getting the arrive and leave time
                              */
                             Interval interval = new Interval(time_i, time_j);
-                            StayPoint stop = new StayPoint(centroid);
+                            //Adding Point J as a Stay Point
+                            StayPoint stop = new StayPoint(point_j);
                             System.out.println("Interval: " + interval);
 
                             /*
