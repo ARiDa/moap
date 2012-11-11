@@ -157,38 +157,43 @@ public class StayPointDetection extends IStopAlgorithm {
                      */
                     if (timeDifference > temporalThreshold) {
                         //Mean Lat and Long
-
-                        LatLonPoint centroid = computeCentroid(null);
-                        /*
-                         * Getting the arrive and leave time
-                         */
-                        Interval interval = new Interval(time_i, time_j);
-                        StayPoint stop = new StayPoint(centroid);
-                        System.out.println("Interval: " + interval);
-
-                        /*
-                         * First Stop
-                         */
-//                        if(stopCount == 0){
+                        
+                        //Se o primeiro e o ultimo ponto é considerado parada
+                        if(i!=0 && j!=pointNum){
+                        
+                        
+                            LatLonPoint centroid = computeCentroid(null);
                             /*
-                         * Set the first point as a stop
-                         */
-//                            if(i > 0){
-//                                IStop firstStop = new StayPoint((LatLonPoint) trajectory.getPoint(i));
-                        new_trajectory.addPoint(stop, interval);
-                        this.result.addTrajectory(new_trajectory);
-//                            }
-//                        }
+                             * Getting the arrive and leave time
+                             */
+                            Interval interval = new Interval(time_i, time_j);
+                            StayPoint stop = new StayPoint(centroid);
+                            System.out.println("Interval: " + interval);
 
-                        stopCount++;
-                        /*
-                         * Adding to the Stay Point to the result
-                         */
-                        //report.setReport("Adding a StayPoint in a StayPoint List"); 
+                            /*
+                             * First Stop
+                             */
+    //                        if(stopCount == 0){
+                                /*
+                             * Set the first point as a stop
+                             */
+    //                            if(i > 0){
+    //                                IStop firstStop = new StayPoint((LatLonPoint) trajectory.getPoint(i));
+                            new_trajectory.addPoint(stop, interval);
+                            this.result.addTrajectory(new_trajectory);
+    //                            }
+    //                        }
+
+                            stopCount++;
+                            /*
+                             * Adding to the Stay Point to the result
+                             */
+                            //report.setReport("Adding a StayPoint in a StayPoint List"); 
 
 
-//                        this.result.getMovingObject(movingObjectId).getTrajectory(size-1).addPoint(stop, interval);
-                        System.out.println("SIZE:" + size);
+    //                        this.result.getMovingObject(movingObjectId).getTrajectory(size-1).addPoint(stop, interval);
+                            System.out.println("SIZE:" + size);
+                        }
                     }
                     i = j;
                     break;
