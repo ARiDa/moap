@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<module codename="arida.ufc.br.moap.datamodelapi">
-    <module_version install_time="1352687995737" last="true" origin="installer" specification_version="1.0">
-        <file crc="2102179403" name="config/Modules/arida-ufc-br-moap-datamodelapi.xml"/>
-        <file crc="841871594" name="modules/arida-ufc-br-moap-datamodelapi.jar"/>
-    </module_version>
-</module>
