@@ -1,6 +1,6 @@
 # NetBeans specific #
 nbproject/private/
-build/
+**/build/**
 nbbuild/
 dist/
 nbdist/
@@ -19,3 +19,4 @@ nb-configuration.xml
 /MOAPNetwork/nbproject/private/
 
 
+/build/

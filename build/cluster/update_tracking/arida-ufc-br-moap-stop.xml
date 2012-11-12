@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><module codename="arida.ufc.br.moap.stop">
-    <module_version install_time="1352587327186" last="true" origin="installer" specification_version="1.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="arida.ufc.br.moap.stop">
+    <module_version install_time="1352681774703" last="true" origin="installer" specification_version="1.0">
         <file crc="3204447903" name="config/Modules/arida-ufc-br-moap-stop.xml"/>
-        <file crc="4073152796" name="modules/arida-ufc-br-moap-stop.jar"/>
+        <file crc="2113566260" name="modules/arida-ufc-br-moap-stop.jar"/>
     </module_version>
 </module>

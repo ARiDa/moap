@@ -5,6 +5,7 @@ import arida.ufc.br.moap.core.beans.LatLonPoint;
 import arida.ufc.br.moap.core.beans.MovingObject;
 import arida.ufc.br.moap.core.beans.Trajectory;
 import arida.ufc.br.moap.core.imp.Parameters;
+import arida.ufc.br.moap.core.imp.Reporter;
 import arida.ufc.br.moap.datamodelapi.spi.ITrajectoryModel;
 import arida.ufc.br.moap.datamodelapi.imp.TrajectoryModelImpl;
 import arida.ufc.br.moap.datamodelapi.spi.ITrajectoryModel;
@@ -20,6 +21,7 @@ import org.joda.time.Interval;
  *
  * @author franzejr
  * @author rafaelelias
+ * @author igobrilhante
  *
  * <p> Reference: Li, Q., Zheng, Y., Xie, X., Chen, Y., Liu, W., & Ma, W.-Y.
  * (2008). Mining user similarity based on location history. Proceedings of the
@@ -50,17 +52,11 @@ public class StayPointDetection extends IStopAlgorithm {
 
     @Override
     public ITrajectoryModel execute(ITrajectoryModel data, Parameters parameters) {
-        //report.setReport("Starting the algorithm, it works for a single trajectory");
-
-        //parameters.addParam(PARAMETER_TIME_THRESHOLD, (double)0.01);
-        //parameters.addParam(PARAMETER_SPATIAL_THRESHOLD, (double)0.01);
-
-        //Debug
-        System.out.println("aq1 StayPointDetection");
+        report = new Reporter(StayPointDetection.class);
+        report.setReport("Starting the algorithm, it works for a single trajectory");
 
         this.result = new TrajectoryModelImpl<StayPoint,Interval>();
 
-        System.out.println("aq2 StayPointDetection");
 
         /*
          * Time Threshold in seconds
@@ -68,30 +64,25 @@ public class StayPointDetection extends IStopAlgorithm {
          */
 
 
-        //Debug
-
 
         double timeThreshold = (Double) parameters.getParamValue(PARAMETER_TIME_THRESHOLD);
 
-        //Debug
-        System.out.println("tempo limite = " + timeThreshold);
+        report.setReport("TimeThreshold: "+timeThreshold);
 
         double distanceThreshold = (Double) parameters.getParamValue(PARAMETER_SPATIAL_THRESHOLD);
 
-        //Debug
-        System.out.println("distancia limite = " + distanceThreshold);
+        report.setReport("DistanceThreshold: "+distanceThreshold);
 
 
         /*
          * Compute distance between LatLon points
          */
-        //report.setReport("Using the Spherical Law of Cosines for compute the distance between two points");
+        report.setReport("Using the Spherical Law of Cosines for compute the distance between two points");
         SphericalLawofCosines distanceFunction = new SphericalLawofCosines();
         /*
          * For each trajectory
          */
-        //report.setReport("Starting the algorithm, it works for a single trajectory");
-//        Collection<Trajectory<LatLonPoint, DateTime>> trajectories = data.getTrajectories();
+        report.setReport("Starting the algorithm, it works for a single trajectory");
         
         for (Trajectory traj : data.getTrajectories()) {
             System.out.println("iterando nas trajetorias");
@@ -121,41 +112,32 @@ public class StayPointDetection extends IStopAlgorithm {
         int i = 0, j = 0;
         int stopCount = 0;
 
-        System.out.println("point num: " + pointNum);
         int size = this.result.getTrajectoryCount();
         
-        System.out.println("point num: "+pointNum);
-
-
         while (i < pointNum) {
-            System.out.println("i: " + i);
+            
             j = i + 1;
             point_i = (LatLonPoint) trajectory.getPoint(i);
-            //point_j = (LatLonPoint) trajectory.getPoint(j);
-            //System.out.println(" Pj" + point_j);
-
-
+           
 
             while (j < pointNum) {
                 
             
                 point_j = (LatLonPoint) trajectory.getPoint(j);
-                //System.out.println(" Pj" + point_j);
-                
-                System.out.println("j: " + j);
+             
+               
                 /*
                  * LatLong distance
                  */
                 double dist = distanceFunction.distance(point_i, point_j);
-                //System.out.println("point_i" +point_i + ",point_j" +point_j); 
-                System.out.println("stayingPointDetection dist: " + dist + "     spatialThreshold" + spatialThreshold);
+            
                 if (dist > spatialThreshold) {
 
                     time_i = (DateTime) trajectory.getTime(i);
                     time_j = (DateTime) trajectory.getTime(j);
                     double timeDifference;
                     timeDifference = time_j.getMillis() - time_i.getMillis();
-                    System.out.println("timeDifference: " + timeDifference);
+                    
 
                     /*
                      * If this condition is TRUE, a stay point is found
@@ -166,39 +148,23 @@ public class StayPointDetection extends IStopAlgorithm {
                         //If the first point and last point are not stay points
                         if(i!=0 && j!=pointNum){
                         
-                            //Compute centroid
+                            /*Compute centroid - Disabled */
                             //LatLonPoint centroid = computeCentroid(null);
-                            /*
-                             * Getting the arrive and leave time
-                             */
+                            
+                           
                             Interval interval = new Interval(time_i, time_j);
                             //Adding Point J as a Stay Point
                             StayPoint stop = new StayPoint(point_j);
-                            System.out.println("Interval: " + interval);
-
-                            /*
-                             * First Stop
-                             */
-    //                        if(stopCount == 0){
-                                /*
-                             * Set the first point as a stop
-                             */
-    //                            if(i > 0){
-    //                                IStop firstStop = new StayPoint((LatLonPoint) trajectory.getPoint(i));
+                            
                             new_trajectory.addPoint(stop, interval);
-                            this.result.addTrajectory(new_trajectory);
-    //                            }
-    //                        }
-
-                            stopCount++;
                             /*
                              * Adding to the Stay Point to the result
                              */
-                            //report.setReport("Adding a StayPoint in a StayPoint List"); 
+                            report.setReport("Adding a StayPoint in a StayPoint List"); 
+                            this.result.addTrajectory(new_trajectory);
+    
+                            stopCount++;      
 
-
-    //                        this.result.getMovingObject(movingObjectId).getTrajectory(size-1).addPoint(stop, interval);
-                            System.out.println("SIZE:" + size);
                         }
                     }
                     i = j;
