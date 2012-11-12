@@ -7,14 +7,6 @@
             <suite-component/>
             <module-dependencies>
                 <dependency>
-                    <code-name-base>arida.ufc.br.libs</code-name-base>
-                    <build-prerequisite/>
-                    <compile-dependency/>
-                    <run-dependency>
-                        <specification-version>1.0</specification-version>
-                    </run-dependency>
-                </dependency>
-                <dependency>
                     <code-name-base>arida.ufc.br.moap.core</code-name-base>
                     <build-prerequisite/>
                     <compile-dependency/>
@@ -38,14 +30,6 @@
                         <specification-version>1.0</specification-version>
                     </run-dependency>
                 </dependency>
-                <dependency>
-                    <code-name-base>org.supercsv</code-name-base>
-                    <build-prerequisite/>
-                    <compile-dependency/>
-                    <run-dependency>
-                        <specification-version>1.0</specification-version>
-                    </run-dependency>
-                </dependency>
             </module-dependencies>
             <test-dependencies>
                 <test-type>
@@ -60,6 +44,18 @@
                 <package>arida.ufc.br.moap.importer.csv.imp</package>
                 <package>arida.ufc.br.moap.importer.spi</package>
             </public-packages>
+            <class-path-extension>
+                <runtime-relative-path>ext/super-csv-2.0.0-beta-1.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/super-csv-2.0.0-beta-1.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/joda-time-2.1.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/joda-time-2.1.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/log4j-1.2.16.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/log4j-1.2.16.jar</binary-origin>
+            </class-path-extension>
         </data>
     </configuration>
 </project>

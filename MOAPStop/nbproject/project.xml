@@ -7,14 +7,6 @@
             <suite-component/>
             <module-dependencies>
                 <dependency>
-                    <code-name-base>arida.ufc.br.libs</code-name-base>
-                    <build-prerequisite/>
-                    <compile-dependency/>
-                    <run-dependency>
-                        <specification-version>1.0</specification-version>
-                    </run-dependency>
-                </dependency>
-                <dependency>
                     <code-name-base>arida.ufc.br.moap.core</code-name-base>
                     <build-prerequisite/>
                     <compile-dependency/>
@@ -51,6 +43,10 @@
                 <package>arida.ufc.br.moap.stop.imp</package>
                 <package>arida.ufc.br.moap.stop.spi</package>
             </public-packages>
+            <class-path-extension>
+                <runtime-relative-path>ext/joda-time-2.1.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/joda-time-2.1.jar</binary-origin>
+            </class-path-extension>
         </data>
     </configuration>
 </project>

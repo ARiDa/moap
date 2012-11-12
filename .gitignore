@@ -9,3 +9,4 @@ nb-configuration.xml
 *.class
 
 /nbproject/private/
+/Libs/nbproject/private/
