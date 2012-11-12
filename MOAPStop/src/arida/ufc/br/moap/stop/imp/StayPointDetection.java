@@ -131,12 +131,17 @@ public class StayPointDetection extends IStopAlgorithm {
             System.out.println("i: " + i);
             j = i + 1;
             point_i = (LatLonPoint) trajectory.getPoint(i);
-            point_j = (LatLonPoint) trajectory.getPoint(j);
-            //System.out.println(" ehuaheauhea");
+            //point_j = (LatLonPoint) trajectory.getPoint(j);
+            //System.out.println(" Pj" + point_j);
 
 
 
             while (j < pointNum) {
+                
+            
+                point_j = (LatLonPoint) trajectory.getPoint(j);
+                //System.out.println(" Pj" + point_j);
+                
                 System.out.println("j: " + j);
                 /*
                  * LatLong distance

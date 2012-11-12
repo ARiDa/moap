@@ -2,7 +2,7 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
-        <file>file:/home/rafael/NetBeansProjects/moap/MOAPStop/src/arida/ufc/br/moap/stop/imp/StayPointDetection.java</file>
-        <file>file:/home/rafael/NetBeansProjects/moap/MOAPStop/src/arida/ufc/br/moap/stop/imp/StayPoint.java</file>
+        <file>file:/home/rafael/NetBeansProjects/moap/MOAPDistance/src/arida/ufc/br/moap/distance/spi/IDistanceFunction.java</file>
+        <file>file:/home/rafael/NetBeansProjects/moap/MOAPDistance/src/arida/ufc/br/moap/distance/imp/SphericalLawofCosines.java</file>
     </open-files>
 </project-private>

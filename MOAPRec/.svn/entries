@@ -10,9 +10,9 @@ https://200.19.187.69/svn/kdd
 2012-10-25T04:24:59.416007Z
 311
 igobrilhante
-
-
-
+has-props
+has-prop-mods
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -25,49 +25,6 @@ igobrilhante
 
 
 4a3cf20f-3b90-4fb5-880d-a2933f490bef
-
-lib
-dir
-
-nbproject
-dir
-
-src
-dir
-
-manifest.mf
-file
-
-
-
-
-2012-10-25T17:41:32.106410Z
-4fa33be6cfca676a2ce6872e80b88ba0
-2012-09-13T19:14:34.298243Z
-232
-igobrilhante
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-135
 
 admin.log
 file
@@ -103,40 +60,6 @@ igobrilhante
 
 0
 
-log4j.properties
-file
-
-
-
-
-2012-10-25T17:41:32.110410Z
-2c35cb0da7d926151fa80028d97348c8
-2012-08-11T09:07:01.554993Z
-213
-igobrilhante
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1216
-
 build.xml
 file
 
@@ -170,9 +93,6 @@ igobrilhante
 
 
 497
-
-test
-dir
 
 database.properties
 file
@@ -208,9 +128,89 @@ has-props
 
 389
 
-release
+lib
+dir
+
+log4j.properties
+file
+
+
+
+
+2012-10-25T17:41:32.110410Z
+2c35cb0da7d926151fa80028d97348c8
+2012-08-11T09:07:01.554993Z
+213
+igobrilhante
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1216
+
+manifest.mf
+file
+
+
+
+
+2012-10-25T17:41:32.106410Z
+4fa33be6cfca676a2ce6872e80b88ba0
+2012-09-13T19:14:34.298243Z
+232
+igobrilhante
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+135
+
+nbproject
 dir
 
 python
+dir
+
+release
+dir
+
+src
+dir
+
+test
 dir
 
