@@ -1,5 +1,4 @@
 # NetBeans specific #
-nbproject/private/
 **/build/**
 **/nbproject/private/**
 nbbuild/
@@ -7,17 +6,6 @@ dist/
 nbdist/
 nbactions.xml
 nb-configuration.xml
+*.class
 
-
-/MOAPClustering/build/
-/MOAPDBPostgres/build/
-/MOAPDataModel/build/
-/SuperCSVWrapper/build/
-/SuperCSVWrapper/nbproject/private/
-/MOAPImporter/nbproject/private/
-/org.supercsv/build/
-/MOAPStop/nbproject/private/
-/MOAPNetwork/nbproject/private/
-
-
-/build/
+/nbproject/private/
