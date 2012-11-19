@@ -1,18 +1,16 @@
 package arida.ufc.br.moap.stop.imp;
 
-import arida.ufc.br.moap.stop.spi.IStop;
 import arida.ufc.br.moap.core.beans.LatLonPoint;
 import arida.ufc.br.moap.core.beans.MovingObject;
 import arida.ufc.br.moap.core.beans.Trajectory;
 import arida.ufc.br.moap.core.imp.Parameters;
 import arida.ufc.br.moap.core.imp.Reporter;
-import arida.ufc.br.moap.datamodelapi.spi.ITrajectoryModel;
 import arida.ufc.br.moap.datamodelapi.imp.TrajectoryModelImpl;
 import arida.ufc.br.moap.datamodelapi.spi.ITrajectoryModel;
 import arida.ufc.br.moap.distance.imp.SphericalLawofCosines;
 import arida.ufc.br.moap.distance.spi.IDistanceFunction;
+import arida.ufc.br.moap.stop.spi.IStop;
 import arida.ufc.br.moap.stop.spi.IStopAlgorithm;
-import java.util.Collection;
 import java.util.List;
 import org.joda.time.DateTime;
 import org.joda.time.Interval;
@@ -51,7 +49,7 @@ public class StayPointDetection extends IStopAlgorithm {
     }
 
     @Override
-    public ITrajectoryModel execute(ITrajectoryModel data, Parameters parameters) {
+    public ITrajectoryModel<StayPoint,Interval> execute(ITrajectoryModel data, Parameters parameters) {
         report = new Reporter(StayPointDetection.class);
         report.setReport("Starting the algorithm, it works for a single trajectory");
 

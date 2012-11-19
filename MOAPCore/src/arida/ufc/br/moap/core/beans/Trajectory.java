@@ -4,6 +4,7 @@ import arida.ufc.br.moap.core.spi.IAnnotable;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import org.apache.commons.lang3.builder.ToStringBuilder;
 
 /**
  * @author igobrilhante
@@ -83,7 +84,7 @@ public class Trajectory<S, T> implements IAnnotable {
      * @return
      */
     public List<S> getPoints() {
-        return points;
+        return (List<S>)points;
     }
 
     public Iterator<S> getPointIterator() {
@@ -91,7 +92,7 @@ public class Trajectory<S, T> implements IAnnotable {
     }
 
     public S getPoint(int idx) {
-        return this.points.get(idx);
+        return (S)this.points.get(idx);
     }
 
     /**
@@ -110,7 +111,7 @@ public class Trajectory<S, T> implements IAnnotable {
      * @return
      */
     public List<T> getTimes() {
-        return times;
+        return (List<T>) times;
     }
 
     public Iterator<T> getTimesIterator() {
@@ -118,7 +119,7 @@ public class Trajectory<S, T> implements IAnnotable {
     }
 
     public T getTime(int idx) {
-        return this.times.get(idx);
+        return (T) this.times.get(idx);
     }
 
     /**
@@ -135,7 +136,9 @@ public class Trajectory<S, T> implements IAnnotable {
     @Override
     public String toString() {
 //		return "Trajectory with "+points.size()+" positions";
-        return "Trajectory " + id;
+        return new ToStringBuilder(this)
+                .append("id",this.id)
+                .toString();
     }
 
     @Override

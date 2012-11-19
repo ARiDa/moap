@@ -1,14 +1,16 @@
 package arida.ufc.br.moap.core.algorithm.spi;
 
-import arida.ufc.br.core.exceptions.MissingParameter;
 import arida.ufc.br.moap.core.imp.Parameters;
 import arida.ufc.br.moap.core.imp.Reporter;
 import arida.ufc.br.moap.core.spi.IDataModel;
-import java.util.HashSet;
-import java.util.Set;
+
+import org.apache.commons.lang3.Validate;
 
 /*
+ * This class provides common methods for other algorithms
+ * 
  */
+
 public abstract class AbstractAlgorithm<I extends IDataModel, O extends IDataModel> {
 
     /*
@@ -33,16 +35,38 @@ public abstract class AbstractAlgorithm<I extends IDataModel, O extends IDataMod
      */
     protected Reporter report;
 
+    /*
+     * Validate the parameters
+     * @return 
+     */
     protected boolean areParametersValid(Parameters input){
         
-        Set<String> diff = new HashSet<String>(input.getParameters());
-        diff.removeAll(this.parameters.getParameters());
+//        Set<String> diff = new HashSet<String>(input.getParameters());
+//        diff.removeAll(this.parameters.getParameters());
+//
+//        if(!diff.isEmpty()){
+//            throw new MissingParameter();
+//        }
         
-        if(!diff.isEmpty()){
-            throw new MissingParameter();
-        }
+//        Validate.notEmpty(input.getParameters());
+//        
+//        for(String s : this.parameters.getParameters()){
+//            // Validate the input
+//            Validate.isTrue(input.getParameters().contains(s),
+//                    "Parameter should contain %s of type %s",
+//                    s, this.parameters.getParamClass(s));
+//            
+//            // Validate the input type
+//            Validate.isInstanceOf(input.getParamClass(s), input.getParamValue(s), 
+//                    "Parameter for %s should be %s", 
+//                    s, this.parameters.getParamClass(s));
+//        }
+//        
+//        
+//        
+//        return true;
         
-        return true;
+        return this.parameters.validateParameters(parameters);
     }
 
     /*

@@ -68,10 +68,20 @@ public class RawTrajectoryCSVImporter implements ITrajectoryImporter {
     private Map<String, Integer> annotationIdx;
     private ITrajectoryModel trajectoryDataModel;
     private Reporter reporter = new Reporter(RawTrajectoryCSVImporter.class);
+    private Parameters params;
+    
+    public RawTrajectoryCSVImporter(){
+        this.params = new Parameters();
+        this.params.addClass(PARAMETER_FILE, String.class);
+    }
 
     @Override
     public void buildImport(ITrajectoryModel trajectoryDataModel, Parameters parameters) {
 //        this.reporter.setReport("Importing Raw Trajectory CSV File");
+        
+        // Validate parameters
+        this.params.validateParameters(parameters);
+        
         this.filepath = (String) parameters.getParamValue(PARAMETER_FILE);
         File file = new File(this.filepath);
         this.trajectoryDataModel = trajectoryDataModel;
