@@ -66,7 +66,7 @@ public abstract class AbstractAlgorithm<I extends IDataModel, O extends IDataMod
 //        
 //        return true;
         
-        return this.parameters.validateParameters(parameters);
+        return this.parameters.validate(parameters);
     }
 
     /*

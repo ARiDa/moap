@@ -80,7 +80,7 @@ public class RawTrajectoryCSVImporter implements ITrajectoryImporter {
 //        this.reporter.setReport("Importing Raw Trajectory CSV File");
         
         // Validate parameters
-        this.params.validateParameters(parameters);
+        this.params.validate(parameters);
         
         this.filepath = (String) parameters.getParamValue(PARAMETER_FILE);
         File file = new File(this.filepath);

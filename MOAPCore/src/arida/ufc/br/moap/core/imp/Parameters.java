@@ -83,7 +83,7 @@ public class Parameters {
 
     }
 
-    public boolean validateParameters(Parameters params) {
+    public boolean validate(Parameters params) {
         //        Set<String> diff = new HashSet<String>(input.getParameters());
 //        diff.removeAll(this.parameters.getParameters());
 //
