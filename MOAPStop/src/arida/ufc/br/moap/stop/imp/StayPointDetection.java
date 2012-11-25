@@ -149,12 +149,18 @@ public class StayPointDetection extends IStopAlgorithm {
                             /*Compute centroid - Disabled */
                             //LatLonPoint centroid = computeCentroid(null);
                             
-                           
-                            Interval interval = new Interval(time_i, time_j);
-                            //Adding Point J as a Stay Point
-                            StayPoint stop = new StayPoint(point_j);
+                            //Adding points to the trajectory
+                            for(int it = i+1; it <= j; it++){
+                                time_i = (DateTime) trajectory.getTime(it);
+                                time_j = (DateTime) trajectory.getTime(it-1);
+                                
+                                Interval interval = new Interval(time_j, time_i);
+                                point_j = (LatLonPoint) trajectory.getPoint(it);
+                                //Adding Point J as a Stay Point
+                                StayPoint stop = new StayPoint(point_j);
+                                new_trajectory.addPoint(stop, interval);
+                            }
                             
-                            new_trajectory.addPoint(stop, interval);
                             /*
                              * Adding to the Stay Point to the result
                              */
