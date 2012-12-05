@@ -1,12 +1,14 @@
 
 package arida.ufc.br.moap.importer.spi;
 
+import java.io.Serializable;
+
 /**
  ** Database description and connection details.
  * 
  * @author franzejr
  */
-public interface IDatabase {
+public interface IDatabase extends Serializable {
     
     public String getName();
 
