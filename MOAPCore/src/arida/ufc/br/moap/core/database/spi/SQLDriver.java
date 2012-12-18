@@ -2,9 +2,8 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package arida.ufc.br.moap.importer.spi;
+package arida.ufc.br.moap.core.database.spi;
 
-import java.io.Serializable;
 import java.sql.Connection;
 import java.sql.SQLException;
 
@@ -12,7 +11,7 @@ import java.sql.SQLException;
  *
  * @author franzejr
  */
-public interface SQLDriver extends Serializable {
+public interface SQLDriver {
     
     public String getPrefix();
 

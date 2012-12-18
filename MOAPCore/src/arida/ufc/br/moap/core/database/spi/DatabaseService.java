@@ -87,6 +87,9 @@ public class DatabaseService implements IDataSourceFactory {
 		log.severe("Database service has not been found");
 		return null;
 	}
+       
+    
+    
 	public static void main(String[] args){
 		
 		AbstractDatabase db = getInstance().getDataSource();

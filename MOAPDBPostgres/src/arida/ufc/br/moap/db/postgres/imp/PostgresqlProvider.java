@@ -4,7 +4,7 @@
  */
 package arida.ufc.br.moap.db.postgres.imp;
 
-import arida.ufc.br.moap.core.database.spi.AbstractDatabase;
+import arida.ufc.br.moap.core.database.spi.*;
 import java.io.Serializable;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
@@ -15,51 +15,45 @@ import java.util.List;
 import java.util.Map;
 import org.apache.log4j.Logger;
 
-
 /**
  *
  * @author igobrilhante
  */
 //@ServiceProvider(service=Database.class)
-public class PostgresqlProvider extends AbstractDatabase implements Serializable {
+public abstract class PostgresqlProvider extends AbstractDatabase implements Serializable {
 
 //	private static final int SRID = Integer.parseInt(PostgisProperties.getInstance().getType("srid"));
-	private static final long serialVersionUID = -85997221180839532L;
-
-
+    private static final long serialVersionUID = -85997221180839532L;
 //    private ConnectionProperty cm;
-
 //    private Connection connection;
 //    private static PostgresqlBuilder instance;
     public final int COMMIT_LIMIT = 100;
-
     private final Logger logger = Logger.getLogger(PostgresqlProvider.class);
-    
-    public PostgresqlProvider(){ System.out.println("a");}
+
+    public PostgresqlProvider() {
+        System.out.println("a");
+    }
 
 //    private PostgresqlBuilder(){
 //    	instance = new PostgresqlBuilder();     
 //    }
-
 //    public static PostgresqlBuilder getInstance(){
 //        if(instance==null){
 //            return new PostgresqlBuilder();
 //        }
 //        return (PostgresqlBuilder) instance;
 //    }
-
 //    public Connection getConnection() {
 //        return this.connection;
 //    }
-
 //    public ConnectionProperty getConnectionDBManager(){
 //        return this.cm;
 //    }
-    
-    public void close() throws SQLException{
+    public void close() throws SQLException {
         this.connection.close();
     }
-    public synchronized void createTable(String table_name, String attributes) throws Exception,SQLException {
+
+    public synchronized void createTable(String table_name, String attributes) throws Exception, SQLException {
         logger.info("Creating table " + table_name);
         Statement state = connection.createStatement();
         String query = "SELECT COUNT(*) count FROM pg_stat_user_tables WHERE schemaname='public' and relname = '" + table_name + "'";
@@ -68,7 +62,6 @@ public class PostgresqlProvider extends AbstractDatabase implements Serializable
         //System.out.println(query);
         result.next();
         if (result.getInt(1) > 0) {
-           
             //System.out.println("Drop table result: "+update); 
         }
         query = "DROP TABLE if exists " + table_name;
@@ -84,8 +77,8 @@ public class PostgresqlProvider extends AbstractDatabase implements Serializable
 
     public synchronized void createTable(String table_name, String attributes, boolean replace) {
     }
-    
-    public synchronized boolean tableExists(String table) throws SQLException{
+
+    public synchronized boolean tableExists(String table) throws SQLException {
         Statement state = connection.createStatement();
         String q = "SELECT COUNT(*) count FROM pg_stat_user_tables WHERE schemaname='public' and relname = '" + table + "'";
         ResultSet result = state.executeQuery(q);
@@ -95,11 +88,13 @@ public class PostgresqlProvider extends AbstractDatabase implements Serializable
         int r = result.getInt(1);
         result.close();
         state.close();
-        if ( r == 0)
+        if (r == 0) {
             return false;
+        }
         return true;
     }
-     public synchronized void createTableAsQuery(String table_name, String query) throws Exception,SQLException {
+
+    public synchronized void createTableAsQuery(String table_name, String query) throws Exception, SQLException {
         logger.info("Creating table " + table_name);
         Statement state = connection.createStatement();
         String q = "SELECT COUNT(*) count FROM pg_stat_user_tables WHERE schemaname='public' and relname = '" + table_name + "'";
@@ -112,8 +107,8 @@ public class PostgresqlProvider extends AbstractDatabase implements Serializable
             update = state.executeUpdate(q);
             //System.out.println("Drop table result: "+update); 
         }
-        q = "DROP TABLE IF EXISTS " + table_name+"; CREATE TABLE " + table_name + " as " +query;
-        
+        q = "DROP TABLE IF EXISTS " + table_name + "; CREATE TABLE " + table_name + " as " + query;
+
 
 
         update = state.executeUpdate(q);
@@ -121,23 +116,24 @@ public class PostgresqlProvider extends AbstractDatabase implements Serializable
         state.close();
 //        connection.commit();
     }
-     public synchronized void createSpatialIndex(String table, String index, String attribute){
+
+    public synchronized void createSpatialIndex(String table, String index, String attribute) {
         try {
             logger.info("Create Index");
             // CREATE INDEX [indexname] ON [tablename] USING GIST ( [geometrycolumn] );
-            String q = "CREATE INDEX "+index+" ON "+table+ " USING GIST ("+ attribute+") ";
-            
-            if(tableExists(table)){
+            String q = "CREATE INDEX " + index + " ON " + table + " USING GIST (" + attribute + ") ";
+
+            if (tableExists(table)) {
                 Statement stat = connection.createStatement();
                 stat.executeUpdate(q);
             }
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
-         
-     }
-     
-         public synchronized void createTableAsQuery(String table_name, String query,String index) throws Exception,SQLException {
+
+    }
+
+    public synchronized void createTableAsQuery(String table_name, String query, String index) throws Exception, SQLException {
         logger.info("Creating table " + table_name);
         Statement state = connection.createStatement();
         String q = "SELECT COUNT(*) count FROM pg_stat_user_tables WHERE schemaname='public' and relname = '" + table_name + "'";
@@ -150,40 +146,39 @@ public class PostgresqlProvider extends AbstractDatabase implements Serializable
             update = state.executeUpdate(q);
             //System.out.println("Drop table result: "+update); 
         }
-        q = "CREATE TABLE " + table_name + " as " +query;
+        q = "CREATE TABLE " + table_name + " as " + query;
 
 
         update = state.executeUpdate(q);
         //System.out.println("Create table result: "+update);
-        if(!index.equals(""))
-            state.execute("ALTER  TABLE "+table_name+" ADD PRIMARY KEY ("+index+")");
+        if (!index.equals("")) {
+            state.execute("ALTER  TABLE " + table_name + " ADD PRIMARY KEY (" + index + ")");
+        }
 //        connection.commit();
         state.close();
-    }  
+    }
 
     public synchronized void addColumn(String table_name, String attribute, String type) throws Exception {
-        
+
         Statement state = connection.createStatement();
-        String query = "SELECT count(*) FROM information_schema.columns WHERE table_name = '"+table_name+"' and column_name='"+attribute+"'";
+        String query = "SELECT count(*) FROM information_schema.columns WHERE table_name = '" + table_name + "' and column_name='" + attribute + "'";
         ResultSet rs = state.executeQuery(query);
         int count = 0;
-        while(rs.next()){
+        while (rs.next()) {
             count = rs.getInt(1);
         }
-        if(count>0){
+        if (count > 0) {
             query = "ALTER TABLE " + table_name + " DROP COLUMN " + attribute;
             state.executeUpdate(query);
         }
         query = "ALTER TABLE " + table_name + " ADD COLUMN " + attribute + " " + type;
         System.out.println(query);
         state.executeUpdate(query);
-        
-        
+
+
         state.close();
 //        connection.commit();
     }
-    
-
 
     public synchronized String prepareStatement(int atts, String table) {
 
@@ -192,8 +187,7 @@ public class PostgresqlProvider extends AbstractDatabase implements Serializable
             for (int i = 0; i < atts; i++) {
                 if (i == atts - 1) {
                     statement += "?";
-                }
-                else {
+                } else {
                     statement += "?,";
                 }
             }
@@ -265,69 +259,70 @@ public class PostgresqlProvider extends AbstractDatabase implements Serializable
 //        
 //        return table;
 //    }
-    
-    public synchronized Object[] getColumnNames(ResultSet res) throws SQLException{
+    public synchronized Object[] getColumnNames(ResultSet res) throws SQLException {
         ResultSetMetaData metadata = res.getMetaData();
         Object[] columnNames = new Object[metadata.getColumnCount()];
         for (int i = 0; i < metadata.getColumnCount(); i++) {
-            
-            columnNames[i] = metadata.getColumnLabel(i+1);
-            
+
+            columnNames[i] = metadata.getColumnLabel(i + 1);
+
         }
         return columnNames;
     }
 
-    public synchronized String mergeStrings(List<String> strings){
+    public synchronized String mergeStrings(List<String> strings) {
         String output = "";
-        
-        for(int i=0;i<strings.size();i++){
-            if(i==0)
-                output += "'"+strings.get(i) +"'";
-            else
-                output += ",'"+strings.get(i) +"'";
+
+        for (int i = 0; i < strings.size(); i++) {
+            if (i == 0) {
+                output += "'" + strings.get(i) + "'";
+            } else {
+                output += ",'" + strings.get(i) + "'";
+            }
         }
-        
+
         return output;
     }
-    
-        public synchronized String mergeIntegers(List<Integer> integers){
+
+    public synchronized String mergeIntegers(List<Integer> integers) {
         String output = "";
-        
-        for(int i=0;i<integers.size();i++){
-            if(i==0)
+
+        for (int i = 0; i < integers.size(); i++) {
+            if (i == 0) {
                 output += integers.get(i);
-            else
-                output += ","+integers.get(i);
+            } else {
+                output += "," + integers.get(i);
+            }
         }
-        
+
         return output;
     }
-        
-    public synchronized List<String> getTables() throws SQLException{
+
+    public synchronized List<String> getTables() throws SQLException {
         ArrayList<String> list = new ArrayList<String>();
-        
+
         Statement s = connection.createStatement();
         ResultSet rs = s.executeQuery("SELECT relname FROM pg_stat_user_tables WHERE schemaname='public'");
-        while(rs.next()){
+        while (rs.next()) {
             list.add(rs.getString("relname"));
         }
         rs.close();
         s.close();
         return list;
     }
-    
-    public synchronized void dropTable(String table) throws SQLException{
+
+    public synchronized void dropTable(String table) throws SQLException {
         Statement s = connection.createStatement();
-        s.executeUpdate("DROP TABLE IF EXISTS "+table);
+        s.executeUpdate("DROP TABLE IF EXISTS " + table);
         s.close();
     }
 
     // Retrieve object/table from the database
-	@Override
-	public Object getObject(String name) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+    @Override
+    public Object getObject(String name) {
+        // TODO Auto-generated method stub
+        return null;
+    }
 
 //	@Override
 //	public void setObject(String name,Object object) {
@@ -360,68 +355,66 @@ public class PostgresqlProvider extends AbstractDatabase implements Serializable
 //
 //		}
 //	}
+    @Override
+    public String getName() {
+        // TODO Auto-generated method stub
+        return "Postgresql";
+    }
 
-	@Override
-	public String getName() {
-		// TODO Auto-generated method stub
-	        return "Postgresql";
-	}
-	@Override
-	public String getDriverClass() {
-		// TODO Auto-generated method stub
-		return "org.postgresql.Driver";
-	}
-	@Override
-	public Object getObject(Class c, String query) {
-		// TODO Auto-generated method stub
-		
-		
-		return null;
-	}
-	@Override
-	public void setObject(Class c, String query) {
-		// TODO Auto-generated method stub
-		
-	}
-    
+    @Override
+    public String getDriverClass() {
+        // TODO Auto-generated method stub
+        return "org.postgresql.Driver";
+    }
 
-	private static synchronized String createAttributes(Map<String, String> attributes){
-		StringBuilder builder = new StringBuilder();
-		for(String att : attributes.keySet()){
-			String type = attributes.get(att);
-			builder.append(att+" ");
-			builder.append(type);
-			builder.append(",");
-		}
-		return builder.substring(0, builder.length()-1);
-	}
+    @Override
+    public Object getObject(Class c, String query) {
+        // TODO Auto-generated method stub
 
-	@Override
-	public void setObject(String name, Object object) {
-		// TODO Auto-generated method stub
-		
-	}
-	
-	public ResultSet getResultSet(String query){
-		try {
-			Statement stat = connection.createStatement();
-			ResultSet res = stat.executeQuery(query);
-			return res;
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		return null;
-	}
-	
-	public void commit(){
-		try {
-			this.getConnection().commit();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-    
+
+        return null;
+    }
+
+    @Override
+    public void setObject(Class c, String query) {
+        // TODO Auto-generated method stub
+    }
+
+    private static synchronized String createAttributes(Map<String, String> attributes) {
+        StringBuilder builder = new StringBuilder();
+        for (String att : attributes.keySet()) {
+            String type = attributes.get(att);
+            builder.append(att + " ");
+            builder.append(type);
+            builder.append(",");
+        }
+        return builder.substring(0, builder.length() - 1);
+    }
+
+    @Override
+    public void setObject(String name, Object object) {
+        // TODO Auto-generated method stub
+    }
+
+    public ResultSet getResultSet(String query) {
+        try {
+            Statement stat = connection.createStatement();
+            ResultSet res = stat.executeQuery(query);
+            return res;
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+    public void commit() {
+        try {
+            this.getConnection().commit();
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
 }
