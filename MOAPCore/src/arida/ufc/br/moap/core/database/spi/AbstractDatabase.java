@@ -36,14 +36,5 @@ public abstract class AbstractDatabase implements IDataSource {
     }
 
     public abstract String getDriverClass();
-
-    public abstract Object getObject(String name);
-
-    public abstract void setObject(String name, Object object);
-
-    public abstract Object getObject(Class c, String query);
-
-    public abstract void setObject(Class c, String query);
-
     
 }

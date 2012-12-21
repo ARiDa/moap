@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package arida.ufc.br.moap.db.postgres.imp;
 
 import arida.ufc.br.moap.core.database.spi.*;
@@ -16,39 +12,19 @@ import java.util.Map;
 import org.apache.log4j.Logger;
 
 /**
+ * Provider to work with PostgreSQL
  *
  * @author igobrilhante
  */
-//@ServiceProvider(service=Database.class)
-public abstract class PostgresqlProvider extends AbstractDatabase implements Serializable {
+public class PostgresqlProvider extends AbstractDatabase implements Serializable {
 
-//	private static final int SRID = Integer.parseInt(PostgisProperties.getInstance().getType("srid"));
     private static final long serialVersionUID = -85997221180839532L;
-//    private ConnectionProperty cm;
-//    private Connection connection;
-//    private static PostgresqlBuilder instance;
     public final int COMMIT_LIMIT = 100;
     private final Logger logger = Logger.getLogger(PostgresqlProvider.class);
 
     public PostgresqlProvider() {
-        System.out.println("a");
     }
 
-//    private PostgresqlBuilder(){
-//    	instance = new PostgresqlBuilder();     
-//    }
-//    public static PostgresqlBuilder getInstance(){
-//        if(instance==null){
-//            return new PostgresqlBuilder();
-//        }
-//        return (PostgresqlBuilder) instance;
-//    }
-//    public Connection getConnection() {
-//        return this.connection;
-//    }
-//    public ConnectionProperty getConnectionDBManager(){
-//        return this.cm;
-//    }
     public void close() throws SQLException {
         this.connection.close();
     }
@@ -56,7 +32,7 @@ public abstract class PostgresqlProvider extends AbstractDatabase implements Ser
     public synchronized void createTable(String table_name, String attributes) throws Exception, SQLException {
         logger.info("Creating table " + table_name);
         Statement state = connection.createStatement();
-        String query = "SELECT COUNT(*) count FROM pg_stat_user_tables WHERE schemaname='public' and relname = '" + table_name + "'";
+        String query = "";
         ResultSet result = state.executeQuery(query);
         int update;
         //System.out.println(query);
@@ -68,14 +44,8 @@ public abstract class PostgresqlProvider extends AbstractDatabase implements Ser
         update = state.executeUpdate(query);
         query = "CREATE TABLE " + table_name + " (" + attributes + ")";
 
-
         update = state.executeUpdate(query);
-        //System.out.println("Create table result: "+update);
         state.close();
-//        connection.commit();
-    }
-
-    public synchronized void createTable(String table_name, String attributes, boolean replace) {
     }
 
     public synchronized boolean tableExists(String table) throws SQLException {
@@ -198,67 +168,6 @@ public abstract class PostgresqlProvider extends AbstractDatabase implements Ser
 
     }
 
-    private void storeAttributes() {
-    }
-
-//    public synchronized String getType(AttributeType type) {
-//        switch (type) {
-//            case STRING:
-//                return "text";
-//            case INT:
-//                return "integer";
-//            case DOUBLE:
-//                return "numeric";
-//            case FLOAT:
-//                return "numeric";
-//            case LONG:
-//                return "bigint";
-//            default:
-//                return null;
-//        }
-//    }
-//
-//    public synchronized  AttributeType getAttributeType(String type) {
-//        if (type.equalsIgnoreCase("text")) {
-//            return AttributeType.STRING;
-//        }
-//        if (type.equalsIgnoreCase("integer")) {
-//            return AttributeType.LONG;
-//        }
-//        if (type.equalsIgnoreCase("int4")) {
-//            return AttributeType.LONG;
-//        }
-//        if (type.equalsIgnoreCase("numeric")) {
-//            return AttributeType.FLOAT;
-//        }
-//        throw new RuntimeException("Type " + type + " has not been found");
-//    }
-//
-//    public int getNumberOfColumns(AttributeTable table) {
-//        int count = 0;
-//        for (AttributeColumn c : table.getColumns()) {
-//            if (!c.getOrigin().equals(AttributeOrigin.PROPERTY)) {
-//                count++;
-//            }
-//        }
-//        System.out.println(count);
-//        return count;
-//    }
-//
-//    public synchronized AttributeTableImpl getTableColumns(ResultSet res, String name) throws SQLException {
-//        AbstractAttributeModel model = (AbstractAttributeModel) Lookup.getDefault().lookup(AttributeController.class).getModel();
-//        
-//        AttributeTableImpl table = new AttributeTableImpl(model, name);
-//        
-//        ResultSetMetaData metadata = res.getMetaData();
-//        for (int i = 0; i < metadata.getColumnCount(); i++) {
-//            AttributeType type = getAttributeType(metadata.getColumnTypeName(i+1));
-//            
-//            table.addColumn(metadata.getColumnName(i+1), type);
-//        }
-//        
-//        return table;
-//    }
     public synchronized Object[] getColumnNames(ResultSet res) throws SQLException {
         ResultSetMetaData metadata = res.getMetaData();
         Object[] columnNames = new Object[metadata.getColumnCount()];
@@ -317,44 +226,6 @@ public abstract class PostgresqlProvider extends AbstractDatabase implements Ser
         s.close();
     }
 
-    // Retrieve object/table from the database
-    @Override
-    public Object getObject(String name) {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-//	@Override
-//	public void setObject(String name,Object object) {
-//		// TODO Auto-generated method stub
-//		Class c;
-//		
-//		if(object instanceof Collection){
-//			Collection collection = (Collection)object;
-//			Object o = collection.iterator().next().getClass();
-//			
-//			if( o instanceof LatLonPoint){
-//				if(o instanceof TimeStampedPoint){
-//					Postgis.toPGPoint((TimeStampedPoint)o, SRID);
-//				}
-//				// create postgis point
-//				else{
-//					Postgis.toPGPoint((LatLonPoint)o,SRID);
-//				}
-//				
-//				
-//			}
-//			else{
-//				if( o instanceof Linestring){
-//					Postgis.toPGLineString((Linestring)o,SRID);
-//				}
-//			}
-//			
-//		}
-//		else{
-//
-//		}
-//	}
     @Override
     public String getName() {
         // TODO Auto-generated method stub
@@ -365,19 +236,6 @@ public abstract class PostgresqlProvider extends AbstractDatabase implements Ser
     public String getDriverClass() {
         // TODO Auto-generated method stub
         return "org.postgresql.Driver";
-    }
-
-    @Override
-    public Object getObject(Class c, String query) {
-        // TODO Auto-generated method stub
-
-
-        return null;
-    }
-
-    @Override
-    public void setObject(Class c, String query) {
-        // TODO Auto-generated method stub
     }
 
     private static synchronized String createAttributes(Map<String, String> attributes) {
@@ -391,11 +249,9 @@ public abstract class PostgresqlProvider extends AbstractDatabase implements Ser
         return builder.substring(0, builder.length() - 1);
     }
 
-    @Override
-    public void setObject(String name, Object object) {
-        // TODO Auto-generated method stub
-    }
-
+    /*
+     * @return ResultSet
+     */
     public ResultSet getResultSet(String query) {
         try {
             Statement stat = connection.createStatement();

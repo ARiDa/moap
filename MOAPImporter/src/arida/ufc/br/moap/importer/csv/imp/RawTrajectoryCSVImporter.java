@@ -12,7 +12,6 @@ import arida.ufc.br.moap.core.imp.Parameters;
 import arida.ufc.br.moap.core.imp.Reporter;
 import arida.ufc.br.moap.datamodelapi.spi.ITrajectoryModel;
 import arida.ufc.br.moap.importer.exceptions.MissingHeaderAttribute;
-import arida.ufc.br.moap.importer.spi.ITrajectoryImporter;
 import java.io.File;
 import java.io.FileFilter;
 import java.io.FileNotFoundException;
@@ -48,7 +47,7 @@ import org.supercsv.prefs.CsvPreference;
  * @param {@link Parameters} to set the file path, for loading a single file, or
  * a directory to load a list of csv files</p>
  */
-public class RawTrajectoryCSVImporter implements ITrajectoryImporter {
+public class RawTrajectoryCSVImporter {
 
     /*
      * Necessary Parameters
@@ -74,7 +73,6 @@ public class RawTrajectoryCSVImporter implements ITrajectoryImporter {
         this.params.addClass(PARAMETER_FILE, String.class);
     }
 
-    @Override
     public void buildImport(ITrajectoryModel trajectoryDataModel, Parameters parameters) {
 //        this.reporter.setReport("Importing Raw Trajectory CSV File");
         
@@ -338,8 +336,7 @@ public class RawTrajectoryCSVImporter implements ITrajectoryImporter {
 
         return processors;
     }
-
-    @Override
+    
     public Reporter getReport() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
