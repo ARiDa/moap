@@ -1,6 +1,7 @@
 package arida.ufc.br.moap.core.database.spi;
 
 import arida.ufc.br.moap.core.datasource.spi.IDataSource;
+import arida.ufc.br.moap.core.spi.IDataModel;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -36,5 +37,7 @@ public abstract class AbstractDatabase implements IDataSource {
     }
 
     public abstract String getDriverClass();
+    
+    public abstract IDataModel getModel();
     
 }

@@ -1,9 +1,6 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package appmoapimporter;
 
+import arida.ufc.br.moap.core.spi.IDataModel;
 import arida.ufc.br.moap.db.postgres.imp.PostgresqlProvider;
 
 /**
@@ -17,7 +14,10 @@ public class APPMOAPImporter {
      */
     public static void main(String[] args) {
        
+        IDataModel model = null;
+        
         PostgresqlProvider provider = new PostgresqlProvider();
+        model = provider.getModel();
         
        
     }

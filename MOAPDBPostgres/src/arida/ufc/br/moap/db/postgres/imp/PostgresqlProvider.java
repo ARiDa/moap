@@ -1,6 +1,8 @@
 package arida.ufc.br.moap.db.postgres.imp;
 
 import arida.ufc.br.moap.core.database.spi.*;
+import arida.ufc.br.moap.core.spi.IDataModel;
+import arida.ufc.br.moap.importer.csv.imp.Translater;
 import java.io.Serializable;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
@@ -15,6 +17,7 @@ import org.apache.log4j.Logger;
  * Provider to work with PostgreSQL
  *
  * @author igobrilhante
+ * @author franzejr
  */
 public class PostgresqlProvider extends AbstractDatabase implements Serializable {
 
@@ -23,6 +26,18 @@ public class PostgresqlProvider extends AbstractDatabase implements Serializable
     private final Logger logger = Logger.getLogger(PostgresqlProvider.class);
 
     public PostgresqlProvider() {
+    }
+
+    @Override
+    public IDataModel getModel() {
+        //TODO
+        String query = "select * from table";
+        IDataModel model = null;
+        Translater translater = new Translater();
+        translater.translate(getResultSet(query), model);
+
+        return model;
+
     }
 
     public void close() throws SQLException {
