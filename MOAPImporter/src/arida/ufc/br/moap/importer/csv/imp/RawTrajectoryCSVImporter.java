@@ -13,7 +13,6 @@ import arida.ufc.br.moap.core.imp.Reporter;
 import arida.ufc.br.moap.datamodelapi.spi.ITrajectoryModel;
 import arida.ufc.br.moap.importer.exceptions.MissingHeaderAttribute;
 import arida.ufc.br.moap.importer.spi.ITrajectoryImporter;
-//import com.sun.j3d.loaders.IncorrectFormatException;
 import java.io.File;
 import java.io.FileFilter;
 import java.io.FileNotFoundException;
@@ -338,5 +337,10 @@ public class RawTrajectoryCSVImporter implements ITrajectoryImporter {
         isHeaderValid(this.mandatoryIdx.keySet());
 
         return processors;
+    }
+
+    @Override
+    public Reporter getReport() {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }
