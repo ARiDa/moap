@@ -21,11 +21,15 @@ public class APPImporterMOAP {
     public static void main(String[] args) {
         PostgresqlProvider provider = new PostgresqlProvider(){};
         
-        provider.setConnection();
-        try {
-            provider.getTables();
-        } catch (SQLException ex) {
-            Logger.getLogger(APPImporterMOAP.class.getName()).log(Level.SEVERE, null, ex);
+        List<Object> tables = new ArrayList<Object>();
+        
+        PostgresqlProvider provider = new PostgresqlProvider();
+        provider.setConnection("user", "pass","port","database");
+        
+        tables = provider.getTables();
+        
+        for(Object o : tables){
+            System.out.println(o.getTriple());
         }
+        
     }
-}
