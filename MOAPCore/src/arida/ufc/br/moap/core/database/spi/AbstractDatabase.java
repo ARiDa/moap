@@ -37,7 +37,11 @@ public abstract class AbstractDatabase implements IDataSource {
     }
 
     public abstract String getDriverClass();
-    
-    public abstract IDataModel getModel();
+    /*
+     * 
+     * //TODO
+     * Get the model detection automatically
+     */
+    public abstract IDataModel getModel(String query, IDataModel model);
     
 }

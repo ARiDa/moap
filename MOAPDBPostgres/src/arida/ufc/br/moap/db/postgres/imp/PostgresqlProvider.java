@@ -29,10 +29,8 @@ public class PostgresqlProvider extends AbstractDatabase implements Serializable
     }
 
     @Override
-    public IDataModel getModel() {
+    public IDataModel getModel(String query, IDataModel model) {
         //TODO
-        String query = "select * from table";
-        IDataModel model = null;
         Translater translater = new Translater();
         translater.translate(getResultSet(query), model);
 

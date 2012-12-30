@@ -13,6 +13,9 @@ import java.sql.ResultSet;
  */
 public class Translater implements ITranslater {
 
+    /*
+     * Fill the Model with the data from the table
+     */
     @Override
     public void translate(ResultSet rs, IDataModel model) {
         throw new UnsupportedOperationException("Not supported yet.");
