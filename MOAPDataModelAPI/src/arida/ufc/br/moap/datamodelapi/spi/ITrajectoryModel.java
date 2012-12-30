@@ -3,15 +3,10 @@ package arida.ufc.br.moap.datamodelapi.spi;
 import arida.ufc.br.moap.core.algorithm.spi.ITrajectoryFactory;
 import arida.ufc.br.moap.core.beans.MovingObject;
 import arida.ufc.br.moap.core.beans.Trajectory;
-import arida.ufc.br.moap.core.beans.TrajectoryFactoryImp;
 import arida.ufc.br.moap.core.beans.iterators.api.IMovingObjectIterable;
-import arida.ufc.br.moap.core.spi.IAnnotable;
-import arida.ufc.br.moap.core.spi.IDataModel;
 import arida.ufc.br.moap.core.beans.iterators.api.ITrajectoryIterable;
-import arida.ufc.br.moap.core.beans.iterators.api.ITrajectoryIterator;
+import arida.ufc.br.moap.core.spi.IDataModel;
 import java.util.Collection;
-import java.util.List;
-import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**
  *
@@ -76,16 +71,6 @@ public interface ITrajectoryModel<S,T> extends IDataModel {
      * @return Moving Object count
      */
     public int getMovingObjectCount();
-    
-//    public void readLock() ;
-//
-//    public void readUnLock() ;
-//
-//    public void readUnlockAll() ;
-//
-//    public void writeLock() ;
-//
-//    public void writeUnlock();
     
     
 }
