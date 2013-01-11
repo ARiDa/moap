@@ -30,12 +30,10 @@ public class PostgresqlProvider extends AbstractDatabase implements Serializable
 
     @Override
     public IDataModel getModel(String query, IDataModel model) {
-        //TODO
         Translater translater = new Translater();
         translater.translate(getResultSet(query), model);
 
         return model;
-
     }
 
     public void close() throws SQLException {
