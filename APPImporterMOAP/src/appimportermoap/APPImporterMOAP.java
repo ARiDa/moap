@@ -4,10 +4,11 @@
  */
 package appimportermoap;
 
+import arida.ufc.br.moap.core.spi.IDataModel;
+import arida.ufc.br.moap.datamodelapi.imp.TrajectoryModelImpl;
 import arida.ufc.br.moap.db.postgres.imp.PostgresqlProvider;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -15,21 +16,15 @@ import java.util.logging.Logger;
  */
 public class APPImporterMOAP {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        PostgresqlProvider provider = new PostgresqlProvider(){};
         
         List<Object> tables = new ArrayList<Object>();
         
+        IDataModel model = new TrajectoryModelImpl();
+        
         PostgresqlProvider provider = new PostgresqlProvider();
-        provider.setConnection("user", "pass","port","database");
-        
-        tables = provider.getTables();
-        
-        for(Object o : tables){
-            System.out.println(o.getTriple());
-        }
-        
+        String query = "select * from trajetorias;";
+        provider.getModel(query,model );
     }
+    
+}
