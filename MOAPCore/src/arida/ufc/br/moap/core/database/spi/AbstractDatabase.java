@@ -51,6 +51,6 @@ public abstract class AbstractDatabase implements IDataSource {
      * //TODO
      * Get the model detection automatically
      */
-    public abstract IDataModel getInstanceModel(String query, IDataModel model);
+    public abstract IDataModel retrieveInstances(String query, IDataModel model);
     
 }
