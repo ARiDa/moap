@@ -18,7 +18,6 @@ public class APPMOAPImporter {
         
         PostgresqlProvider provider = new PostgresqlProvider();
         model = provider.getModel();
-        
        
     }
 }

@@ -39,7 +39,7 @@ public class PostgresqlProvider extends AbstractDatabase implements Serializable
 
     @Override
     public IDataModel getInstanceModel(String query, IDataModel model) {
-        Translater translater = new Translater();
+        Translater translater = new Translater(this.connection);
         translater.translate(query, model);
 
         return model;
