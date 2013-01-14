@@ -1,7 +1,6 @@
 package arida.ufc.br.moap.importer.spi;
 
 import arida.ufc.br.moap.core.spi.IDataModel;
-import java.sql.ResultSet;
 
 /**
  *
@@ -12,5 +11,5 @@ import java.sql.ResultSet;
  */
 public interface ITranslater {
 
-    public void translate(ResultSet rs, IDataModel model);
+    public void translate(String query, IDataModel model);
 }

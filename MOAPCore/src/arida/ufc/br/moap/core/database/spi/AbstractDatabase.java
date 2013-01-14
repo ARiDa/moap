@@ -2,35 +2,44 @@ package arida.ufc.br.moap.core.database.spi;
 
 import arida.ufc.br.moap.core.datasource.spi.IDataSource;
 import arida.ufc.br.moap.core.spi.IDataModel;
-import java.io.IOException;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.SQLException;
 import org.apache.log4j.Logger;
+import org.openide.util.Exceptions;
 
+/**
+ *
+ * @author franzejr
+ */
 public abstract class AbstractDatabase implements IDataSource {
 
     private static Logger logger = Logger.getLogger(AbstractDatabase.class);
     protected static ConnectionProperty p;
-    protected static Connection connection = getConnection();
+    protected static Connection connection;
+    protected static AbstractDatabase instance;
+    protected String user;
+    protected String password;
+    protected String url;
 
-    public static Connection getConnection() {
-        p = null;
+    public AbstractDatabase(String user, String password, String url){
+        this.user = user;
+        this.password = password;
+        this.url = url;
+        
         try {
-            p = ConnectionProperty.getInstance();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            connection  = DriverManager.getConnection(url, user, password);
+        } catch (SQLException ex) {
+            Exceptions.printStackTrace(ex);
         }
-        connection = p.getConnection();
-        logger.info(p.getString());
-        return connection;
-    };
+    }
+    
+    /**
+     *
+     * Get an instance from a connection
+     * @return Instance
+     */
+    public abstract AbstractDatabase getInstance();
 	
     public String toString() {
         return ConnectionProperty.getString();
@@ -42,6 +51,6 @@ public abstract class AbstractDatabase implements IDataSource {
      * //TODO
      * Get the model detection automatically
      */
-    public abstract IDataModel getModel(String query, IDataModel model);
+    public abstract IDataModel getInstanceModel(String query, IDataModel model);
     
 }

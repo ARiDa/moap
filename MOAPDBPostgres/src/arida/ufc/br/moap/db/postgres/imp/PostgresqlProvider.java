@@ -25,13 +25,22 @@ public class PostgresqlProvider extends AbstractDatabase implements Serializable
     public final int COMMIT_LIMIT = 100;
     private final Logger logger = Logger.getLogger(PostgresqlProvider.class);
 
-    public PostgresqlProvider() {
+    public PostgresqlProvider(String user, String password, String url) {
+        super(user, password, url);
+    }
+
+    public AbstractDatabase getInstance() {
+        if (instance == null) {
+            instance = new PostgresqlProvider(user, password, url);
+        }
+        
+        return instance;
     }
 
     @Override
-    public IDataModel getModel(String query, IDataModel model) {
+    public IDataModel getInstanceModel(String query, IDataModel model) {
         Translater translater = new Translater();
-        translater.translate(getResultSet(query), model);
+        translater.translate(query, model);
 
         return model;
     }
@@ -274,14 +283,5 @@ public class PostgresqlProvider extends AbstractDatabase implements Serializable
         }
 
         return null;
-    }
-
-    public void commit() {
-        try {
-            this.getConnection().commit();
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
     }
 }

@@ -22,9 +22,9 @@ public class APPImporterMOAP {
         
         IDataModel model = new TrajectoryModelImpl();
         
-        PostgresqlProvider provider = new PostgresqlProvider();
+        PostgresqlProvider provider = new PostgresqlProvider("root","root", "jdbc:postgresql://localhost/test");
         String query = "select * from trajetorias;";
-        provider.getModel(query,model );
+        model = provider.getInstanceModel(query,model );
     }
     
 }
