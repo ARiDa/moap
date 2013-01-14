@@ -1,4 +1,4 @@
-package arida.ufc.br.moap.importer.csv.imp;
+package arida.ufc.br.moap.importer.database.imp;
 
 import arida.ufc.br.moap.core.spi.IDataModel;
 import arida.ufc.br.moap.importer.spi.ITranslater;

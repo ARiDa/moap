@@ -2,7 +2,7 @@ package arida.ufc.br.moap.db.postgres.imp;
 
 import arida.ufc.br.moap.core.database.spi.*;
 import arida.ufc.br.moap.core.spi.IDataModel;
-import arida.ufc.br.moap.importer.csv.imp.Translater;
+import arida.ufc.br.moap.importer.database.imp.Translater;
 import java.io.Serializable;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
