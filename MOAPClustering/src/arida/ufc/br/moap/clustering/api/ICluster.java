@@ -1,4 +1,4 @@
-package arida.ufc.br.moap.clustering.spi;
+package arida.ufc.br.moap.clustering.api;
 
 import java.util.List;
 
@@ -9,10 +9,10 @@ import java.util.List;
  */
 public interface ICluster<T> {
 
-    /**
-     * @param id
-     */
-    public void setId(int id);
+//    /**
+//     * @param id
+//     */
+//    public void setId(int id);
 
     /**
      * @return

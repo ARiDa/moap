@@ -1,4 +1,4 @@
-package arida.ufc.br.moap.clustering.spi;
+package arida.ufc.br.moap.clustering.api;
 
 import arida.ufc.br.moap.core.algorithm.spi.AbstractAlgorithm;
 import arida.ufc.br.moap.distance.spi.IDistanceFunction;
@@ -10,19 +10,23 @@ import java.util.Collection;
  * @param <D>
  * @param <T>
  */
-public abstract class IClusteringAlgorithm extends AbstractAlgorithm {
+public abstract class IClusteringAlgorithm<T> extends AbstractAlgorithm {
 
-    protected IDistanceFunction distanceFunction;
+    protected IDistanceFunction<T> distanceFunction;
     /**
      * @return
      */
     public abstract String getName();
 
-    public void setDistanceFunction(IDistanceFunction distanceFunction){
+    /**
+     * 
+     * @param distanceFunction 
+     */
+    public void setDistanceFunction(IDistanceFunction<T> distanceFunction){
         this.distanceFunction = distanceFunction;
     }
     /**
      * @return
      */
-    public abstract Collection<ICluster> getClusters();
+    public abstract Collection<ICluster<T>> getClusters();
 }
