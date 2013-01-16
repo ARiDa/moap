@@ -13,12 +13,12 @@ public class SphericalLawofCosines implements IDistanceFunction<LatLonPoint> {
     private final double R_EARTH = 6371; // Meters
 	/*
      * (non-Javadoc) @see
-     * mf.algorithm.distance.spi.IDistanceFunction#distance(java.lang.Object,
+     * mf.algorithm.evaluate.spi.IDistanceFunction#evaluate(java.lang.Object,
      * java.lang.Object)
      */
 
     @Override
-    public double distance(LatLonPoint o1, LatLonPoint o2) {
+    public Double evaluate(LatLonPoint o1, LatLonPoint o2) {
         // TODO Auto-generated method stub
 
         double d = computeDistance(o1.getLatitude(), o1.getLongitude(),
@@ -86,5 +86,11 @@ public class SphericalLawofCosines implements IDistanceFunction<LatLonPoint> {
      */
     private double rad2deg(double rad) {
         return (rad * 180.0 / Math.PI);
+    }
+
+
+    @Override
+    public String getName() {
+        throw new UnsupportedOperationException("Spherical Law of Cosines");
     }
 }

@@ -73,7 +73,7 @@ public class StayPointDetection extends IStopAlgorithm {
 
 
         /*
-         * Compute distance between LatLon points
+         * Compute evaluate between LatLon points
          */
         report.setReport("Using the Spherical Law of Cosines for compute the distance between two points");
         SphericalLawofCosines distanceFunction = new SphericalLawofCosines();
@@ -125,9 +125,9 @@ public class StayPointDetection extends IStopAlgorithm {
              
                
                 /*
-                 * LatLong distance
+                 * LatLong evaluate
                  */
-                double dist = distanceFunction.distance(point_i, point_j);
+                double dist = distanceFunction.evaluate(point_i, point_j);
             
                 if (dist > spatialThreshold) {
 

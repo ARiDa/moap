@@ -7,6 +7,7 @@
             <suite-component/>
             <module-dependencies/>
             <public-packages>
+                <package>arida.ufc.br.core.exceptions</package>
                 <package>arida.ufc.br.moap.core.algorithm.spi</package>
                 <package>arida.ufc.br.moap.core.beans</package>
                 <package>arida.ufc.br.moap.core.beans.iterators.api</package>
@@ -16,6 +17,7 @@
                 <package>arida.ufc.br.moap.core.datasource.spi</package>
                 <package>arida.ufc.br.moap.core.imp</package>
                 <package>arida.ufc.br.moap.core.spi</package>
+                <package>arida.ufc.br.moap.function.api</package>
                 <package>examples</package>
             </public-packages>
             <class-path-extension>

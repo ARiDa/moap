@@ -18,7 +18,7 @@ public class Haversine implements IDistanceFunction<LatLonPoint> {
      */
 
     @Override
-    public double distance(LatLonPoint o1, LatLonPoint o2) {
+    public Double evaluate(LatLonPoint o1, LatLonPoint o2) {
         // TODO Auto-generated method stub
 
         double d = computeDistance(o1.getLatitude(), o1.getLongitude(),
@@ -66,5 +66,10 @@ public class Haversine implements IDistanceFunction<LatLonPoint> {
      */
     private double rad2deg(double rad) {
         return (rad * 180.0 / Math.PI);
+    }
+
+    @Override
+    public String getName() {
+        return "Haversine";
     }
 }
