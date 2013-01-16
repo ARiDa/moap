@@ -1,143 +1,221 @@
 package arida.ufc.br.moap.importer.database.imp;
 
+import arida.ufc.br.moap.core.beans.LatLonPoint;
+import arida.ufc.br.moap.core.beans.MovingObject;
+import arida.ufc.br.moap.core.beans.Trajectory;
 import arida.ufc.br.moap.core.spi.IDataModel;
+import arida.ufc.br.moap.datamodelapi.imp.TrajectoryModelImpl;
+import arida.ufc.br.moap.datamodelapi.spi.ITrajectoryModel;
+import arida.ufc.br.moap.importer.exceptions.MissingHeaderAttribute;
 import arida.ufc.br.moap.importer.spi.ITranslater;
 import java.sql.Connection;
-import java.sql.DatabaseMetaData;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.sql.Types;
+import java.util.HashSet;
+import java.util.Set;
+import org.joda.time.DateTime;
+import org.joda.time.Interval;
 import org.openide.util.Exceptions;
 
 /**
  *
  * The main class to translate a ResultSet for a specific Model
- * 
+ *
  * @author franzejr
  * @author igobrilhante
  */
 public class Translater implements ITranslater {
+
+    /*
+     * Necessary Parameters
+     */
+    public static final String PARAMETER_FILE = "file";
+    /*
+     * Standard Variables
+     */
     
-    
-    /* Type mapping used for reading experiment results */
-  /** Type mapping for STRING used for reading experiment results. */
-  public static final int STRING = 0;
-  /** Type mapping for BOOL used for reading experiment results. */
-  public static final int BOOL = 1;
-  /** Type mapping for DOUBLE used for reading experiment results. */
-  public static final int DOUBLE = 2;
-  /** Type mapping for BYTE used for reading experiment results. */
-  public static final int BYTE = 3;
-  /** Type mapping for SHORT used for reading experiment results. */
-  public static final int SHORT = 4;
-  /** Type mapping for INTEGER used for reading experiment results. */
-  public static final int INTEGER = 5;
-  /** Type mapping for LONG used for reading experiment results. */
-  public static final int LONG = 6;
-  /** Type mapping for FLOAT used for reading experiment results. */
-  public static final int FLOAT = 7;
-  /** Type mapping for DATE used for reading experiment results. */
-  public static final int DATE = 8; 
-  /** Type mapping for TEXT used for reading, e.g., text blobs. */
-  public static final int TEXT = 9; 
-  /** Type mapping for TIME used for reading TIME columns. */
-    
+    private ITrajectoryModel trajectoryDataModel;
+    private final String LATITUDE = "lat";
+    private final String LONGITUDE = "lon";
+    private final String TIME = "time";
     Connection connection;
     ResultSet resultSet;
-    
-    public Translater(Connection connection){
+
+    public Translater(Connection connection) {
         this.connection = connection;
     }
-    
+
     /*
      * Fill the Model with the data from the table
      */
     @Override
     public void translate(String query, IDataModel model) {
-        
+        trajectoryDataModel = (ITrajectoryModel) model;
+        Statement statement;
         try {
-            DatabaseMetaData mtdt = connection.getMetaData();
-            
-            Statement statement = connection.createStatement();
+            statement = connection.createStatement();
             resultSet = statement.executeQuery(query);
             
-            ResultSetMetaData rsmd = resultSet.getMetaData();
             
-            int databaseType[] = new int[rsmd.getColumnCount()];
-            String columnName[] = new String[rsmd.getColumnCount()];
-            
-            for (int i = 0; i < rsmd.getColumnCount(); i++) {
-                databaseType[i] = rsmd.getColumnType(i);
-                columnName[i] = rsmd.getColumnName(i);
+            if(isHeaderValid(resultSet)){
+                Integer i = 0;
+                while (resultSet.next()) {
+                    MovingObject movingObject = this.trajectoryDataModel.factory().newMovingObject(i.toString());
+                    Trajectory<LatLonPoint, DateTime> trajectory = this.trajectoryDataModel.factory().newTrajectory(i + "_0", movingObject);
+                    //trajectory.
+                    resultSet.getString(LATITUDE);
+                    resultSet.getString(LONGITUDE);
+                    resultSet.getString(TIME);
+                    i++;
+                }
+            } 
+            else{
+                throw new MissingHeaderAttribute("Missing header attributes");
             }
-            
-            int i = 0;
-            while(resultSet.next()){
-                //TODO
-                typeName(databaseType[i]);
-                i++;
-            }
+
         } catch (SQLException ex) {
             Exceptions.printStackTrace(ex);
         }
-         
+
     }
     
-   /**
-   * Returns the name associated with a SQL type.
-   *
-   * @param type 	the SQL type
-   * @return 		the name of the type
-   */
-  public static String typeName(int type) {
-    switch (type) {
-      case Types.BIGINT :
-	return "BIGINT ";
-      case Types.BINARY:
-	return "BINARY";
-      case Types.BIT:
-	return "BIT";
-      case Types.CHAR:
-	return "CHAR";
-      case Types.DATE:
-	return "DATE";
-      case Types.DECIMAL:
-	return "DECIMAL";
-      case Types.DOUBLE:
-	return "DOUBLE";
-      case Types.FLOAT:
-	return "FLOAT";
-      case Types.INTEGER:
-	return "INTEGER";
-      case Types.LONGVARBINARY:
-	return "LONGVARBINARY";
-      case Types.LONGVARCHAR:
-	return "LONGVARCHAR";
-      case Types.NULL:
-	return "NULL";
-      case Types.NUMERIC:
-	return "NUMERIC";
-      case Types.OTHER:
-	return "OTHER";
-      case Types.REAL:
-	return "REAL";
-      case Types.SMALLINT:
-	return "SMALLINT";
-      case Types.TIME:
-	return "TIME";
-      case Types.TIMESTAMP:
-	return "TIMESTAMP";
-      case Types.TINYINT:
-	return "TINYINT";
-      case Types.VARBINARY:
-	return "VARBINARY";
-      case Types.VARCHAR:
-	return "VARCHAR";
-      default:
-	return "Unknown";
+
+    /*
+     * Verify if the header is valid
+     * for a header be valid, it's necessary it must has
+     * Latitude, Longitude and Timestamp
+     */
+    private boolean isHeaderValid(ResultSet resultSet) {
+        Set<String> header = getColumnNames(resultSet);
+        
+        String error = "";
+
+        if (!header.contains(LATITUDE)) {
+            error += "lat,";
+        }
+        if (!header.contains(LONGITUDE)) {
+            error += "lon,";
+        }
+        if (!header.contains(TIME)) {
+            error += "time,";
+        }
+        if (!error.equals("")) {
+            int size = error.length() - 1;
+            String msg = error.substring(0, size);
+            throw new MissingHeaderAttribute("Missing header attributes: " + msg);
+        }
+
+        return true;
+
     }
-  }
     
+    
+    private Set<String> getColumnNames(ResultSet resultSet){
+        ResultSetMetaData rsmd;
+        Set<String> header = new HashSet<String>();
+        try {
+            rsmd = resultSet.getMetaData();
+            for (int i = 0; i < rsmd.getColumnCount(); i++) {
+                header.add(rsmd.getColumnName(i));
+            }
+            
+            return header;
+        } catch (SQLException ex) {
+            Exceptions.printStackTrace(ex);
+        }
+        throw new MissingHeaderAttribute("Missing header attributes");
+    }
 }
+
+/*
+ * //TODO 
+ * make a general translater
+ * try {
+ DatabaseMetaData mtdt = connection.getMetaData();
+            
+ Statement statement = connection.createStatement();
+ resultSet = statement.executeQuery(query);
+            
+ ResultSetMetaData rsmd = resultSet.getMetaData();
+            
+ int databaseType[] = new int[rsmd.getColumnCount()];
+ String columnName[] = new String[rsmd.getColumnCount()];
+            
+ for (int i = 0; i < rsmd.getColumnCount(); i++) {
+ databaseType[i] = rsmd.getColumnType(i);
+ columnName[i] = rsmd.getColumnName(i);
+ }
+            
+ while(resultSet.next()){
+ for (int i = 0; i < rsmd.getColumnCount(); i++) {
+ Object object = typeName(databaseType[i], resultSet.getObject(i));
+ }
+ }
+ } catch (SQLException ex) {
+ Exceptions.printStackTrace(ex);
+ }
+        
+ * 
+ *
+ * 
+ * 
+ *   
+ * Returns the name associated with a SQL type.
+ *
+ * @param type 	the SQL type
+ * @return 		the name of the type
+ *
+ public static Object typeName(int type, Object object) {
+ switch (type) {
+ case Types.BIGINT :
+ return (Integer) object;
+ case Types.BINARY:
+ return "BINARY";
+ case Types.BIT:
+ return "BIT";
+ case Types.CHAR:
+ return "CHAR";
+ case Types.DATE:
+ return "DATE";
+ case Types.DECIMAL:
+ return "DECIMAL";
+ case Types.DOUBLE:
+ return "DOUBLE";
+ case Types.FLOAT:
+ return "FLOAT";
+ case Types.INTEGER:
+ return "INTEGER";
+ case Types.LONGVARBINARY:
+ return "LONGVARBINARY";
+ case Types.LONGVARCHAR:
+ return "LONGVARCHAR";
+ case Types.NULL:
+ return "NULL";
+ case Types.NUMERIC:
+ return "NUMERIC";
+ case Types.OTHER:
+ return "OTHER";
+ case Types.REAL:
+ return "REAL";
+ case Types.SMALLINT:
+ return "SMALLINT";
+ case Types.TIME:
+ return "TIME";
+ case Types.TIMESTAMP:
+ return "TIMESTAMP";
+ case Types.TINYINT:
+ return "TINYINT";
+ case Types.VARBINARY:
+ return "VARBINARY";
+ case Types.VARCHAR:
+ return "VARCHAR";
+ default:
+ return "Unknown";
+ }
+ }
+    
+ }
+ * 
+ */
