@@ -1,4 +1,4 @@
-package arida.ufc.br.moap.clustering.optics.imp;
+package arida.ufc.br.moap.clustering.optics;
 
 import arida.ufc.br.moap.clustering.api.ICluster;
 import arida.ufc.br.moap.clustering.api.IClusteringAlgorithm;

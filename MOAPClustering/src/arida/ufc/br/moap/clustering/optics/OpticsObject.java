@@ -1,7 +1,12 @@
-package arida.ufc.br.moap.clustering.optics.imp;
+package arida.ufc.br.moap.clustering.optics;
 
 import java.util.List;
 
+/**
+ * This class represents an OpticsObject with the relevant attributes for Optics
+ * @author igobrilhante
+ * @param <T> 
+ */
 public class OpticsObject<T> implements Comparable<OpticsObject<T>> {
 	private T object;
 	private boolean processed;
@@ -11,6 +16,10 @@ public class OpticsObject<T> implements Comparable<OpticsObject<T>> {
 	private int clusterID;
 	
 
+        /**
+         * 
+         * @param object 
+         */
 	public OpticsObject(T object) {
 		this.object = object;
 		this.processed = false;
