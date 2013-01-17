@@ -64,10 +64,16 @@ public class Translater implements ITranslater {
                 while (resultSet.next()) {
                     MovingObject movingObject = this.trajectoryDataModel.factory().newMovingObject(i.toString());
                     Trajectory<LatLonPoint, DateTime> trajectory = this.trajectoryDataModel.factory().newTrajectory(i + "_0", movingObject);
-                    //trajectory.
-                    resultSet.getString(LATITUDE);
-                    resultSet.getString(LONGITUDE);
-                    resultSet.getString(TIME);
+                    
+                    LatLonPoint latLonPoint = new LatLonPoint();
+                    double latitude = Double.valueOf(resultSet.getString(LATITUDE));
+                    double longitude = Double.valueOf(resultSet.getString(LONGITUDE));
+                    DateTime timestamp = DateTime.parse(resultSet.getString(TIME));
+  
+                    latLonPoint.setLatitude(latitude);
+                    latLonPoint.setLongitude(longitude);
+                    trajectory.addPoint(latLonPoint, timestamp);
+                    
                     i++;
                 }
             } 
