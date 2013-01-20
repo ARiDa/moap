@@ -5,10 +5,8 @@ import arida.ufc.br.moap.clustering.api.IClusteringAlgorithm;
 import arida.ufc.br.moap.core.imp.Parameters;
 import arida.ufc.br.moap.core.spi.IDataModel;
 import arida.ufc.br.moap.datamodelapi.imp.ListModelImpl;
-import arida.ufc.br.moap.datamodelapi.imp.MapModelImpl;
 import arida.ufc.br.moap.distance.spi.IDistanceFunction;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.PriorityQueue;
 import org.apache.log4j.Logger;
@@ -56,9 +54,7 @@ public class Optics<T>
         this.params = new Parameters();
         params.addClass("minPts", Integer.class);
         params.addClass("epsilon", Float.class);
-        
-
-        
+     
     }
     
 
@@ -68,15 +64,6 @@ public class Optics<T>
         return "Optics Algorithm";
     }
 
-    /*
-     * (non-Javadoc) @see
-     * mf.algorithm.clustering.spi.IClusteringAlgorithm#getClusters()
-     */
-//    @Override
-//    public Collection<ICluster<T>> getClusters() {
-//        // TODO Auto-generated method stub
-//        return this.clusters;
-//    }
 
     /**
      * @param object
@@ -226,11 +213,6 @@ public class Optics<T>
     public List<OpticsObject<T>> getClusterOrdered() {
         return ClusterOrdered;
     }
-
-//    @Override
-//    public Collection<ICluster<T>> getClusters() {
-//        return this.clusters;
-//    }
 
     /**
      * 
