@@ -11,6 +11,6 @@ import java.util.Collection;
 public interface IDataModel<T> {
     
     public String getName();
-    public Collection<T> getObjects();
+    public Collection<T> getInstances();
 
 }

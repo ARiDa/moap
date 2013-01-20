@@ -5,27 +5,24 @@
 package arida.ufc.br.moap.datamodelapi.imp;
 
 import arida.ufc.br.moap.core.spi.IDataModel;
-import java.util.AbstractMap;
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.Set;
 
 /**
  *
  * @author igobrilhante
  */
-public class MapModelImpl<O1,O2> extends AbstractMap<O1, O2> implements IDataModel<O1> {
+public class MapModelImpl<O1,O2> extends HashMap<O1, O2> implements IDataModel<O1> {
     
-    private HashMap data;
     
     public MapModelImpl(){
-        this.data = new HashMap();
+       super();
     }
 
-    @Override
-    public Set<Entry<O1, O2>> entrySet() {
-        return this.data.entrySet();
-    }
+//    @Override
+//    public Set<Entry<O1, O2>> entrySet() {
+//        return this.data.entrySet();
+//    }
 
     @Override
     public String getName() {
@@ -33,8 +30,8 @@ public class MapModelImpl<O1,O2> extends AbstractMap<O1, O2> implements IDataMod
     }
 
     @Override
-    public Collection<O1> getObjects() {
-        return data.keySet();
+    public Collection<O1> getInstances() {
+        return this.keySet();
     }
     
 }

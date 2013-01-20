@@ -262,7 +262,7 @@ public class TrajectoryModelImpl<S, T> extends AbstractTrajectoryModel<S, T> {
     }
 
     @Override
-    public Collection getObjects() {
+    public Collection getInstances() {
         return this.trajectories;
     }
 }

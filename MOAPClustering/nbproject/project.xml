@@ -33,6 +33,7 @@
             </module-dependencies>
             <public-packages>
                 <package>arida.ufc.br.moap.clustering.api</package>
+                <package>arida.ufc.br.moap.clustering.optics</package>
             </public-packages>
             <class-path-extension>
                 <runtime-relative-path>ext/log4j-1.2.16.jar</runtime-relative-path>

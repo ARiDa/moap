@@ -24,10 +24,7 @@ import org.apache.log4j.Logger;
  * href='http://dl.acm.org/citation.cfm?id=304187'>http://dl.acm.org/citation.cfm?id=304187</a>
  */
 public class Optics<T>
-    extends IClusteringAlgorithm<
-        T,
-        IDataModel<T>,
-        IDataModel<ICluster<T>>> {
+    extends IClusteringAlgorithm<T> {
 
     public static final int UNDEFINED = Integer.MAX_VALUE;
     private Logger logger = Logger.getLogger(Optics.class);
@@ -37,7 +34,7 @@ public class Optics<T>
     private PriorityQueue<OpticsObject<T>> orderSeed;
     private IDistanceFunction<T> distance_function;
     private List<OpticsObject<T>> ClusterOrdered;
-    private List<ICluster<T>> clusters;
+    private List<OpticsCluster<T>> clusters;
     private Parameters params;
 
     /**
@@ -221,7 +218,7 @@ public class Optics<T>
      * @return 
      */
     @Override
-    public ListModelImpl<ICluster<T>> execute(IDataModel<T> data, Parameters parameters) {
+    public ListModelImpl<OpticsCluster<T>> execute(IDataModel<T> data, Parameters parameters) {
         
         setParameters(parameters);
         
@@ -230,7 +227,7 @@ public class Optics<T>
         
         
         // Creating OpticsObjects
-        for (T t : data.getObjects()) {
+        for (T t : data.getInstances()) {
             OpticsObject<T> o = new OpticsObject<T>(t);
             this.setOfObjects.add(o);
         }
@@ -244,7 +241,7 @@ public class Optics<T>
         
         logger.info("Optics Execution");
         int size = setOfObjects.size();
-        this.clusters = new ArrayList<ICluster<T>>();
+        this.clusters = new ArrayList<OpticsCluster<T>>();
         this.ClusterOrdered = new ArrayList<OpticsObject<T>>();
         int i = 0;
         while (i < size) {
@@ -260,7 +257,7 @@ public class Optics<T>
         logger.info("Optics Execution End");
         
         
-        ListModelImpl<ICluster<T>> res = new ListModelImpl<ICluster<T>>(this.clusters);
+        ListModelImpl<OpticsCluster<T>> res = new ListModelImpl<OpticsCluster<T>>(this.clusters);
         this.result = res;
         
         return res;

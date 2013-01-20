@@ -5,7 +5,6 @@
 package arida.ufc.br.moap.datamodelapi.imp;
 
 import arida.ufc.br.moap.core.spi.IDataModel;
-import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -14,17 +13,16 @@ import java.util.List;
  *
  * @author igobrilhante
  */
-public class ListModelImpl<O> extends AbstractList<O> implements IDataModel<O> {
-    
-    private List<O> data;
-    
+public class ListModelImpl<O> extends ArrayList<O> implements IDataModel<O> {
+        
     public ListModelImpl(){
-        this.data = new ArrayList();
+       super();
     }
     
     public ListModelImpl(List<O> data){
-        this.data = new ArrayList<O>(data);
+       super(data);
     }
+    
 
     @Override
     public String getName() {
@@ -32,18 +30,8 @@ public class ListModelImpl<O> extends AbstractList<O> implements IDataModel<O> {
     }
 
     @Override
-    public Collection<O> getObjects() {
-        return this.data;
-    }
-
-    @Override
-    public O get(int index) {
-        return data.get(index);
-    }
-
-    @Override
-    public int size() {
-        return data.size();
+    public Collection<O> getInstances() {
+        return this;
     }
     
 }
