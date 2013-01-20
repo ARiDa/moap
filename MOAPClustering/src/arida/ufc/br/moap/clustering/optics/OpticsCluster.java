@@ -11,6 +11,7 @@ import java.util.List;
  * @param <T>
  */
 public class OpticsCluster<T> implements ICluster<T>,Comparable<Integer> {
+    
 	private final int id;
 	private List<T> objects;
 	

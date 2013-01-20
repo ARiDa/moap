@@ -41,6 +41,7 @@ public class StayPointDetection extends IStopAlgorithm {
 
     public static final String PARAMETER_TIME_THRESHOLD = "timeThreshold";
     public static final String PARAMETER_SPATIAL_THRESHOLD = "spatialThreshold";
+    private TrajectoryModelImpl<StayPoint,Interval> res;
 
 //    private  List<IStop> stayPoints = new ArrayList<StayPoint>();
     @Override
@@ -49,11 +50,11 @@ public class StayPointDetection extends IStopAlgorithm {
     }
 
     @Override
-    public ITrajectoryModel<StayPoint,Interval> execute(ITrajectoryModel data, Parameters parameters) {
+    public ITrajectoryModel<StayPoint, Interval> execute(ITrajectoryModel<LatLonPoint, DateTime> data, Parameters parameters) {
         report = new Reporter(StayPointDetection.class);
         report.setReport("Starting the algorithm, it works for a single trajectory");
 
-        this.result = new TrajectoryModelImpl<StayPoint,Interval>();
+        this.res = new TrajectoryModelImpl<StayPoint,Interval>();
 
 
         /*
@@ -88,7 +89,9 @@ public class StayPointDetection extends IStopAlgorithm {
 
         }
 
-        return result;
+        this.result = res;
+        
+        return res;
     }
 
     /*
@@ -99,10 +102,10 @@ public class StayPointDetection extends IStopAlgorithm {
         int pointNum = trajectory.getPointCount();
         MovingObject movingObjectId = trajectory.getMovingObject();
 
-        Trajectory new_trajectory = this.result.factory().newTrajectory(trajectory.getId(), movingObjectId);
+        Trajectory new_trajectory = this.res.factory().newTrajectory(trajectory.getId(), movingObjectId);
 
        
-        this.result.addTrajectory(new_trajectory);
+        this.res.addTrajectory(new_trajectory);
       
 
         LatLonPoint point_i, point_j;
@@ -110,7 +113,7 @@ public class StayPointDetection extends IStopAlgorithm {
         int i = 0, j = 0;
         int stopCount = 0;
 
-        int size = this.result.getTrajectoryCount();
+        int size = this.res.getTrajectoryCount();
         
         while (i < pointNum) {
             
@@ -195,4 +198,11 @@ public class StayPointDetection extends IStopAlgorithm {
         LatLonPoint centroid = null;
         return centroid;
     }
+
+    @Override
+    public String getName() {
+        return "Stop Point Detection Algorithm";
+    }
+
+
 }

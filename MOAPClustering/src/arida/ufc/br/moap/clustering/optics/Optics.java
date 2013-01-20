@@ -4,6 +4,8 @@ import arida.ufc.br.moap.clustering.api.ICluster;
 import arida.ufc.br.moap.clustering.api.IClusteringAlgorithm;
 import arida.ufc.br.moap.core.imp.Parameters;
 import arida.ufc.br.moap.core.spi.IDataModel;
+import arida.ufc.br.moap.datamodelapi.imp.ListModelImpl;
+import arida.ufc.br.moap.datamodelapi.imp.MapModelImpl;
 import arida.ufc.br.moap.distance.spi.IDistanceFunction;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -23,17 +25,22 @@ import org.apache.log4j.Logger;
  * Retrieved from <a
  * href='http://dl.acm.org/citation.cfm?id=304187'>http://dl.acm.org/citation.cfm?id=304187</a>
  */
-public class Optics<T> extends IClusteringAlgorithm<T> {
+public class Optics<T>
+    extends IClusteringAlgorithm<
+        T,
+        IDataModel<T>,
+        IDataModel<ICluster<T>>> {
 
     public static final int UNDEFINED = Integer.MAX_VALUE;
     private Logger logger = Logger.getLogger(Optics.class);
     private List<OpticsObject<T>> setOfObjects;
-    private double epsilon;
-    private double minPts;
+    private float epsilon;
+    private int minPts;
     private PriorityQueue<OpticsObject<T>> orderSeed;
     private IDistanceFunction<T> distance_function;
     private List<OpticsObject<T>> ClusterOrdered;
-    private Collection<ICluster<T>> clusters;
+    private List<ICluster<T>> clusters;
+    private Parameters params;
 
     /**
      * @param dataset
@@ -41,31 +48,20 @@ public class Optics<T> extends IClusteringAlgorithm<T> {
      * @param minPts
      * @param distanceFunction
      */
-    public Optics(List<T> dataset, double epsilon, double minPts, IDistanceFunction<T> distanceFunction) {
-        this.setOfObjects = new ArrayList<OpticsObject<T>>();
-        this.orderSeed = new PriorityQueue<OpticsObject<T>>();
-        for (T t : dataset) {
-            OpticsObject<T> o = new OpticsObject<T>(t);
-            this.setOfObjects.add(o);
-        }
+    public Optics(List<T> dataset, IDistanceFunction<T> distanceFunction) {
+        
         this.distance_function = distanceFunction;
 
         // Parameters for the algorithm
-        this.epsilon = epsilon;
-        this.minPts = minPts;
+        this.params = new Parameters();
+        params.addClass("minPts", Integer.class);
+        params.addClass("epsilon", Float.class);
+        
 
-        // Set neighbors the p
-        for (OpticsObject<T> p : setOfObjects) {
-            setNeighbors(p);
-        }
+        
     }
+    
 
-
-
-    /*
-     * (non-Javadoc) @see
-     * mf.algorithm.clustering.spi.IClusteringAlgorithm#getName()
-     */
     @Override
     public String getName() {
         // TODO Auto-generated method stub
@@ -231,10 +227,10 @@ public class Optics<T> extends IClusteringAlgorithm<T> {
         return ClusterOrdered;
     }
 
-    @Override
-    public Collection<ICluster<T>> getClusters() {
-        return this.clusters;
-    }
+//    @Override
+//    public Collection<ICluster<T>> getClusters() {
+//        return this.clusters;
+//    }
 
     /**
      * 
@@ -243,8 +239,28 @@ public class Optics<T> extends IClusteringAlgorithm<T> {
      * @return 
      */
     @Override
-    public IDataModel execute(IDataModel data, Parameters parameters) {
-               logger.info("Optics Execution");
+    public ListModelImpl<ICluster<T>> execute(IDataModel<T> data, Parameters parameters) {
+        
+        setParameters(parameters);
+        
+        this.setOfObjects = new ArrayList<OpticsObject<T>>();
+        this.orderSeed = new PriorityQueue<OpticsObject<T>>();
+        
+        
+        // Creating OpticsObjects
+        for (T t : data.getObjects()) {
+            OpticsObject<T> o = new OpticsObject<T>(t);
+            this.setOfObjects.add(o);
+        }
+        
+        // Set neighbors of each point p
+        for (OpticsObject<T> p : setOfObjects) {
+            setNeighbors(p);
+        }
+        
+        
+        
+        logger.info("Optics Execution");
         int size = setOfObjects.size();
         this.clusters = new ArrayList<ICluster<T>>();
         this.ClusterOrdered = new ArrayList<OpticsObject<T>>();
@@ -261,7 +277,21 @@ public class Optics<T> extends IClusteringAlgorithm<T> {
         extractDBSCANClustering(); // Extract the cluster
         logger.info("Optics Execution End");
         
-        return null;
+        
+        ListModelImpl<ICluster<T>> res = new ListModelImpl<ICluster<T>>(this.clusters);
+        this.result = res;
+        
+        return res;
+    }
+    
+    private void setParameters(Parameters parameters){
+        logger.info("Setting parameters");
+        if(this.params.validate(parameters)){
+            this.epsilon = (Float)parameters.getParamValue("eps");
+            this.minPts = (Integer)parameters.getParamValue("minpts");
+        }
+        
+        
     }
 
     

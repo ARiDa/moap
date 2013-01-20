@@ -4,14 +4,13 @@ import arida.ufc.br.moap.core.imp.Parameters;
 import arida.ufc.br.moap.core.imp.Reporter;
 import arida.ufc.br.moap.core.spi.IDataModel;
 
-import org.apache.commons.lang3.Validate;
 
 /*
  * This class provides common methods for other algorithms
  * 
  */
 
-public abstract class AbstractAlgorithm<I extends IDataModel, O extends IDataModel> {
+public abstract class AbstractAlgorithm<I extends IDataModel<?>, O extends IDataModel<?> > {
 
     /*
      * Parameters which will be used by algorithm
@@ -41,31 +40,6 @@ public abstract class AbstractAlgorithm<I extends IDataModel, O extends IDataMod
      */
     protected boolean areParametersValid(Parameters input){
         
-//        Set<String> diff = new HashSet<String>(input.getParameters());
-//        diff.removeAll(this.parameters.getParameters());
-//
-//        if(!diff.isEmpty()){
-//            throw new MissingParameter();
-//        }
-        
-//        Validate.notEmpty(input.getParameters());
-//        
-//        for(String s : this.parameters.getParameters()){
-//            // Validate the input
-//            Validate.isTrue(input.getParameters().contains(s),
-//                    "Parameter should contain %s of type %s",
-//                    s, this.parameters.getParamClass(s));
-//            
-//            // Validate the input type
-//            Validate.isInstanceOf(input.getParamClass(s), input.getParamValue(s), 
-//                    "Parameter for %s should be %s", 
-//                    s, this.parameters.getParamClass(s));
-//        }
-//        
-//        
-//        
-//        return true;
-        
         return this.parameters.validate(parameters);
     }
 
@@ -76,4 +50,6 @@ public abstract class AbstractAlgorithm<I extends IDataModel, O extends IDataMod
      * @param parameters Parameters which will be used in the algorithm
      */
     public abstract O execute(I data, Parameters parameters);
+    
+    public abstract String getName();
 }

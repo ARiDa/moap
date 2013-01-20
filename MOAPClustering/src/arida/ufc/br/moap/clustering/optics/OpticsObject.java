@@ -8,13 +8,12 @@ import java.util.List;
  * @param <T> 
  */
 public class OpticsObject<T> implements Comparable<OpticsObject<T>> {
-	private T object;
+	private final T object;
 	private boolean processed;
 	private double reachabilityDistance;
 	private double coreDistance;
 	private List<OpticsObject<T>> neighbors;
 	private int clusterID;
-	
 
         /**
          * 
@@ -31,9 +30,6 @@ public class OpticsObject<T> implements Comparable<OpticsObject<T>> {
 		return object;
 	}
 
-	public void setObject(T object) {
-		this.object = object;
-	}
 
 	public int getClusterID() {
 		return clusterID;

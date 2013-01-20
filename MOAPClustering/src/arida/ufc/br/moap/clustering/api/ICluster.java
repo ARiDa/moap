@@ -9,10 +9,6 @@ import java.util.List;
  */
 public interface ICluster<T> {
 
-//    /**
-//     * @param id
-//     */
-//    public void setId(int id);
 
     /**
      * @return

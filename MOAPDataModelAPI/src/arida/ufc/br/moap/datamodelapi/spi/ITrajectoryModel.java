@@ -13,7 +13,7 @@ import java.util.Collection;
  * @author franzejr
  * @author rafaelelias
  */
-public interface ITrajectoryModel<S,T> extends IDataModel {
+public interface ITrajectoryModel<S,T> extends IDataModel<Trajectory<S,T>> {
     
     /*
      * Add a single trajectory

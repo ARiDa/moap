@@ -255,4 +255,14 @@ public class TrajectoryModelImpl<S, T> extends AbstractTrajectoryModel<S, T> {
         this.trajectoryIndices = null;
         
     }
+
+    @Override
+    public String getName() {
+        return "Trajectory Model";
+    }
+
+    @Override
+    public Collection getObjects() {
+        return this.trajectories;
+    }
 }
