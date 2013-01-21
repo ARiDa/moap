@@ -11,6 +11,8 @@ import java.util.List;
 
 /**
  *
+ * General Model for tabular
+ * 
  * @author igobrilhante
  */
 public class ListModelImpl<O> extends ArrayList<O> implements IDataModel<O> {

@@ -2,7 +2,7 @@ package arida.ufc.br.moap.db.postgres.imp;
 
 import arida.ufc.br.moap.core.database.spi.*;
 import arida.ufc.br.moap.core.spi.IDataModel;
-import arida.ufc.br.moap.importer.database.imp.Translater;
+import arida.ufc.br.moap.datamodelapi.imp.TrajectoryModelImpl;
 import java.io.Serializable;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
@@ -33,14 +33,22 @@ public class PostgresqlProvider extends AbstractDatabase implements Serializable
         if (instance == null) {
             instance = new PostgresqlProvider(user, password, url);
         }
-        
+
         return instance;
     }
 
     @Override
     public IDataModel retrieveInstances(String query, IDataModel model) {
-        Translater translater = new Translater(this.connection);
-        translater.translate(query, model);
+
+        //Verify the model
+        if (model instanceof TrajectoryModelImpl) {
+            SimpleTrajectoryTranslater translater = new SimpleTrajectoryTranslater(this.connection);
+            translater.translate(query, model);
+        } else {
+            GeneralTranslater generalTranslater = new GeneralTranslater(this.connection);
+            generalTranslater.translate(query, model);
+        }
+
 
         return model;
     }
