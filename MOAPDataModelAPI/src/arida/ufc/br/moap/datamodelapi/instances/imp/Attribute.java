@@ -23,6 +23,12 @@ public class Attribute implements IAttribute {
         this.defaultValue = defaultValue;
     }
     
+    public Attribute(String name,AttributeType type){
+        this.name = name;
+        this.type = type;
+        this.defaultValue = null;
+    }
+    
     @Override
     public String getName() {
         return this.name;

@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package arida.ufc.br.moap.datamodelapi.instances.imp;
 
 import arida.ufc.br.moap.datamodelapi.instances.api.AttributeType;
@@ -40,15 +36,33 @@ public class InstancesBasedModelImpl implements IInstanceBasedModel {
         }
 
     }
+    
+    @Override
+    public void addAttribute(String name, AttributeType type) {
+        
+        if (name != null && type != null ) {
+            Attribute att = new Attribute(name, type);
+
+            if (!this.attributes.contains(att)) {
+                this.addAttribute(att);
+            }
+        }
+        else{
+            throw new IllegalArgumentException("Arguments cannot be null");
+        }
+
+    }
 
     @Override
     public void addAttribute(IAttribute attribute) {
-        if(attribute!=null) {
-            this.attributes.add(attribute);
-        }
-        else {
-            throw new IllegalArgumentException("Arguments cannot be null");
-        }
+        
+        this.attributes.add(attribute);
+//        if(attribute!=null) {
+//            this.attributes.add(attribute);
+//        }
+//        else {
+//            throw new IllegalArgumentException("Arguments cannot be null");
+//        }
     }
 
     @Override

@@ -16,6 +16,8 @@ public interface IInstanceBasedModel extends IDataModel<IInstance> {
     
     public void addAttribute(String name,AttributeType type,Object defaultValue);
     
+    public void addAttribute(String name,AttributeType type);
+    
     public void addAttribute(IAttribute attribute);
     
     public IAttribute getAttribute(String attributeName);

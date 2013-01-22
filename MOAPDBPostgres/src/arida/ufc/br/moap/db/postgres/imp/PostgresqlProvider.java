@@ -3,6 +3,7 @@ package arida.ufc.br.moap.db.postgres.imp;
 import arida.ufc.br.moap.core.database.spi.*;
 import arida.ufc.br.moap.core.spi.IDataModel;
 import arida.ufc.br.moap.datamodelapi.imp.TrajectoryModelImpl;
+import arida.ufc.br.moap.datamodelapi.instances.imp.InstancesBasedModelImpl;
 import java.io.Serializable;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
@@ -46,9 +47,8 @@ public class PostgresqlProvider extends AbstractDatabase implements Serializable
             translater.translate(query, model);
         } else {
             GeneralTranslater generalTranslater = new GeneralTranslater(this.connection);
-            generalTranslater.translate(query, model);
+            generalTranslater.translate(query, (InstancesBasedModelImpl)model);
         }
-
 
         return model;
     }

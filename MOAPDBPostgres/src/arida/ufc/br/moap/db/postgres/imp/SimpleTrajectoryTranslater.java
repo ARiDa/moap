@@ -15,6 +15,8 @@ import java.sql.Statement;
 import java.util.HashSet;
 import java.util.Set;
 import org.joda.time.DateTime;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
 import org.openide.util.Exceptions;
 
 /**
@@ -71,7 +73,10 @@ public class SimpleTrajectoryTranslater implements ITranslater {
                     LatLonPoint latLonPoint = new LatLonPoint();
                     double latitude = Double.valueOf(resultSet.getString(LATITUDE));
                     double longitude = Double.valueOf(resultSet.getString(LONGITUDE));
-                    DateTime timestamp = DateTime.parse(resultSet.getString(TIME));
+                    
+                    DateTimeFormatter fmt = DateTimeFormat.forPattern("yyyy-mm-dd HH:mm:ss.SSSSSS");
+                    
+                    DateTime timestamp = DateTime.parse(resultSet.getString(TIME), fmt);
   
                     latLonPoint.setLatitude(latitude);
                     latLonPoint.setLongitude(longitude);
@@ -97,6 +102,8 @@ public class SimpleTrajectoryTranslater implements ITranslater {
      * Verify if the header is valid
      * for a header be valid, it's necessary it must has
      * Latitude, Longitude and Timestamp
+     * 
+     * @param resultSet ResultSet
      */
     private boolean isHeaderValid(ResultSet resultSet) {
         Set<String> header = getColumnNames(resultSet);
@@ -126,7 +133,7 @@ public class SimpleTrajectoryTranslater implements ITranslater {
         Set<String> header = new HashSet<String>();
         try {
             rsmd = resultSet.getMetaData();
-            for (int i = 0; i < rsmd.getColumnCount(); i++) {
+            for (int i = 1; i <= rsmd.getColumnCount(); i++) {
                 header.add(rsmd.getColumnName(i));
             }
             
