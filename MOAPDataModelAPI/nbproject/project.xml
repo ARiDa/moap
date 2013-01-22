@@ -25,6 +25,8 @@
             </module-dependencies>
             <public-packages>
                 <package>arida.ufc.br.moap.datamodelapi.imp</package>
+                <package>arida.ufc.br.moap.datamodelapi.instances.api</package>
+                <package>arida.ufc.br.moap.datamodelapi.instances.imp</package>
                 <package>arida.ufc.br.moap.datamodelapi.spi</package>
             </public-packages>
         </data>
