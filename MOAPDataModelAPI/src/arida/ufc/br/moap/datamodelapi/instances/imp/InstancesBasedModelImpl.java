@@ -15,12 +15,12 @@ import java.util.Collection;
  *
  * @author igobrilhante
  */
-public class InstancesBasedModel implements IInstanceBasedModel {
+public class InstancesBasedModelImpl implements IInstanceBasedModel {
 
     public ArrayList<IInstance> instances;
     public ArrayList<IAttribute> attributes;
 
-    public InstancesBasedModel() {
+    public InstancesBasedModelImpl() {
         this.instances = new ArrayList();
         this.attributes = new ArrayList<IAttribute>();
     }
