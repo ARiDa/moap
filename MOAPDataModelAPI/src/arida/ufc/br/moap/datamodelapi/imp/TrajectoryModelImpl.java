@@ -265,4 +265,12 @@ public class TrajectoryModelImpl<S, T> extends AbstractTrajectoryModel<S, T> {
     public Collection getInstances() {
         return this.trajectories;
     }
+
+    @Override
+    public void addInstance(Object instance) {
+        if(instance instanceof Trajectory){
+            Trajectory<S,T> traj = (Trajectory<S,T>)instance;
+            this.addTrajectory(traj);
+        }
+    }
 }

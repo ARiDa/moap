@@ -12,5 +12,6 @@ public interface IDataModel<T> {
     
     public String getName();
     public Collection<T> getInstances();
+    public void addInstance(T instance);
 
 }

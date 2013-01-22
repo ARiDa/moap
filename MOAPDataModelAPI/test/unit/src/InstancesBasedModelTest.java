@@ -6,13 +6,12 @@
 import arida.ufc.br.moap.datamodelapi.instances.api.AttributeType;
 import arida.ufc.br.moap.datamodelapi.instances.api.IInstance;
 import arida.ufc.br.moap.datamodelapi.instances.imp.Instance;
-import arida.ufc.br.moap.datamodelapi.instances.imp.InstancesBasedModel;
+import arida.ufc.br.moap.datamodelapi.instances.imp.InstancesBasedModelImpl;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  *
@@ -48,7 +47,7 @@ public class InstancesBasedModelTest {
         /*
          * Defining the Model
          */
-        InstancesBasedModel model = new InstancesBasedModel();
+        InstancesBasedModelImpl model = new InstancesBasedModelImpl();
         model.addAttribute("age", AttributeType.INT, -1);
         model.addAttribute("name", AttributeType.STRING, "");
         model.addAttribute("weight", AttributeType.FLOAT, 0f);
@@ -107,7 +106,7 @@ public class InstancesBasedModelTest {
         /*
          * Defining the Model
          */
-        InstancesBasedModel model = new InstancesBasedModel();
+        InstancesBasedModelImpl model = new InstancesBasedModelImpl();
         model.addAttribute("age", AttributeType.INT, -1);
         model.addAttribute("name", AttributeType.STRING, "");
         model.addAttribute("weight", AttributeType.FLOAT, 0f);

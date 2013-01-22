@@ -35,5 +35,10 @@ public class ListModelImpl<O> extends ArrayList<O> implements IDataModel<O> {
     public Collection<O> getInstances() {
         return this;
     }
+
+    @Override
+    public void addInstance(O instance) {
+        this.add(instance);
+    }
     
 }

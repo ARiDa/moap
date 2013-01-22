@@ -30,5 +30,12 @@ public class MapModelImpl<O1,O2> extends HashMap<O1, O2> implements IDataModel<O
     public Collection<O1> getInstances() {
         return this.keySet();
     }
+
+    @Override
+    public void addInstance(O1 instance) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+    
+    
     
 }

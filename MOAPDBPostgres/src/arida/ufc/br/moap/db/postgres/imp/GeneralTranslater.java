@@ -52,6 +52,7 @@ public class GeneralTranslater implements ITranslater {
             }
 
             MapModelImpl<Object, List<Object>> newModel = new MapModelImpl<Object, List<Object>>();
+            
             HashMap<Object, List<Object>> hashMap = new HashMap<Object, List<Object>>();
 
             while (resultSet.next()) {
