@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><module codename="arida.ufc.br.moap.db.mysql">
-    <module_version install_time="1358880246385" last="true" origin="installer" specification_version="1.0">
+    <module_version install_time="1358894886297" last="true" origin="installer" specification_version="1.0">
         <file crc="210837656" name="config/Modules/arida-ufc-br-moap-db-mysql.xml"/>
-        <file crc="3819931822" name="modules/arida-ufc-br-moap-db-mysql.jar"/>
+        <file crc="3226719859" name="modules/arida-ufc-br-moap-db-mysql.jar"/>
     </module_version>
 </module>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><module codename="arida.ufc.br.moap.core">
-    <module_version install_time="1358880246234" last="true" origin="installer" specification_version="1.0">
+    <module_version install_time="1358894886091" last="true" origin="installer" specification_version="1.0">
         <file crc="2616643751" name="config/Modules/arida-ufc-br-moap-core.xml"/>
-        <file crc="2963854015" name="modules/arida-ufc-br-moap-core.jar"/>
+        <file crc="1539977557" name="modules/arida-ufc-br-moap-core.jar"/>
         <file crc="2621656446" name="modules/ext/commons-lang3-3.1.jar"/>
         <file crc="767179638" name="modules/ext/junit-4.5.jar"/>
         <file crc="1484850960" name="modules/ext/log4j-1.2.16.jar"/>

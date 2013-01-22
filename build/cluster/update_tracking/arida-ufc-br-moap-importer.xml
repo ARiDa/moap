@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><module codename="arida.ufc.br.moap.importer">
-    <module_version install_time="1358880248128" last="true" origin="installer" specification_version="1.0.1.130122.1.1">
+    <module_version install_time="1358894887915" last="true" origin="installer" specification_version="1.0.1.130122.1">
         <file crc="1959329987" name="config/Modules/arida-ufc-br-moap-importer.xml"/>
-        <file crc="1984933086" name="modules/arida-ufc-br-moap-importer.jar"/>
+        <file crc="3986960537" name="modules/arida-ufc-br-moap-importer.jar"/>
         <file crc="1685266790" name="modules/ext/joda-time-2.1.jar"/>
         <file crc="1484850960" name="modules/ext/log4j-1.2.16.jar"/>
         <file crc="1776613170" name="modules/ext/super-csv-2.0.0-beta-1-javadoc.jar"/>

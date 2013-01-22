@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><module codename="arida.ufc.br.moap.distance">
-    <module_version install_time="1358880246695" last="true" origin="installer" specification_version="1.0.1">
+    <module_version install_time="1358894886704" last="true" origin="installer" specification_version="1.0.1">
         <file crc="1939884060" name="config/Modules/arida-ufc-br-moap-distance.xml"/>
-        <file crc="1905293336" name="modules/arida-ufc-br-moap-distance.jar"/>
+        <file crc="1395873529" name="modules/arida-ufc-br-moap-distance.jar"/>
     </module_version>
 </module>

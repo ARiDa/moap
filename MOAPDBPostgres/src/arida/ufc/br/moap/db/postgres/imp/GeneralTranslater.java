@@ -22,7 +22,7 @@ import org.openide.util.Exceptions;
  * @author igobrilhante
  */
 public class GeneralTranslater implements ITranslater<InstancesBasedModelImpl> {
-    
+        
     Connection connection;
     ResultSet resultSet;
 
