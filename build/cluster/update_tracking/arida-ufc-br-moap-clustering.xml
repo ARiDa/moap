@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><module codename="arida.ufc.br.moap.clustering">
-    <module_version install_time="1358894887556" last="true" origin="installer" specification_version="1.0">
-        <file crc="593248021" name="config/Modules/arida-ufc-br-moap-clustering.xml"/>
-        <file crc="259095152" name="modules/arida-ufc-br-moap-clustering.jar"/>
-        <file crc="1484850960" name="modules/ext/log4j-1.2.16.jar"/>
-    </module_version>
-</module>
