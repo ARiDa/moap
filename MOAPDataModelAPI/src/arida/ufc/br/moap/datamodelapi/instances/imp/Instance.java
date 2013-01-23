@@ -2,7 +2,7 @@ package arida.ufc.br.moap.datamodelapi.instances.imp;
 
 import arida.ufc.br.moap.datamodelapi.instances.api.AttributeType;
 import arida.ufc.br.moap.datamodelapi.instances.api.IInstance;
-import arida.ufc.br.moap.datamodelapi.instances.api.IInstanceBasedModel;
+import arida.ufc.br.moap.datamodelapi.instances.api.IInstancesBasedModel;
 import java.util.HashMap;
 
 /**
@@ -11,14 +11,14 @@ import java.util.HashMap;
  */
 public class Instance implements IInstance {
 
-    private final IInstanceBasedModel model;
+    private final IInstancesBasedModel model;
     private final HashMap<Integer, Object> attributeIdx;
     private final HashMap<String, Integer> attributeColumnName;
 
     /**
      * Class constructor specifying the model will be used
      */
-    public Instance(IInstanceBasedModel model) {
+    public Instance(IInstancesBasedModel model) {
         this.model = model;
         this.attributeIdx = new HashMap<Integer, Object>();
         this.attributeColumnName = new HashMap<String, Integer>();
@@ -26,7 +26,7 @@ public class Instance implements IInstance {
     }
 
     @Override
-    public IInstanceBasedModel getModel() {
+    public IInstancesBasedModel getModel() {
         return this.model;
     }
     

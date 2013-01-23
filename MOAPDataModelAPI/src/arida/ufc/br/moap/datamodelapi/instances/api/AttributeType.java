@@ -7,6 +7,8 @@ package arida.ufc.br.moap.datamodelapi.instances.api;
 /**
  *
  * @author igobrilhante
+ * 
+ * Defines types for being used in IAttribute
  */
 public enum AttributeType {
     DOUBLE(Double.class),

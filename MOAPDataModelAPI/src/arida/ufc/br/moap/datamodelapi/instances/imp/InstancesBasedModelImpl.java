@@ -3,15 +3,17 @@ package arida.ufc.br.moap.datamodelapi.instances.imp;
 import arida.ufc.br.moap.datamodelapi.instances.api.AttributeType;
 import arida.ufc.br.moap.datamodelapi.instances.api.IAttribute;
 import arida.ufc.br.moap.datamodelapi.instances.api.IInstance;
-import arida.ufc.br.moap.datamodelapi.instances.api.IInstanceBasedModel;
+import arida.ufc.br.moap.datamodelapi.instances.api.IInstancesBasedModel;
 import java.util.ArrayList;
 import java.util.Collection;
 
 /**
  *
  * @author igobrilhante
+ * 
+ * Implementation of IInstancesBasedModel
  */
-public class InstancesBasedModelImpl implements IInstanceBasedModel {
+public class InstancesBasedModelImpl implements IInstancesBasedModel {
 
     public ArrayList<IInstance> instances;
     public ArrayList<IAttribute> attributes;
