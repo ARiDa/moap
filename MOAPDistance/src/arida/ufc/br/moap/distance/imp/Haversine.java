@@ -7,6 +7,7 @@ import arida.ufc.br.moap.distance.spi.IDistanceFunction;
 /**
  * @author igobrilhante
  *
+ * This function computes distance between two LatLonPoints using Haversine. The result is in kilometers
  */
 public class Haversine implements IDistanceFunction<LatLonPoint> {
 
@@ -31,7 +32,7 @@ public class Haversine implements IDistanceFunction<LatLonPoint> {
      * @param lon1
      * @param lat2
      * @param lon2
-     * @return
+     * @return distance in kilometers
      */
     private double computeDistance(double lat1, double lon1, double lat2, double lon2) {
 

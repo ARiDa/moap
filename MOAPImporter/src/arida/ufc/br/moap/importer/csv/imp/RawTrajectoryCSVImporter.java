@@ -4,14 +4,6 @@
  */
 package arida.ufc.br.moap.importer.csv.imp;
 
-import arida.ufc.br.moap.core.beans.AnnotationType;
-import arida.ufc.br.moap.core.beans.LatLonPoint;
-import arida.ufc.br.moap.core.beans.MovingObject;
-import arida.ufc.br.moap.core.beans.Trajectory;
-import arida.ufc.br.moap.core.imp.Parameters;
-import arida.ufc.br.moap.core.imp.Reporter;
-import arida.ufc.br.moap.datamodelapi.spi.ITrajectoryModel;
-import arida.ufc.br.moap.importer.exceptions.MissingHeaderAttribute;
 import java.io.File;
 import java.io.FileFilter;
 import java.io.FileNotFoundException;
@@ -24,6 +16,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Queue;
 import java.util.Set;
+
 import org.joda.time.DateTime;
 import org.supercsv.cellprocessor.Optional;
 import org.supercsv.cellprocessor.ParseDate;
@@ -33,6 +26,15 @@ import org.supercsv.cellprocessor.ift.CellProcessor;
 import org.supercsv.io.CsvListReader;
 import org.supercsv.io.ICsvListReader;
 import org.supercsv.prefs.CsvPreference;
+
+import arida.ufc.br.moap.core.beans.LatLonPoint;
+import arida.ufc.br.moap.core.beans.MovingObject;
+import arida.ufc.br.moap.core.beans.Trajectory;
+import arida.ufc.br.moap.core.imp.Parameters;
+import arida.ufc.br.moap.core.imp.Reporter;
+import arida.ufc.br.moap.core.spi.Type;
+import arida.ufc.br.moap.datamodelapi.spi.ITrajectoryModel;
+import arida.ufc.br.moap.importer.exceptions.MissingHeaderAttribute;
 
 /**
  *
@@ -60,20 +62,24 @@ public class RawTrajectoryCSVImporter {
     private final String LONGITUDE = "lon";
     private final String TIME = "time";
     private final String USERID = "userid";
-    private final String TIME_FORMAT = "yyyy-MM-dd'T'HH:mm:ss'Z'";
+    private String timeFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'";
     private String filepath;
     private Map<String, Integer> mandatoryIdx;
     private Map<String, Integer> annotationIdx;
-    private ITrajectoryModel trajectoryDataModel;
-    private Reporter reporter = new Reporter(RawTrajectoryCSVImporter.class);
+    private ITrajectoryModel<LatLonPoint,DateTime> trajectoryDataModel;
+//    private Reporter reporter = new Reporter(RawTrajectoryCSVImporter.class);
     private Parameters params;
     
     public RawTrajectoryCSVImporter(){
         this.params = new Parameters();
         this.params.addClass(PARAMETER_FILE, String.class);
     }
+    
+    public void setTimeFormat(String format){
+    	this.timeFormat = format;
+    }
 
-    public void buildImport(ITrajectoryModel trajectoryDataModel, Parameters parameters) {
+    public void buildImport(ITrajectoryModel<LatLonPoint,DateTime> trajectoryDataModel, Parameters parameters) {
 //        this.reporter.setReport("Importing Raw Trajectory CSV File");
         
         // Validate parameters
@@ -187,7 +193,7 @@ public class RawTrajectoryCSVImporter {
              * Add annotation to the point
              */
             for (String annotation : this.annotationIdx.keySet()) {
-                point.getAnnotations().addAnnotation(annotation, AnnotationType.STRING, trajectoryList.get(this.annotationIdx.get(annotation)));
+                point.getAnnotations().addAnnotation(annotation, Type.STRING, trajectoryList.get(this.annotationIdx.get(annotation)));
             }
 
             /*
@@ -234,14 +240,14 @@ public class RawTrajectoryCSVImporter {
              * Add annotation to the point
              */
             for (String annotation : this.annotationIdx.keySet()) {
-                point.getAnnotations().addAnnotation(annotation, AnnotationType.STRING, trajectoryList.get(this.annotationIdx.get(annotation)));
+                point.getAnnotations().addAnnotation(annotation, Type.STRING, trajectoryList.get(this.annotationIdx.get(annotation)));
             }
 
             /*
              * Add point to the trajectory
              */
             if (previous_userid.equalsIgnoreCase(userid)) {
-                int i = this.trajectoryDataModel.getTrajectories(userid).size();
+//                int i = this.trajectoryDataModel.getTrajectories(userid).size();
                 this.trajectoryDataModel.getTrajectory(current_trajectory).addPoint(point, datetime);;
             } /*
              * Create a new moving object
@@ -316,7 +322,7 @@ public class RawTrajectoryCSVImporter {
                 processors[i] = new NotNull();
             } else if (head.equalsIgnoreCase(TIME)) {
                 this.mandatoryIdx.put(head, i);
-                processors[i] = new NotNull(new ParseDate(TIME_FORMAT));
+                processors[i] = new NotNull(new ParseDate(timeFormat));
             } else if (head.equalsIgnoreCase(LATITUDE)) {
                 this.mandatoryIdx.put(head, i);
                 processors[i] = new NotNull(new ParseDouble());

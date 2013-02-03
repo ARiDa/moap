@@ -1,5 +1,0 @@
-Manifest-Version: 1.0
-OpenIDE-Module: arida.ufc.br.moap.datamodelapi
-OpenIDE-Module-Implementation-Version: 1
-OpenIDE-Module-Localizing-Bundle: arida/ufc/br/moap/datamodelapi/Bundle.properties
-

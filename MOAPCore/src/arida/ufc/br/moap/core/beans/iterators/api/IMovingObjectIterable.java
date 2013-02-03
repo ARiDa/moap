@@ -5,7 +5,6 @@
 package arida.ufc.br.moap.core.beans.iterators.api;
 
 import arida.ufc.br.moap.core.beans.MovingObject;
-import java.util.List;
 
 /**
  *

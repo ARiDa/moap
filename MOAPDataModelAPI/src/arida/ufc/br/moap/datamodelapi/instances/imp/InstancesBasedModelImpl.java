@@ -1,7 +1,8 @@
 package arida.ufc.br.moap.datamodelapi.instances.imp;
 
-import arida.ufc.br.moap.datamodelapi.instances.api.AttributeType;
-import arida.ufc.br.moap.datamodelapi.instances.api.IAttribute;
+import arida.ufc.br.moap.core.imp.Attribute;
+import arida.ufc.br.moap.core.spi.Type;
+import arida.ufc.br.moap.core.spi.IAttribute;
 import arida.ufc.br.moap.datamodelapi.instances.api.IInstance;
 import arida.ufc.br.moap.datamodelapi.instances.api.IInstancesBasedModel;
 import java.util.ArrayList;
@@ -19,12 +20,12 @@ public class InstancesBasedModelImpl implements IInstancesBasedModel {
     public ArrayList<IAttribute> attributes;
 
     public InstancesBasedModelImpl() {
-        this.instances = new ArrayList();
+        this.instances = new ArrayList<IInstance>();
         this.attributes = new ArrayList<IAttribute>();
     }
 
     @Override
-    public void addAttribute(String name, AttributeType type, Object defaultValue) {
+    public void addAttribute(String name, Type type, Object defaultValue) {
         
         if (name != null && type != null && defaultValue != null) {
             Attribute att = new Attribute(name, type, defaultValue);
@@ -40,7 +41,7 @@ public class InstancesBasedModelImpl implements IInstancesBasedModel {
     }
     
     @Override
-    public void addAttribute(String name, AttributeType type) {
+    public void addAttribute(String name, Type type) {
         
         if (name != null && type != null ) {
             Attribute att = new Attribute(name, type);
@@ -140,4 +141,10 @@ public class InstancesBasedModelImpl implements IInstancesBasedModel {
     public int instancesCount() {
         return this.instances.size();
     }
+
+	@Override
+	public Collection<IAttribute> getAttributes() {
+		// TODO Auto-generated method stub
+		return this.attributes;
+	}
 }

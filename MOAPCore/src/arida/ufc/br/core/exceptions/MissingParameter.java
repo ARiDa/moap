@@ -8,6 +8,6 @@ package arida.ufc.br.core.exceptions;
  *
  * @author igobrilhante
  */
-public class MissingParameter extends RuntimeException {
-    
-}
+//public class MissingParameter extends RuntimeException {
+//    
+//}

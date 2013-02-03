@@ -5,7 +5,6 @@
 package arida.ufc.br.moap.core.beans;
 
 import arida.ufc.br.moap.core.algorithm.spi.ITrajectoryFactory;
-import arida.ufc.br.moap.core.spi.IAnnotable;
 
 /**
  *

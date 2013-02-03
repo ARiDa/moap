@@ -19,7 +19,7 @@ public class Parameters {
      */
 
     private HashMap<String, Object> parameters = new HashMap<String, Object>();
-    private HashMap<String, Class> parametersClass = new HashMap<String, Class>();
+    private HashMap<String, Class<? extends Object>> parametersClass = new HashMap<String, Class<? extends Object>>();
     /*
      * You can add a Parameter,to do it, you need to
      * specify the parameter name and the value
@@ -30,7 +30,7 @@ public class Parameters {
         parametersClass.put(name, value.getClass());
     }
 
-    public void addClass(String name, Class c) {
+    public void addClass(String name, Class<? extends Object> c) {
         parametersClass.put(name, c);
     }
 
@@ -41,7 +41,7 @@ public class Parameters {
         return parameters.get(paramName);
     }
 
-    public Class getParamClass(String paramName) {
+    public Class<? extends Object> getParamClass(String paramName) {
         return parametersClass.get(paramName);
     }
 

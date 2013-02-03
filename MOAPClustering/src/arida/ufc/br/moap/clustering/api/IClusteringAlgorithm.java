@@ -27,6 +27,14 @@ public abstract class IClusteringAlgorithm<T>
         this.distanceFunction = distanceFunction;
     }
     
+    /**
+     * 
+     * @return IDistanceFunction<T>
+     */
+    public IDistanceFunction<T> getDistanceFunction(){
+    	return this.distanceFunction;
+    }
+    
 //    /**
 //     * @return
 //     */

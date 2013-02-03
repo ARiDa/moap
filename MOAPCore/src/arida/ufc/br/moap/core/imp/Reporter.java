@@ -1,8 +1,8 @@
 package arida.ufc.br.moap.core.imp;
 
-import arida.ufc.br.moap.core.imp.Reporter.ReporterLevel;
 import java.util.ArrayList;
 import java.util.List;
+
 import org.apache.log4j.Logger;
 
 /**
@@ -11,14 +11,14 @@ import org.apache.log4j.Logger;
  */
 public class Reporter {
 
-    enum ReporterLevel {
+    public enum ReporterLevel {
 
         INFO, ERROR
     }
     private List<String> reports;
     private final Logger logger;
 
-    public Reporter(Class c) {
+    public Reporter(Class<? extends Object> c) {
         this.logger = Logger.getLogger(c);
         this.reports = new ArrayList<String>();
     }

@@ -1,8 +1,7 @@
 package arida.ufc.br.moap.core.beans;
 
-import java.sql.Timestamp;
 
-
+@Deprecated
 public class Interval<T> implements Comparable<Interval> {
 
 	private T begin;

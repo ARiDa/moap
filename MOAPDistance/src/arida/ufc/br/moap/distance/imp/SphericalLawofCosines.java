@@ -10,7 +10,7 @@ import arida.ufc.br.moap.distance.spi.IDistanceFunction;
  */
 public class SphericalLawofCosines implements IDistanceFunction<LatLonPoint> {
 
-    private final double R_EARTH = 6371; // Meters
+    private final double R_EARTH = 6371; // Kilometers
 	/*
      * (non-Javadoc) @see
      * mf.algorithm.evaluate.spi.IDistanceFunction#evaluate(java.lang.Object,

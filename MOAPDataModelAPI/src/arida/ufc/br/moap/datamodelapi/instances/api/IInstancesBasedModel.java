@@ -4,6 +4,8 @@
  */
 package arida.ufc.br.moap.datamodelapi.instances.api;
 
+import arida.ufc.br.moap.core.spi.Type;
+import arida.ufc.br.moap.core.spi.IAttribute;
 import arida.ufc.br.moap.core.spi.IDataModel;
 import java.util.Collection;
 
@@ -28,7 +30,7 @@ public interface IInstancesBasedModel extends IDataModel<IInstance> {
      * @param type
      * @param defaultValue 
      */
-    public void addAttribute(String name,AttributeType type,Object defaultValue);
+    public void addAttribute(String name,Type type,Object defaultValue);
     
     /**
      * Add a new attribute into the model
@@ -36,7 +38,7 @@ public interface IInstancesBasedModel extends IDataModel<IInstance> {
      * @param name
      * @param type 
      */
-    public void addAttribute(String name,AttributeType type);
+    public void addAttribute(String name,Type type);
     
     /**
      * Add a new attribute into the model
@@ -117,6 +119,8 @@ public interface IInstancesBasedModel extends IDataModel<IInstance> {
      * @return number of instances
      */
     public int instancesCount();
+    
+    public Collection<IAttribute> getAttributes();
     
     
     

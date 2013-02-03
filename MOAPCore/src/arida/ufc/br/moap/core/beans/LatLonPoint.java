@@ -7,10 +7,6 @@ import arida.ufc.br.moap.core.spi.IAnnotable;
  * 
  */
 public class LatLonPoint implements IAnnotable {
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -6597463564933758852L;
 	protected double lon;
 	protected double lat;
 	private Annotations annotations;

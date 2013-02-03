@@ -6,7 +6,6 @@ package arida.ufc.br.moap.core.algorithm.spi;
 
 import arida.ufc.br.moap.core.beans.MovingObject;
 import arida.ufc.br.moap.core.beans.Trajectory;
-import arida.ufc.br.moap.core.spi.IAnnotable;
 
 /**
  *

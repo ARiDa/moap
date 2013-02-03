@@ -1,8 +1,11 @@
 package arida.ufc.br.moap.core.beans;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import arida.ufc.br.moap.core.spi.Type;
 
 public class Annotations {
 	private Map<String, Annotation> annotations;
@@ -12,7 +15,9 @@ public class Annotations {
 	}
 	
 	public List<Annotation> getAnnotations() {
-		return (List<Annotation>) annotations.values();
+		List<Annotation> list = new ArrayList<>();
+		list.addAll(annotations.values());
+		return list;
 	}
 
 	public void setAnnotations(List<Annotation> annotations) {
@@ -21,12 +26,15 @@ public class Annotations {
 		}
 	}
 	
-	public void addAnnotation(String name,AnnotationType type,Object value){
+	public void addAnnotation(String name,Type type,Object value){
 		this.annotations.put(name, new Annotation(name, type, value));
 	}
 	
 	public Annotation getAnnotation(int index){
-		return  ((List<Annotation>) annotations.values()).get(index);
+		List<Annotation> list = new ArrayList<>();
+		list.addAll(annotations.values());
+		
+		return  list.get(index);
 	}
 	
 	public Annotation getAnnotation(String index){

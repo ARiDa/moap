@@ -1,6 +1,6 @@
 package arida.ufc.br.moap.datamodelapi.instances.imp;
 
-import arida.ufc.br.moap.datamodelapi.instances.api.AttributeType;
+import arida.ufc.br.moap.core.spi.Type;
 import arida.ufc.br.moap.datamodelapi.instances.api.IInstance;
 import arida.ufc.br.moap.datamodelapi.instances.api.IInstancesBasedModel;
 import java.util.HashMap;
@@ -82,7 +82,7 @@ public class Instance implements IInstance {
 
         if (this.model.hasAttribute(columnIdx)) {
 
-            AttributeType attributeType = this.model.getAttribute(columnIdx).getType();
+            Type attributeType = this.model.getAttribute(columnIdx).getType();
 
             Class type = attributeType.getType();
 

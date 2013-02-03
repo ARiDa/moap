@@ -8,6 +8,7 @@ package arida.ufc.br.moap.core.beans;
  *
  * @author igobrilhante
  */
+@Deprecated
 public enum AnnotationType {
     STRING, INT, DOUBLE, DATETIME
 }
