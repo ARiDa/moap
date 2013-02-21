@@ -16,6 +16,21 @@ import arida.ufc.br.moap.datamodelapi.instances.api.IInstancesBasedModel;
 public abstract class AssociationRulesAlgorithm extends AbstractAlgorithm<IInstancesBasedModel, ListModelImpl<IAssociationRule>> {
 	
 	/**
+	 * @return index of the item attribute. It corresponds to the attribute that will be the item of the transactions
+	 */
+	public abstract int getItemAttributeIndex();
+	
+	/**
+	 * return index of the transaction attribute index. Transaction index is the unique identifier of the transaction, e.g. user id.
+	 */
+	public abstract int getTransactionAttributeIndex();
+	
+	/**
+	 * @return transaction format. Simple, each line for a item, or List, all items of a single transaction per line
+	 */
+	public abstract TransactionFormat getTransactionFormat();
+	
+	/**
 	 * @return number of transactions
 	 */
 	public abstract int getTransactionsCount();

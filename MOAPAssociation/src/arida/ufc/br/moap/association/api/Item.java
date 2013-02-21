@@ -49,6 +49,14 @@ public class Item implements Comparable<Item> {
 	public int getFrequency(){
 		return this.frequency;
 	}
+	
+	public void increaseFrequency(){
+		this.frequency++;
+	}
+	
+	public void decreaseFrequency(){
+		this.frequency--;
+	}
 
 	/**
 	 * Compare two items according to their string representation. This is useful for lexicographical ordering
