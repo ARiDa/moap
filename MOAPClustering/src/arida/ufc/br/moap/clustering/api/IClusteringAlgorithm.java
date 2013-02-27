@@ -1,6 +1,6 @@
 package arida.ufc.br.moap.clustering.api;
 
-import arida.ufc.br.moap.core.algorithm.spi.AbstractAlgorithm;
+import arida.ufc.br.moap.core.algorithm.spi.AbstractParametricAlgorithm;
 import arida.ufc.br.moap.core.spi.IDataModel;
 import arida.ufc.br.moap.function.api.IDistanceFunction;
 
@@ -11,7 +11,7 @@ import arida.ufc.br.moap.function.api.IDistanceFunction;
  * @param <T>
  */
 public abstract class IClusteringAlgorithm<T> 
-    extends AbstractAlgorithm<IDataModel<T> , IDataModel<? extends ICluster<T>>> {
+    extends AbstractParametricAlgorithm<IDataModel<T> , IDataModel<? extends ICluster<T>>> {
 
     protected IDistanceFunction<T> distanceFunction;
 //    /**

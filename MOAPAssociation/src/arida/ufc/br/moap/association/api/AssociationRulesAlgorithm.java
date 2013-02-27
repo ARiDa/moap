@@ -3,7 +3,7 @@ package arida.ufc.br.moap.association.api;
 
 import java.util.Collection;
 
-import arida.ufc.br.moap.core.algorithm.spi.AbstractAlgorithm;
+import arida.ufc.br.moap.core.algorithm.spi.AbstractParametricAlgorithm;
 import arida.ufc.br.moap.datamodelapi.imp.ListModelImpl;
 import arida.ufc.br.moap.datamodelapi.instances.api.IInstancesBasedModel;
 
@@ -13,7 +13,7 @@ import arida.ufc.br.moap.datamodelapi.instances.api.IInstancesBasedModel;
  * Abstract class that defines the capabilities of an association rules algorithm. 
  * It receives IInstancesBasedModel as input and results a ListModelImpl<IAssociationRule>
  */
-public abstract class AssociationRulesAlgorithm extends AbstractAlgorithm<IInstancesBasedModel, ListModelImpl<IAssociationRule>> {
+public abstract class AssociationRulesAlgorithm extends AbstractParametricAlgorithm<IInstancesBasedModel, ListModelImpl<IAssociationRule>> {
 	
 	/**
 	 * @return index of the item attribute. It corresponds to the attribute that will be the item of the transactions
