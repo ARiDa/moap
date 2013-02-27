@@ -53,6 +53,10 @@ public abstract class AbstractDatabase implements IDataSource {
 		logger.info(ConnectionProperty.getString());
     }
     
+    public Connection getConnection(){
+    	return AbstractDatabase.connection;
+    }
+    
     /**
      *
      * Get an instance from a connection
