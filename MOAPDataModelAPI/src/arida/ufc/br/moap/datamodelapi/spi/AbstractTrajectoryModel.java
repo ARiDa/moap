@@ -7,7 +7,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
  *
  * @author igobrilhante
  */
-public abstract class AbstractTrajectoryModel<S, T> implements ITrajectoryModel {
+public abstract class AbstractTrajectoryModel<S, T> implements ITrajectoryModel<S,T> {
     protected final ReentrantReadWriteLock readWriteLock = new ReentrantReadWriteLock();
 
     public void readLock() {

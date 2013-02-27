@@ -18,259 +18,261 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**
  * ITrajectoryModel implementation.
- *
+ * 
  * @author franzejr
  * @author rafaelelias
  */
 public class TrajectoryModelImpl<S, T> extends AbstractTrajectoryModel<S, T> {
 
-    public TrajectoryModelImpl() {
-        super();
-    }
-    /*
-     * List of all trajectories. Remembering that a trajectory
-     * is a set of points which each point has a Latitude,Longitude
-     * and one Timestamp.
-     */
-    /*
-     * Trajectory List
-     */
-    private List<Trajectory<S, T>> trajectories = new ArrayList<Trajectory<S, T>>();
-    /*
-     *Identify a trajectory 
-     */
-    private HashMap<String, Trajectory<S, T>> trajectoryIndices = new HashMap<String, Trajectory<S, T>>();
-    /*
-     * Identify Moving Objects
-     */
-    private HashMap<String, MovingObject> movingObjectIndices = new HashMap<String, MovingObject>();
-    /*
-     * Moving Object List
-     */
-    private List<MovingObject> movingObjects = new ArrayList<MovingObject>();
-    /*
-     * Build a trajectory for a model
-     */
-    private ITrajectoryFactory<S, T> factory = new TrajectoryFactoryImp<S, T>();
+	public TrajectoryModelImpl() {
+		super();
+	}
 
-    @Override
-    public Trajectory<S, T> getTrajectory(int id) {
+	/*
+	 * List of all trajectories. Remembering that a trajectory is a set of
+	 * points which each point has a Latitude,Longitude and one Timestamp.
+	 */
+	/*
+	 * Trajectory List
+	 */
+	private List<Trajectory<S, T>> trajectories = new ArrayList<Trajectory<S, T>>();
+	/*
+	 * Identify a trajectory
+	 */
+	private HashMap<String, Trajectory<S, T>> trajectoryIndices = new HashMap<String, Trajectory<S, T>>();
+	/*
+	 * Identify Moving Objects
+	 */
+	private HashMap<String, MovingObject> movingObjectIndices = new HashMap<String, MovingObject>();
+	/*
+	 * Moving Object List
+	 */
+	private List<MovingObject> movingObjects = new ArrayList<MovingObject>();
+	/*
+	 * Build a trajectory for a model
+	 */
+	private ITrajectoryFactory<S, T> factory = new TrajectoryFactoryImp<S, T>();
 
-        if (Integer.valueOf(id) == null) {
-            throw new NullPointerException("Trajectory idx cannot be NULL");
-        }
+	@Override
+	public Trajectory<S, T> getTrajectory(int id) {
 
-        return trajectories.get(id);
-    }
+		if (Integer.valueOf(id) == null) {
+			throw new NullPointerException("Trajectory idx cannot be NULL");
+		}
 
-    @Override
-    public ITrajectoryIterable getTrajectories() {
+		return trajectories.get(id);
+	}
 
-        ITrajectoryIterable iterable = new TrajectoryIterableImp(trajectories, readWriteLock.readLock());
-        return iterable;
-    }
+	@Override
+	public ITrajectoryIterable<S, T> getTrajectories() {
 
-    private void addMovingObject(MovingObject mo) {
+		ITrajectoryIterable<S, T> iterable = new TrajectoryIterableImp<S, T>(
+				trajectories, readWriteLock.readLock());
+		return iterable;
+	}
 
-        if (mo == null) {
-            throw new NullPointerException("Moving object cannot be NULL");
-        }
+	private void addMovingObject(MovingObject mo) {
 
-        if (!this.movingObjectIndices.containsKey(mo.getId())) {
-            this.movingObjects.add(mo);
-            this.movingObjectIndices.put(mo.getId(), mo);
-        }
-    }
+		if (mo == null) {
+			throw new NullPointerException("Moving object cannot be NULL");
+		}
 
-    @Override
-    public MovingObject getMovingObject(String id) {
-        return this.movingObjectIndices.get(id);
-    }
+		if (!this.movingObjectIndices.containsKey(mo.getId())) {
+			this.movingObjects.add(mo);
+			this.movingObjectIndices.put(mo.getId(), mo);
+		}
+	}
 
-    @Override
-    public int getTrajectoryCount() {
-        return this.trajectories.size();
-    }
+	@Override
+	public MovingObject getMovingObject(String id) {
+		return this.movingObjectIndices.get(id);
+	}
 
-    @Override
-    public int getMovingObjectCount() {
-        return this.movingObjects.size();
-    }
+	@Override
+	public int getTrajectoryCount() {
+		return this.trajectories.size();
+	}
 
-    @Override
-    public void addTrajectory(Trajectory trajectory) {
-        if (trajectory == null) {
-            throw new IllegalArgumentException("trajectory cannot be NULL");
-        }
-        if (trajectory.getMovingObject() == null) {
-            throw new NullPointerException("Moving object for the trajectory cannot be NULL");
-        }
+	@Override
+	public int getMovingObjectCount() {
+		return this.movingObjects.size();
+	}
 
-        if (!this.trajectoryIndices.containsKey(trajectory.getId())) {
-            this.trajectories.add(trajectory);
-            this.trajectoryIndices.put(trajectory.getId(), trajectory);
-            addMovingObject(trajectory.getMovingObject());
-        }
-    }
+	@Override
+	public void addTrajectory(Trajectory<S, T> trajectory) {
+		if (trajectory == null) {
+			throw new IllegalArgumentException("trajectory cannot be NULL");
+		}
+		if (trajectory.getMovingObject() == null) {
+			throw new NullPointerException(
+					"Moving object for the trajectory cannot be NULL");
+		}
 
-    @Override
-    public String toString() {
-        return "";
-    }
+		if (!this.trajectoryIndices.containsKey(trajectory.getId())) {
+			this.trajectories.add(trajectory);
+			this.trajectoryIndices.put(trajectory.getId(), trajectory);
+			addMovingObject(trajectory.getMovingObject());
+		}
+	}
 
-    @Override
-    public ITrajectoryFactory factory() {
-        return this.factory;
-    }
+	@Override
+	public String toString() {
+		return "";
+	}
 
-    @Override
-    public MovingObject getMovingObject(int idx) {
-        if (Integer.valueOf(idx) == null) {
-            throw new IllegalArgumentException("Moving object idx cannot be NULL");
-        }
-        return this.movingObjects.get(idx);
-    }
+	@Override
+	public ITrajectoryFactory<S, T> factory() {
+		return this.factory;
+	}
 
-    @Override
-    public IMovingObjectIterable getMovingObjects() {
-        readLock();
-        return new MovingObjectIterableImp(movingObjects, readWriteLock.readLock());
-    }
+	@Override
+	public MovingObject getMovingObject(int idx) {
+		if (Integer.valueOf(idx) == null) {
+			throw new IllegalArgumentException(
+					"Moving object idx cannot be NULL");
+		}
+		return this.movingObjects.get(idx);
+	}
 
-    @Override
-    public Collection<Trajectory<S, T>> getTrajectories(MovingObject mo) {
-        if (mo == null) {
-            throw new IllegalArgumentException("mo id cannot be NULL");
-        }
-        List<Trajectory<S, T>> list = new ArrayList<Trajectory<S, T>>();
-        for (Trajectory traj : this.trajectoryIndices.values()) {
-            if (traj.getMovingObject().equals(mo)) {
-                list.add(traj);
-            }
-        }
-        return list;
-    }
+	@Override
+	public IMovingObjectIterable getMovingObjects() {
+		readLock();
+		return new MovingObjectIterableImp(movingObjects,
+				readWriteLock.readLock());
+	}
 
-    @Override
-    public Collection<Trajectory<S, T>> getTrajectories(String moId) {
-        if (moId == null) {
-            throw new IllegalArgumentException("mo id cannot be NULL");
-        }
-        MovingObject mo = this.movingObjectIndices.get(moId);
-        return getTrajectories(mo);
-    }
+	@Override
+	public Collection<Trajectory<S, T>> getTrajectories(MovingObject mo) {
+		if (mo == null) {
+			throw new IllegalArgumentException("mo id cannot be NULL");
+		}
+		List<Trajectory<S, T>> list = new ArrayList<Trajectory<S, T>>();
+		for (Trajectory<S, T> traj : this.trajectoryIndices.values()) {
+			if (traj.getMovingObject().equals(mo)) {
+				list.add(traj);
+			}
+		}
+		return list;
+	}
 
-    @Override
-    public Trajectory getTrajectory(String id) {
-        if (id == null) {
-            throw new IllegalArgumentException("trajectory id cannot be NULL");
-        }
-        return this.trajectoryIndices.get(id);
-    }
+	@Override
+	public Collection<Trajectory<S, T>> getTrajectories(String moId) {
+		if (moId == null) {
+			throw new IllegalArgumentException("mo id cannot be NULL");
+		}
+		MovingObject mo = this.movingObjectIndices.get(moId);
+		return getTrajectories(mo);
+	}
 
-    @Override
-    public Trajectory removeTrajectory(int id) {
-        if (Integer.valueOf(id) == null) {
-            throw new IllegalArgumentException("trajectory id cannot be NULL");
-        }
-        Trajectory t = this.trajectories.remove(id);
-        if (t != null) {
-            this.trajectoryIndices.remove(t.getId());
-        }
-        return t;
-    }
+	@Override
+	public Trajectory<S, T> getTrajectory(String id) {
+		if (id == null) {
+			throw new IllegalArgumentException("trajectory id cannot be NULL");
+		}
+		return this.trajectoryIndices.get(id);
+	}
 
-    @Override
-    public Trajectory removeTrajectory(String id) {
-        if (id == null) {
-            throw new IllegalArgumentException("trajectory id cannot be NULL");
-        }
-        Trajectory t = this.trajectoryIndices.remove(id);
-        if (t != null) {
-            this.trajectories.remove(t);
-        }
+	@Override
+	public Trajectory<S, T> removeTrajectory(int id) {
+		if (Integer.valueOf(id) == null) {
+			throw new IllegalArgumentException("trajectory id cannot be NULL");
+		}
+		Trajectory<S, T> t = this.trajectories.remove(id);
+		if (t != null) {
+			this.trajectoryIndices.remove(t.getId());
+		}
+		return t;
+	}
 
-        return t;
-    }
+	@Override
+	public Trajectory<S, T> removeTrajectory(String id) {
+		if (id == null) {
+			throw new IllegalArgumentException("trajectory id cannot be NULL");
+		}
+		Trajectory<S, T> t = this.trajectoryIndices.remove(id);
+		if (t != null) {
+			this.trajectories.remove(t);
+		}
 
-    @Override
-    public MovingObject removeMovingObject(int idx) {
-        if (Integer.valueOf(idx) == null) {
-            throw new IllegalArgumentException("trajectory id cannot be NULL");
-        }
-        MovingObject mo = this.movingObjects.remove(idx);
-        if (mo != null) {
-            this.movingObjectIndices.remove(mo.getId());
+		return t;
+	}
 
-            /*
-             * Remove all the Moving Object's trajectories
-             */
-            removeTrajectories(mo);
+	@Override
+	public MovingObject removeMovingObject(int idx) {
+		if (Integer.valueOf(idx) == null) {
+			throw new IllegalArgumentException("trajectory id cannot be NULL");
+		}
+		MovingObject mo = this.movingObjects.remove(idx);
+		if (mo != null) {
+			this.movingObjectIndices.remove(mo.getId());
 
-        }
+			/*
+			 * Remove all the Moving Object's trajectories
+			 */
+			removeTrajectories(mo);
 
-        return mo;
-    }
+		}
 
-    @Override
-    public MovingObject removeMovingObject(String id) {
-        if (id == null) {
-            throw new IllegalArgumentException("trajectory id cannot be NULL");
-        }
-        MovingObject mo = this.movingObjectIndices.remove(id);
-        if (mo != null) {
-            this.movingObjects.remove(mo);
-            /*
-             * Remove all the Moving Object's trajectories
-             */
-            removeTrajectories(mo);
-        }
+		return mo;
+	}
 
-        return mo;
-    }
+	@Override
+	public MovingObject removeMovingObject(String id) {
+		if (id == null) {
+			throw new IllegalArgumentException("trajectory id cannot be NULL");
+		}
+		MovingObject mo = this.movingObjectIndices.remove(id);
+		if (mo != null) {
+			this.movingObjects.remove(mo);
+			/*
+			 * Remove all the Moving Object's trajectories
+			 */
+			removeTrajectories(mo);
+		}
 
-    /* 
-     * @return Remove all trajectories of a given {@link Moving Object}
-     */
-    private void removeTrajectories(MovingObject mo) {
-        Collection<Trajectory<S,T>> c = getTrajectories(mo);
-        Iterator iter = c.iterator();
-        while(iter.hasNext()){
-            this.trajectories.remove((Trajectory<S,T>)iter.next());
-        }
-    }
+		return mo;
+	}
 
-    public ReentrantReadWriteLock getReadWriteLock() {
-        return readWriteLock;
-    }
-    
-    @Override
-    protected void finalize() throws Throwable{
-        super.finalize();
-        
-        this.factory = null;
-        this.movingObjectIndices = null;
-        this.movingObjects = null;
-        this.trajectories = null;
-        this.trajectoryIndices = null;
-        
-    }
+	/*
+	 * @return Remove all trajectories of a given {@link Moving Object}
+	 */
+	private void removeTrajectories(MovingObject mo) {
+		Collection<Trajectory<S, T>> c = getTrajectories(mo);
+		Iterator<Trajectory<S, T>> iter = c.iterator();
+		while (iter.hasNext()) {
+			this.trajectories.remove(iter.next());
+		}
+	}
 
-    @Override
-    public String getName() {
-        return "Trajectory Model";
-    }
+	public ReentrantReadWriteLock getReadWriteLock() {
+		return readWriteLock;
+	}
 
-    @Override
-    public Collection getInstances() {
-        return this.trajectories;
-    }
+	@Override
+	protected void finalize() throws Throwable {
+		super.finalize();
 
-    @Override
-    public void addInstance(Object instance) {
-        if(instance instanceof Trajectory){
-            Trajectory<S,T> traj = (Trajectory<S,T>)instance;
-            this.addTrajectory(traj);
-        }
-    }
+		this.factory = null;
+		this.movingObjectIndices = null;
+		this.movingObjects = null;
+		this.trajectories = null;
+		this.trajectoryIndices = null;
+
+	}
+
+	@Override
+	public String getName() {
+		return "Trajectory Model";
+	}
+
+	@Override
+	public Collection<Trajectory<S, T>> getInstances() {
+		return this.trajectories;
+	}
+
+	@Override
+	public void addInstance(Trajectory<S, T> instance) {
+		Trajectory<S, T> traj = (Trajectory<S, T>) instance;
+		this.addTrajectory(traj);
+	}
 }

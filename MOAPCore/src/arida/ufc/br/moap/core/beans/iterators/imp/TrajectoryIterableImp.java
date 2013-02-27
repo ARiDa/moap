@@ -8,6 +8,8 @@ import arida.ufc.br.moap.core.beans.Trajectory;
 import arida.ufc.br.moap.core.beans.iterators.api.ITrajectoryIterable;
 import arida.ufc.br.moap.core.beans.iterators.api.ITrajectoryIterator;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.locks.Lock;
 
@@ -15,22 +17,23 @@ import java.util.concurrent.locks.Lock;
  *
  * @author igobrilhante
  */
-public class TrajectoryIterableImp implements ITrajectoryIterable {
+public class TrajectoryIterableImp<S,T> implements ITrajectoryIterable<S,T> {
 
-    private TrajectoryIteratorImp iterator;
+    private TrajectoryIteratorImp<S,T> iterator;
     
-    public TrajectoryIterableImp(List trajectories,Lock lock){
-        this.iterator = new TrajectoryIteratorImp(trajectories,lock);
+    public TrajectoryIterableImp(List<Trajectory<S,T>> trajectories,Lock lock){
+        this.iterator = new TrajectoryIteratorImp<S,T>(trajectories,lock);
     }
     
     @Override
-    public ITrajectoryIterator iterator() {
+    public ITrajectoryIterator<S,T> iterator() {
         return iterator;
     }
 
-    @Override
-    public Trajectory[] toArray() {
-        ArrayList<Trajectory> list = new ArrayList<Trajectory>();
+    @SuppressWarnings("unchecked")
+	@Override
+    public Trajectory<S,T>[] toArray() {
+        ArrayList<Trajectory<S,T>> list = new ArrayList<Trajectory<S,T>>();
          for (; iterator.hasNext();) {
             list.add(iterator.next());
         }
@@ -44,6 +47,12 @@ public class TrajectoryIterableImp implements ITrajectoryIterable {
             this.iterator.lock.unlock();
         }
     }
+
+	@Override
+	public Collection<Trajectory<S,T>> toCollection() {
+		// TODO Auto-generated method stub
+		return Arrays.asList(toArray());
+	}
 
 
     

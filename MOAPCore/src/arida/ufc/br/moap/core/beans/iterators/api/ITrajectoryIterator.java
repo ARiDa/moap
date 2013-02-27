@@ -11,6 +11,6 @@ import java.util.Iterator;
  *
  * @author igobrilhante
  */
-public interface ITrajectoryIterator extends Iterator<Trajectory> {
+public interface ITrajectoryIterator<S,T> extends Iterator<Trajectory<S,T>> {
     
 }

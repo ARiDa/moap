@@ -6,7 +6,6 @@ package arida.ufc.br.moap.core.beans.iterators.imp;
 
 import arida.ufc.br.moap.core.beans.Trajectory;
 import arida.ufc.br.moap.core.beans.iterators.api.ITrajectoryIterator;
-import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.locks.Lock;
 
@@ -14,14 +13,14 @@ import java.util.concurrent.locks.Lock;
  *
  * @author igobrilhante
  */
-public class TrajectoryIteratorImp implements ITrajectoryIterator {
+public class TrajectoryIteratorImp<S,T> implements ITrajectoryIterator<S,T> {
 
-    private List<Trajectory> array;
+    private List<Trajectory<S,T>> array;
     private int currentIndex = 0;
     private int currentSize;
     protected Lock lock;
     
-    public TrajectoryIteratorImp(List trajectories,Lock lock){
+    public TrajectoryIteratorImp(List<Trajectory<S,T>> trajectories,Lock lock){
         this.array = trajectories;
         this.currentSize = array.size();
         this.lock = lock;
@@ -33,7 +32,7 @@ public class TrajectoryIteratorImp implements ITrajectoryIterator {
     }
 
     @Override
-    public Trajectory next() {
+    public Trajectory<S,T> next() {
         return array.get(currentIndex++);
     }
 
