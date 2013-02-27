@@ -2,7 +2,7 @@ package arida.ufc.br.moap.clustering.api;
 
 import arida.ufc.br.moap.core.algorithm.spi.AbstractAlgorithm;
 import arida.ufc.br.moap.core.spi.IDataModel;
-import arida.ufc.br.moap.distance.spi.IDistanceFunction;
+import arida.ufc.br.moap.function.api.IDistanceFunction;
 
 /**
  * @author igobrilhante

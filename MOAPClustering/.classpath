@@ -5,6 +5,6 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/MOAPCore"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/MOAPDataModelAPI"/>
 	<classpathentry kind="lib" path="/MOAPCore/lib/log4j-1.2.16.jar"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/MOAPDistance"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/MOAPFunction"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

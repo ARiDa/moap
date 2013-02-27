@@ -1,7 +1,7 @@
 package arida.ufc.br.moap.optics.functions;
 
 import arida.ufc.br.moap.core.beans.Trajectory;
-import arida.ufc.br.moap.distance.spi.IDistanceFunction;
+import arida.ufc.br.moap.function.api.IDistanceFunction;
 
 /**
  * 

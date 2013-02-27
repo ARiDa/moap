@@ -5,7 +5,7 @@ import java.util.List;
 import arida.ufc.br.moap.clustering.api.ICluster;
 import arida.ufc.br.moap.core.imp.Reporter;
 import arida.ufc.br.moap.core.imp.Reporter.ReporterLevel;
-import arida.ufc.br.moap.distance.spi.IDistanceFunction;
+import arida.ufc.br.moap.function.api.IDistanceFunction;
 
 public class OpticsEvaluation {
 	
