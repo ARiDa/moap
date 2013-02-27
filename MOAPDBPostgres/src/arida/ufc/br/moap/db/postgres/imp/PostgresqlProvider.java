@@ -29,6 +29,10 @@ public class PostgresqlProvider extends AbstractDatabase implements Serializable
     public PostgresqlProvider(String user, String password, String url) {
         super(user, password, url);
     }
+    
+    public PostgresqlProvider(){
+    	super();
+    }
 
     public AbstractDatabase getInstance() {
         if (instance == null) {
