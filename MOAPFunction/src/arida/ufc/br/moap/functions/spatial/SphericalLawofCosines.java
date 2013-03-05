@@ -39,9 +39,9 @@ public class SphericalLawofCosines implements IDistanceFunction<LatLonPoint> {
         dist = Math.acos(dist);
         dist = Math.toDegrees(dist);
 
-//        dist = dist * 60 * 1.1515; // Miles
+        dist = dist * 60 * 1.1515; // Miles
 //		  if (unit == "K") {
-//        dist = dist * 1.609344; // KM
+        dist = dist * 1.609344; // KM
         
 //        dist = meters2degree(dist);
 //		  } else if (unit == "N") {

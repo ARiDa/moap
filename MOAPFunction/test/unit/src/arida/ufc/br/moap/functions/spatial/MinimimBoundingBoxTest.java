@@ -51,14 +51,19 @@ public class MinimimBoundingBoxTest {
     @Test
     public void testEvaluate() {
         System.out.println("evaluate mbb 1");
+        
+        LatLonPoint l1 = new LatLonPoint(10.31982, 43.5764);
+		LatLonPoint l2 = new LatLonPoint(10.44902, 43.69891);
+        
         Collection<LatLonPoint> collection = new HashSet<LatLonPoint>();
         
-        collection.add(new LatLonPoint(0.0, 0.0));
-        collection.add(new LatLonPoint(1.0, 1.0));
+        collection.add(l1);
+        collection.add(l2);
         
         MinimimBoundingBox instance = new MinimimBoundingBox();
         Pair expResult = new Pair(new LatLonPoint(0.0, 0.0), new LatLonPoint(1.0, 1.0));
         Pair result = instance.evaluate(collection);
+//        19982.104961829952604757569664
 //        assertEquals(expResult, result);
         
         System.out.println("MBB: "+result);
