@@ -17,10 +17,10 @@ import arida.ufc.br.moap.vis.engine.api.IVisualizationEngine;
 public class JXMapEngine {
 
 	private JXMapKit map;
-	private IVisualizationEngine<Shape> engine;
+	private IVisualizationEngine engine;
 	private List<ILayer> layers;
 	
-	public JXMapEngine(JXMapKit map,IVisualizationEngine<Shape> engine){
+	public JXMapEngine(JXMapKit map,IVisualizationEngine engine){
 		this.map = map;
 		this.engine = engine;
 		this.layers = new ArrayList<>();
@@ -67,7 +67,7 @@ public class JXMapEngine {
 				 */
 				g.setColor(layer.getColor());
 				for(IFeaturable feature : layer.getFeaturables()){
-					Shape shape = engine.getShape(feature);
+					Shape shape = engine.getShape(map,feature);
 					g.draw(shape);
 				}
 			}
