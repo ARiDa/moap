@@ -14,5 +14,6 @@ public interface ILayer {
 	public int getId();
 	public String getName();
 	public Color getColor();
+	public boolean isVisible();
 	
 }
