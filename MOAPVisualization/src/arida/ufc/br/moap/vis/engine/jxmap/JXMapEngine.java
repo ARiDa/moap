@@ -65,6 +65,7 @@ public class JXMapEngine {
 				/*
 				 * Implement the layer here, where the layer contains a list of IFeaturables
 				 */
+				g.setColor(layer.getColor());
 				for(IFeaturable feature : layer.getFeaturables()){
 					Shape shape = engine.getShape(feature);
 					g.draw(shape);

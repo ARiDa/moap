@@ -1,5 +1,7 @@
 package arida.ufc.br.moap.vis.engine.api;
 
+import java.awt.Color;
+
 import arida.ufc.br.moap.vis.api.IFeaturable;
 
 public interface ILayer {
@@ -11,5 +13,6 @@ public interface ILayer {
 	public void removeFeaturable(int i);
 	public int getId();
 	public String getName();
+	public Color getColor();
 	
 }
