@@ -25,12 +25,14 @@ public class JaccardSimilarity<T> implements ISimilarityFunction<Set<T>> {
 		HashSet<T> inter = new HashSet<>(arg0);
 		inter.retainAll(arg1);
 		
-		int a = inter.size();
+		int interSize = inter.size();
+		int set1Size = arg0.size();
+		int set2Size = arg1.size();
 		
-		HashSet<T> union = new HashSet<T>(arg0);
-		union.addAll(arg1);
-		int b = union.size();
+//		HashSet<T> union = new HashSet<T>(arg0);
+//		union.addAll(arg1);
+		int unionSize = set1Size + set2Size - interSize;
 
-		return (double)a/b;
+		return (double)interSize/unionSize;
 	}
 }
