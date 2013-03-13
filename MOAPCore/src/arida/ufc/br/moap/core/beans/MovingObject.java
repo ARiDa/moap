@@ -58,7 +58,7 @@ public class MovingObject {
     }
     
     public String toString() {
-        return "Moving Object " + id;
+        return id;
     }
     
 }

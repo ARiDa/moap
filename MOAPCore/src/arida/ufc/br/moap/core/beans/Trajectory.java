@@ -136,9 +136,8 @@ public class Trajectory<S, T> implements IAnnotable {
     @Override
     public String toString() {
 //		return "Trajectory with "+points.size()+" positions";
-        return new ToStringBuilder(this)
-                .append("id",this.id)
-                .toString();
+
+        return this.id;
     }
 
     @Override
