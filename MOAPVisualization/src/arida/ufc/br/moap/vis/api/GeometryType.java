@@ -4,7 +4,8 @@ public enum GeometryType {
 	POINT("Point"),
 	LINESTRING("LineString"),
 	POLYGON("Polygon"),
-	MULTIPOINT("MultiPoint");
+	MULTIPOINT("MultiPoint"),
+	GEOMETRYCOLLECTION("GeometryCollection");
 	
 	private String geomType;
 	
