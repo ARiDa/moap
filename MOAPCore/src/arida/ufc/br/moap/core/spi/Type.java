@@ -6,8 +6,6 @@ package arida.ufc.br.moap.core.spi;
 
 import java.math.BigDecimal;
 
-import arida.ufc.br.moap.core.types.api.IntegerList;
-
 /**
  *
  * @author igobrilhante
@@ -21,9 +19,7 @@ public enum Type {
     FLOAT(Float.class),
     BOOLEAN(Boolean.class),
     BIGDECIMAL(BigDecimal.class),
-    LONG(Long.class),
-    INTEGERLIST(IntegerList.class)
-    ;
+    LONG(Long.class);
     
     
     private final Class type;
