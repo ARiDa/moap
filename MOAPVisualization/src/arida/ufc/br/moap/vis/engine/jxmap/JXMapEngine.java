@@ -23,7 +23,7 @@ public class JXMapEngine {
 	public JXMapEngine(JXMapKit map,IVisualizationEngine engine){
 		this.map = map;
 		this.engine = engine;
-		this.layers = new ArrayList<>();
+		this.layers = new ArrayList<ILayer>();
 	}
 
 	public JXMapKit getMap() {
