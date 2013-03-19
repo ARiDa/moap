@@ -2,7 +2,6 @@ package arida.ufc.br.moap.vis.engine.impl;
 
 import java.awt.Polygon;
 import java.awt.Shape;
-import java.awt.geom.Ellipse2D;
 import java.awt.geom.Point2D;
 
 import org.jdesktop.swingx.JXMapViewer;
@@ -51,9 +50,9 @@ public class VisualizationEngineImpl implements IVisualizationEngine {
 		Point2D pt = null;
 		double[][] coords = geom.getCoordinates();
 
-		for (int x = 1; x < coords.length; x++) {
-			for (int y = 1; y < coords.length; y++) {
-				pt = viewer.getTileFactory().geoToPixel(new GeoPosition(coords[x][y], coords[x][y]), viewer.getZoom());
+		for (int i = 0; i < coords.length; i++) {
+			for (int y = 0; y < coords[i].length; y++) {
+				pt = viewer.getTileFactory().geoToPixel(new GeoPosition(coords[i][1], coords[i][0]), viewer.getZoom());
 				lineString.addPoint(pt);
 			}
 		}
@@ -74,10 +73,10 @@ public class VisualizationEngineImpl implements IVisualizationEngine {
 		Point2D pt = null;
 		double[][] coords = geom.getCoordinates();
 
-		for (int x = 0; x < coords.length; x++) {
-			for (int y = 0; y < coords.length; y++) {
+		for (int i = 0; i < coords.length; i++) {
+			for (int y = 0; y < coords[i].length; y++) {
 				pt = viewer.getTileFactory().geoToPixel(
-						new GeoPosition(coords[x][y], coords[x][y]),
+						new GeoPosition(coords[i][1], coords[i][0]),
 						viewer.getZoom());
 				polygon.addPoint((int) pt.getX(), (int) pt.getY());
 
@@ -100,11 +99,12 @@ public class VisualizationEngineImpl implements IVisualizationEngine {
 		double[][] coord = geom.getCoordinates();
 
 		Point2D pt = viewer.getTileFactory().geoToPixel(
-				new GeoPosition(coord[0][0], coord[0][1]), viewer.getZoom());
-
-		Ellipse2D e = new Ellipse2D.Double(pt.getX(), pt.getY(), 1000.0, 1000.0);
-
-		return e;
+				new GeoPosition(coord[0][1], coord[0][0]), viewer.getZoom());
+		
+		Polyline2D point = new Polyline2D();
+		point.addPoint(pt);
+		
+		return point;
 
 	}
 

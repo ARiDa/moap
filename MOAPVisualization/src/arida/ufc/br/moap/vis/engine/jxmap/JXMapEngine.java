@@ -1,6 +1,5 @@
 package arida.ufc.br.moap.vis.engine.jxmap;
 
-import java.awt.BasicStroke;
 import java.awt.Graphics2D;
 import java.awt.Shape;
 import java.awt.geom.Rectangle2D;
@@ -39,7 +38,7 @@ public class JXMapEngine {
 	public void run() {
 		CompoundPainter<JXMapViewer> cp = getLayerCompoundPainter(layers);
 		this.map.getMainMap().setOverlayPainter(cp);
-		this.map.updateUI();
+		//this.map.updateUI();
 
 	};
 
@@ -67,17 +66,13 @@ public class JXMapEngine {
 
 				Rectangle2D rect = map.getViewportBounds();
 				g.translate(-rect.getX(), -rect.getY());
-				g.setStroke(new BasicStroke(5.2f, BasicStroke.CAP_ROUND,
-						BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
-
-				/*
-				 * Implement the layer here, where the layer contains a list of
-				 * IFeaturables
-				 */
+				g.setStroke(layer.getStroke());
 				g.setColor(layer.getColor());
+				
 				for (IFeaturable feature : layer.getFeaturables()) {
 					Shape shape = engine.getShape(map, feature);
 					g.draw(shape);
+					g.fill(shape);
 				}
 			}
 
