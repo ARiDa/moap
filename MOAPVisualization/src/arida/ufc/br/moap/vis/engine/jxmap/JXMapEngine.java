@@ -1,7 +1,9 @@
 package arida.ufc.br.moap.vis.engine.jxmap;
 
+import java.awt.BasicStroke;
 import java.awt.Graphics2D;
 import java.awt.Shape;
+import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,8 +21,8 @@ public class JXMapEngine {
 	private JXMapKit map;
 	private IVisualizationEngine engine;
 	private List<ILayer> layers;
-	
-	public JXMapEngine(JXMapKit map,IVisualizationEngine engine){
+
+	public JXMapEngine(JXMapKit map, IVisualizationEngine engine) {
 		this.map = map;
 		this.engine = engine;
 		this.layers = new ArrayList<ILayer>();
@@ -33,41 +35,48 @@ public class JXMapEngine {
 	public void setMap(JXMapKit map) {
 		this.map = map;
 	}
-	
-	public void run(){
+
+	public void run() {
 		CompoundPainter<JXMapViewer> cp = getLayerCompoundPainter(layers);
 		this.map.getMainMap().setOverlayPainter(cp);
 		this.map.updateUI();
-		
+
 	};
-	
-	public void addLayer(int i,ILayer layer){
+
+	public void addLayer(int i, ILayer layer) {
 		this.layers.add(i, layer);
 	}
-	
-	public void addLayer(ILayer layer){
+
+	public void addLayer(ILayer layer) {
 		this.layers.add(layer);
 	}
-	
-	public void removeLayer(ILayer layer){
+
+	public void removeLayer(ILayer layer) {
 		this.layers.remove(layer);
 	}
-	
-	public void removeLayer(int i){
+
+	public void removeLayer(int i) {
 		this.layers.remove(i);
 	}
-	
+
 	private Painter<JXMapViewer> getLayerPainter(final ILayer layer) {
 		Painter<JXMapViewer> overlay = new Painter<JXMapViewer>() {
 
 			@Override
 			public void paint(Graphics2D g, JXMapViewer map, int arg2, int arg3) {
+
+				Rectangle2D rect = map.getViewportBounds();
+				g.translate(-rect.getX(), -rect.getY());
+				g.setStroke(new BasicStroke(5.2f, BasicStroke.CAP_ROUND,
+						BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
+
 				/*
-				 * Implement the layer here, where the layer contains a list of IFeaturables
+				 * Implement the layer here, where the layer contains a list of
+				 * IFeaturables
 				 */
 				g.setColor(layer.getColor());
-				for(IFeaturable feature : layer.getFeaturables()){
-					Shape shape = engine.getShape(map,feature);
+				for (IFeaturable feature : layer.getFeaturables()) {
+					Shape shape = engine.getShape(map, feature);
 					g.draw(shape);
 				}
 			}
@@ -77,22 +86,23 @@ public class JXMapEngine {
 		return overlay;
 
 	}
-	
-	@SuppressWarnings({"unchecked" })
-	private CompoundPainter<JXMapViewer> getLayerCompoundPainter(final List<ILayer> layers){
+
+	@SuppressWarnings({ "unchecked" })
+	private CompoundPainter<JXMapViewer> getLayerCompoundPainter(
+			final List<ILayer> layers) {
 		CompoundPainter<JXMapViewer> cp = new CompoundPainter<JXMapViewer>();
 		cp.setCacheable(false);
-		
-		int size = layers.size(); 
+
+		int size = layers.size();
 		Painter<JXMapViewer>[] paintersArray = new Painter[size];
-		
-		for(int i=0;i<size;i++){
+
+		for (int i = 0; i < size; i++) {
 			ILayer layer = layers.get(i);
 			paintersArray[i] = getLayerPainter(layer);
 		}
-		
+
 		cp.setPainters(paintersArray);
-		
+
 		return cp;
 	}
 

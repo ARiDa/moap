@@ -102,7 +102,7 @@ public class VisualizationEngineImpl implements IVisualizationEngine {
 		Point2D pt = viewer.getTileFactory().geoToPixel(
 				new GeoPosition(coord[0][0], coord[0][1]), viewer.getZoom());
 
-		Ellipse2D e = new Ellipse2D.Double(pt.getX(), pt.getY(), 1.0, 1.0);
+		Ellipse2D e = new Ellipse2D.Double(pt.getX(), pt.getY(), 1000.0, 1000.0);
 
 		return e;
 
