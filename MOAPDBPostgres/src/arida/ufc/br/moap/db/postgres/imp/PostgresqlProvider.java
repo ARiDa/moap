@@ -65,13 +65,13 @@ public class PostgresqlProvider extends AbstractDatabase implements Serializable
         logger.info("Creating table " + table_name);
         Statement state = connection.createStatement();
         String query = "";
-        ResultSet result = state.executeQuery(query);
+        ResultSet result;// = state.executeQuery(query);
         int update;
         //System.out.println(query);
-        result.next();
-        if (result.getInt(1) > 0) {
+//        result.next();
+//        if (result.getInt(1) > 0) {
             //System.out.println("Drop table result: "+update); 
-        }
+//        }
         query = "DROP TABLE if exists " + table_name;
         update = state.executeUpdate(query);
         query = "CREATE TABLE " + table_name + " (" + attributes + ")";

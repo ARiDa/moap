@@ -88,10 +88,10 @@ public class MinimimBoundingBox implements IUnaryFunction<Collection<LatLonPoint
         Haversine distance = new Haversine(); 
         
         double upper_distance = distance.evaluate(bottom_left, upper_left);
-        System.out.println(upper_distance);
+//        System.out.println(upper_distance);
         
         double side_distance = distance.evaluate(bottom_left, bottom_right);
-        System.out.println(side_distance);
+//        System.out.println(side_distance);
         
         area = upper_distance*side_distance;
         

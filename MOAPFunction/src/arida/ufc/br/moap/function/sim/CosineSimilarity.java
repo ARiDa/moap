@@ -10,16 +10,16 @@ import arida.ufc.br.moap.function.api.ISimilarityFunction;
  * 
  * @author igobrilhante
  */
-public class CosineSimilarity<T> implements ISimilarityFunction<Map<T, Double>> {
+public class CosineSimilarity<T> implements ISimilarityFunction<Map<T, ? extends Number>> {
 
 	@Override
 	public String getName() {
 		// TODO Auto-generated method stub
-		return null;
+		return "Cosine Similarity";
 	}
 
 	@Override
-	public Double evaluate(Map<T, Double> obj1, Map<T, Double> obj2) {
+	public Double evaluate(Map<T, ? extends Number> obj1, Map<T, ? extends Number> obj2) {
       double sim = 0.0;
       
       Set<T> s1 = obj1.keySet();
@@ -32,16 +32,16 @@ public class CosineSimilarity<T> implements ISimilarityFunction<Map<T, Double>> 
           double c = 0;
           
           for(T o : intersection){
-              a += (obj1.get(o)*obj2.get(o));
+              a += (obj1.get(o).doubleValue()*obj2.get(o).doubleValue());
           }
           
           for(T o : s1){
-              b += Math.pow(obj1.get(o), 2);
+              b += Math.pow(obj1.get(o).doubleValue(), 2);
           }
           b = Math.sqrt(b);
           
           for(T o : s2){
-              c += Math.pow(obj2.get(o), 2);
+              c += Math.pow(obj2.get(o).doubleValue(), 2);
           }
           c = Math.sqrt(c);
           

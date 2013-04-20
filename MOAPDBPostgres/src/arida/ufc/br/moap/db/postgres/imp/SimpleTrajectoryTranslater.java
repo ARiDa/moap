@@ -61,7 +61,7 @@ public class SimpleTrajectoryTranslater implements ITranslater {
     public SimpleTrajectoryTranslater(Connection connection) {
         this.connection = connection;
         
-        this.mandatoryIdx = new HashSet<>();
+        this.mandatoryIdx = new HashSet<String>();
         this.mandatoryIdx.add(LATITUDE);
         this.mandatoryIdx.add(LONGITUDE);
         this.mandatoryIdx.add(TIME);
@@ -242,7 +242,7 @@ public class SimpleTrajectoryTranslater implements ITranslater {
             }
             
             // Remove the attributes of the header that are mandatory
-            this.annotationIdx = new HashSet<>(header);
+            this.annotationIdx = new HashSet<String>(header);
             this.annotationIdx.removeAll(mandatoryIdx);
             
             return header;

@@ -15,7 +15,7 @@ public class Annotations {
 	}
 	
 	public List<Annotation> getAnnotations() {
-		List<Annotation> list = new ArrayList<>();
+		List<Annotation> list = new ArrayList<Annotation>();
 		list.addAll(annotations.values());
 		return list;
 	}
@@ -31,7 +31,7 @@ public class Annotations {
 	}
 	
 	public Annotation getAnnotation(int index){
-		List<Annotation> list = new ArrayList<>();
+		List<Annotation> list = new ArrayList<Annotation>();
 		list.addAll(annotations.values());
 		
 		return  list.get(index);

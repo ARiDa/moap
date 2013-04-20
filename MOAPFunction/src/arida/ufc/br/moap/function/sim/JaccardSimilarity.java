@@ -22,7 +22,7 @@ public class JaccardSimilarity<T> implements ISimilarityFunction<Set<T>> {
 	@Override
 	public Double evaluate(Set<T> arg0, Set<T> arg1) {
 		
-		HashSet<T> inter = new HashSet<>(arg0);
+		HashSet<T> inter = new HashSet<T>(arg0);
 		inter.retainAll(arg1);
 		
 		int interSize = inter.size();

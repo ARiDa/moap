@@ -24,4 +24,8 @@ public abstract class AbstractAlgorithm<O extends IDataModel<?>> {
     protected Reporter report;
   
     public abstract String getName();
+    
+    public Reporter getReporter(){
+    	return this.report;
+    }
 }
