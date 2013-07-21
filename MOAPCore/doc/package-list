@@ -1,0 +1,11 @@
+arida.ufc.br.core.exceptions
+arida.ufc.br.moap.core.algorithm.spi
+arida.ufc.br.moap.core.beans
+arida.ufc.br.moap.core.beans.iterators.api
+arida.ufc.br.moap.core.beans.iterators.imp
+arida.ufc.br.moap.core.database.imp
+arida.ufc.br.moap.core.database.spi
+arida.ufc.br.moap.core.datasource.spi
+arida.ufc.br.moap.core.geojson.api
+arida.ufc.br.moap.core.imp
+arida.ufc.br.moap.core.spi
